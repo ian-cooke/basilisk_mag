@@ -1,0 +1,7 @@
+setup.py
+dist/Basilisk/__init__.py
+dist/Basilisk.egg-info/PKG-INFO
+dist/Basilisk.egg-info/SOURCES.txt
+dist/Basilisk.egg-info/dependency_links.txt
+dist/Basilisk.egg-info/requires.txt
+dist/Basilisk.egg-info/top_level.txt

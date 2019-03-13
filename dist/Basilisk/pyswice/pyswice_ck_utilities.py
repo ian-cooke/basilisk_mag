@@ -1,0 +1,1 @@
+/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice/pyswice_ck_utilities.py
