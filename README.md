@@ -18,6 +18,18 @@ Of the following requirements Python is the only one for which prebuilt librarie
 
 [Setup a Windows Development Environment](@ref installWindows)
 
+## COSMO ##
+COSMO is using a modified version of Basilisk, based on modifications made from the MAXWELL cubesat project
+
+#### MAXWELL Modifications ####
+* Simple Earth Magnetic Field Model (Not IGRF)
+* Torque Rods
+* Bdot Control Law
+
+#### COSMO Modifications ####
+* Torque Rod Attitude State & Rate Tracking Law
+* Extra data in MagMeterIntMsg.h to be able to plot dipole moments after max dipole restriction
+
 ### Basilisk Development guidelines ###
 
 * [Coding Guidelines](@ref codingGuidelines)
