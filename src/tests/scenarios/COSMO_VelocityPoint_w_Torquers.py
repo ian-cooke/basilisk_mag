@@ -233,7 +233,7 @@ def run(show_plots, useAltBodyFrame):
     scSim.TotalSim.terminateSimulation()
 
     # set the simulation time variable used later on
-    simulationTime = macros.sec2nano(750.0)
+    simulationTime = macros.sec2nano(5000.0)
 
     #
     #  create the simulation process
@@ -256,7 +256,7 @@ def run(show_plots, useAltBodyFrame):
     scObject = spacecraftPlus.SpacecraftPlus()
     scObject.ModelTag = "spacecraftBody"
     # define the simulation inertia
-    I = [0.02, 0., 0.,
+    I = [0.008, 0., 0.,
          0., 0.04, 0.,
          0., 0., 0.04]
     scObject.hub.mHub = 4.8  # kg - spacecraft mass
@@ -407,8 +407,8 @@ def run(show_plots, useAltBodyFrame):
     mag_attTrackControlConfig.inputMagMeterName = MagMeter.outputStateMessage
     mag_attTrackControlConfig.vehConfigInMsgName = "vehicleConfigName"
     mag_attTrackControlConfig.outputDataName = "LrRequested"
-    mag_attTrackControlConfig.K_sigma = 5000000.0
-    mag_attTrackControlConfig.K_omega = 5000000.0
+    mag_attTrackControlConfig.K_sigma = 0.1
+    mag_attTrackControlConfig.K_omega = 0.1
     mag_attTrackControlConfig.use_rw_wheels = 0
 
     # setup torque rods
@@ -417,20 +417,21 @@ def run(show_plots, useAltBodyFrame):
     torqueRodConfig.ModelTag = "torqueRods"
     torqueRodConfig.magFieldMsgName = MagMeter.outputStateMessage
     torqueRodConfig.cmdTorqueRodsMsgName = mag_attTrackControlConfig.outputDataName
-    torqueRodConfig.MaxDipoleMoment = 0.11  # [Am^2]
+    torqueRodConfig.torqueRodOutputMsgName = "torqueRodOutput"
+    torqueRodConfig.MaxDipoleMoment = 1.1  # [Am^2]
     scObject.addDynamicEffector(torqueRodConfig)
     scSim.AddModelToTask(simTaskName, torqueRodConfig)
 
     #
     #   Setup data logging before the simulation is initialized
     #
-    numDataPoints = 500
+    numDataPoints = 10000
     samplingTime = simulationTime / (numDataPoints - 1)
     scSim.TotalSim.logThisMessage(mag_attTrackControlConfig.outputDataName, samplingTime)
     scSim.TotalSim.logThisMessage(attErrorConfig.outputDataName, samplingTime)
     scSim.TotalSim.logThisMessage(sNavObject.outputTransName, samplingTime)
     scSim.TotalSim.logThisMessage(sNavObject.outputAttName, samplingTime)
-    scSim.TotalSim.logThisMessage(torqueRodConfig.torqueExternalPntB_B)
+    scSim.TotalSim.logThisMessage(torqueRodConfig.torqueRodOutputMsgName)
 
     #
     # create simulation messages
@@ -458,7 +459,8 @@ def run(show_plots, useAltBodyFrame):
     #
     #   retrieve the logged data
     #
-    dataLr = scSim.pullMessageLogData(mag_attTrackControlConfig.outputDataName + ".torqueRequestBody", range(3))
+    dataLr = scSim.pullMessageLogData(torqueRodConfig.torqueRodOutputMsgName + ".torque_constrained", range(3))
+    dataDipole = scSim.pullMessageLogData(torqueRodConfig.torqueRodOutputMsgName + ".dipole_constrained", range(3))
     dataSigmaBR = scSim.pullMessageLogData(attErrorConfig.outputDataName + ".sigma_BR", range(3))
     dataOmegaBR = scSim.pullMessageLogData(attErrorConfig.outputDataName + ".omega_BR_B", range(3))
     dataPos = scSim.pullMessageLogData(sNavObject.outputTransName + ".r_BN_N", range(3))
@@ -479,9 +481,9 @@ def run(show_plots, useAltBodyFrame):
     pltName = fileName + "1" + str(int(useAltBodyFrame))
     figureList[pltName] = plt.figure(1)
 
-    plot_control_torque(timeLineSet, dataLr)
-    pltName = fileName + "2" + str(int(useAltBodyFrame))
-    figureList[pltName] = plt.figure(2)
+    #plot_control_torque(timeLineSet, dataLr)
+    #pltName = fileName + "2" + str(int(useAltBodyFrame))
+    #figureList[pltName] = plt.figure(2)
 
     plot_rate_error(timeLineSet, dataOmegaBR)
     pltName = fileName + "3" + str(int(useAltBodyFrame))

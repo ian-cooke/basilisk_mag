@@ -24,6 +24,7 @@ all: \
 /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/stSensorIntMsg.h\
 /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/sunpointIntMsg.h\
 /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/thrArrayOnTimeCmdIntMsg.h\
+/Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/torqueRodOutputIntMsg.h\
 /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/vscmgArrayTorqueIntMsg.h\
 /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/vscmgSpeedIntMsg.h\
 /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.cpp\

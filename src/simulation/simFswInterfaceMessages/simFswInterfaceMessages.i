@@ -34,6 +34,7 @@
 #include "thrArrayOnTimeCmdIntMsg.h"
 #include "MagMeterIntMsg.h"
 #include "cmdTorqueRodsIntMsg.h"
+#include "torqueRodOutputIntMsg.h"
 %}
 
 %include "swig_conly_data.i"
@@ -69,6 +70,8 @@ GEN_SIZEOF(THRArrayOnTimeCmdIntMsg)
 GEN_SIZEOF(MagMeterIntMsg)
 %include "cmdTorqueRodsIntMsg.h"
 GEN_SIZEOF(CmdTorqueRodsIntMsg)
+%include "torqueRodOutputIntMsg.h"
+GEN_SIZEOF(torqueRodOutputIntMsg)
 
 #ifndef CSHARP_ROX
 %pythoncode %{

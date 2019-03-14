@@ -39,6 +39,9 @@ torqueRodDynamicEffector::torqueRodDynamicEffector()
     
     magFieldMsgName = "current_mag_bf";
     magFieldMsgID = -1;
+    
+    torqueRodOutputMsgName = "torqueRods_output";
+    torqueRodOutputMsgID = -1;
     return;
 }
 
@@ -53,6 +56,8 @@ torqueRodDynamicEffector::~torqueRodDynamicEffector()
  */
 void torqueRodDynamicEffector::SelfInit()
 {
+    SystemMessaging *messageSys = SystemMessaging::GetInstance();
+    this->torqueRodOutputMsgID =  messageSys->CreateNewMessage(this->torqueRodOutputMsgName, sizeof(torqueRodOutputIntMsg), 2, "torqueRodOutputIntMsg", this->moduleID);
     return;
 }
 
@@ -69,6 +74,8 @@ void torqueRodDynamicEffector::CrossInit()
     
     magFieldMsgID = SystemMessaging::GetInstance()->subscribeToMessage(this->magFieldMsgName,sizeof(MagMeterIntMsg), moduleID);
     
+    torqueRodOutputMsgID = SystemMessaging::GetInstance()->subscribeToMessage(this->torqueRodOutputMsgName,sizeof(torqueRodOutputMsgID), moduleID);
+    
     /* zero the input message vectors */
     memset(&(this->DipoleMomentCmd.dipole_moment), 0x0, 3*sizeof(double));
     return;
@@ -80,13 +87,22 @@ void torqueRodDynamicEffector::linkInStates(DynParamManager& statesIn)
 }
 
 
-/*! This module does not write any output messages.
+/*! This module writes output messages for output dipole and torque.
  @param CurrentClock The current time used for time-stamping the message
  @return void
  */
 void torqueRodDynamicEffector::writeOutputMessages(uint64_t currentClock)
 {
+    SystemMessaging *messageSys = SystemMessaging::GetInstance();
     
+    for (int i = 0; i < 3; i ++) {
+        torqueRodOutput.dipole_constrained[i] = DipoleMomentCmd.dipole_moment[i];
+        torqueRodOutput.torque_constrained[i] = torqueExternalPntB_B[i];
+    }
+    messageSys->WriteMessage(this->torqueRodOutputMsgID, currentClock,
+                             sizeof(torqueRodOutputIntMsg), reinterpret_cast<uint8_t*> (&torqueRodOutput), this->moduleID);
+     return;
+     
 }
 
 /*! This method is used to read the incoming message and set the
@@ -129,10 +145,12 @@ void torqueRodDynamicEffector::computeForceTorque(double integTime)
     double cmdVecOutput[3];
     int i;
     for (i=0;i<3;i++){
+        //BSK_PRINT(MSG_ERROR, "Dipole Moment Before is: %f", DipoleMomentCmd.dipole_moment[i]);
         if(DipoleMomentCmd.dipole_moment[i] > MaxDipoleMoment)
             DipoleMomentCmd.dipole_moment[i] = MaxDipoleMoment;
         if(DipoleMomentCmd.dipole_moment[i] < -MaxDipoleMoment)
             DipoleMomentCmd.dipole_moment[i] = -MaxDipoleMoment;
+        //BSK_PRINT(MSG_ERROR, "Dipole Moment after is: %f", DipoleMomentCmd.dipole_moment[i]);
     }
     
     v3Cross(DipoleMomentCmd.dipole_moment, MagFieldCurrent.mag_bf, cmdVecOutput);
@@ -146,4 +164,8 @@ void torqueRodDynamicEffector::computeForceTorque(double integTime)
 void torqueRodDynamicEffector::UpdateState(uint64_t CurrentSimNanos)
 {
     this->readInputMessages();
+    
+    writeOutputMessages(CurrentSimNanos);
+    
+    return;
 }

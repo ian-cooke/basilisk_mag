@@ -3052,13 +3052,14 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[43]
 #define SWIGTYPE_p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t swig_types[44]
 #define SWIGTYPE_p_swig__SwigPyIterator swig_types[45]
-#define SWIGTYPE_p_unsigned_char swig_types[46]
-#define SWIGTYPE_p_unsigned_int swig_types[47]
-#define SWIGTYPE_p_unsigned_long_long swig_types[48]
-#define SWIGTYPE_p_unsigned_short swig_types[49]
-#define SWIGTYPE_p_value_type swig_types[50]
-static swig_type_info *swig_types[52];
-static swig_module_info swig_module = {swig_types, 51, 0, 0, 0, 0};
+#define SWIGTYPE_p_torqueRodOutputIntMsg swig_types[46]
+#define SWIGTYPE_p_unsigned_char swig_types[47]
+#define SWIGTYPE_p_unsigned_int swig_types[48]
+#define SWIGTYPE_p_unsigned_long_long swig_types[49]
+#define SWIGTYPE_p_unsigned_short swig_types[50]
+#define SWIGTYPE_p_value_type swig_types[51]
+static swig_type_info *swig_types[53];
+static swig_module_info swig_module = {swig_types, 52, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3178,6 +3179,7 @@ namespace swig {
 #include "thrArrayOnTimeCmdIntMsg.h"
 #include "MagMeterIntMsg.h"
 #include "cmdTorqueRodsIntMsg.h"
+#include "torqueRodOutputIntMsg.h"
 
 
 #include <stdint.h>		// Use the C99 official header
@@ -23217,6 +23219,351 @@ SWIGINTERN PyObject *CmdTorqueRodsIntMsg_swigregister(PyObject *SWIGUNUSEDPARM(s
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_torqueRodOutputIntMsg_timeTag_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  torqueRodOutputIntMsg *arg1 = (torqueRodOutputIntMsg *) 0 ;
+  uint64_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned long long val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:torqueRodOutputIntMsg_timeTag_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_torqueRodOutputIntMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "torqueRodOutputIntMsg_timeTag_set" "', argument " "1"" of type '" "torqueRodOutputIntMsg *""'"); 
+  }
+  arg1 = reinterpret_cast< torqueRodOutputIntMsg * >(argp1);
+  ecode2 = SWIG_AsVal_unsigned_SS_long_SS_long(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "torqueRodOutputIntMsg_timeTag_set" "', argument " "2"" of type '" "uint64_t""'");
+  } 
+  arg2 = static_cast< uint64_t >(val2);
+  if (arg1) (arg1)->timeTag = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_torqueRodOutputIntMsg_timeTag_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  torqueRodOutputIntMsg *arg1 = (torqueRodOutputIntMsg *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  uint64_t result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:torqueRodOutputIntMsg_timeTag_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_torqueRodOutputIntMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "torqueRodOutputIntMsg_timeTag_get" "', argument " "1"" of type '" "torqueRodOutputIntMsg *""'"); 
+  }
+  arg1 = reinterpret_cast< torqueRodOutputIntMsg * >(argp1);
+  result = (uint64_t) ((arg1)->timeTag);
+  resultobj = SWIG_From_unsigned_SS_long_SS_long(static_cast< unsigned long long >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_torqueRodOutputIntMsg_torque_constrained_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  torqueRodOutputIntMsg *arg1 = (torqueRodOutputIntMsg *) 0 ;
+  double *arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double temp2[3] ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:torqueRodOutputIntMsg_torque_constrained_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_torqueRodOutputIntMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "torqueRodOutputIntMsg_torque_constrained_set" "', argument " "1"" of type '" "torqueRodOutputIntMsg *""'"); 
+  }
+  arg1 = reinterpret_cast< torqueRodOutputIntMsg * >(argp1);
+  {
+    int i;
+    void *blankPtr = 0 ;
+    int resOut = 0 ;
+    if (!PySequence_Check(obj1)) {
+      PyErr_SetString(PyExc_ValueError,"Expected a sequence");
+      return NULL;
+    }
+    if (PySequence_Length(obj1) > 3) {
+      printf("Value: %d\n", 3);
+      PyErr_SetString(PyExc_ValueError,"Size mismatch. Expected 3 elements");
+      return NULL;
+    }
+    memset(temp2, 0x0, 3*sizeof(double));
+    for (i = 0; i < PySequence_Length(obj1); i++) {
+      PyObject *o = PySequence_GetItem(obj1,i);
+      if (PyNumber_Check(o)) {
+        temp2[i] = (double) PyFloat_AsDouble(o);
+      } else {
+        resOut = SWIG_ConvertPtr(o, &blankPtr,SWIGTYPE_p_double, 0 |  0 );
+        if (!SWIG_IsOK(resOut)) {
+          SWIG_exception_fail(SWIG_ArgError(resOut), "Could not convert that double into a pointer for some reason.  This is an ugly SWIG failure.  Good luck.\n");
+          return NULL;
+        }
+        memcpy(&(temp2[i]), blankPtr, sizeof(double));
+      }
+    }
+    arg2 = temp2;
+  }
+  {
+    int i;
+    for (i = 0; i < 3; i++) {
+      memcpy(&(arg1->torque_constrained[i]), &(arg2[i]), sizeof(double));
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_torqueRodOutputIntMsg_torque_constrained_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  torqueRodOutputIntMsg *arg1 = (torqueRodOutputIntMsg *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  double *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:torqueRodOutputIntMsg_torque_constrained_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_torqueRodOutputIntMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "torqueRodOutputIntMsg_torque_constrained_get" "', argument " "1"" of type '" "torqueRodOutputIntMsg *""'"); 
+  }
+  arg1 = reinterpret_cast< torqueRodOutputIntMsg * >(argp1);
+  result = (double *)(double *) ((arg1)->torque_constrained);
+  {
+    int i;
+    resultobj = PyList_New(0);
+    PyObject *locOutObj = 0;
+    for (i = 0; i < 3; i++) {
+      locOutObj = SWIG_NewPointerObj(SWIG_as_voidptr(&(result[i])), SWIGTYPE_p_double, 0 |  0 );
+      
+      if(PyNumber_Check(locOutObj)){
+        PyObject *outObject = PyFloat_FromDouble((double) result[i]);
+        PyList_Append(resultobj,outObject);
+        Py_DECREF(outObject);
+      }
+      else
+      {
+        PyList_SetItem(resultobj, i, locOutObj);
+      }
+    }
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_torqueRodOutputIntMsg_dipole_constrained_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  torqueRodOutputIntMsg *arg1 = (torqueRodOutputIntMsg *) 0 ;
+  double *arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double temp2[3] ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:torqueRodOutputIntMsg_dipole_constrained_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_torqueRodOutputIntMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "torqueRodOutputIntMsg_dipole_constrained_set" "', argument " "1"" of type '" "torqueRodOutputIntMsg *""'"); 
+  }
+  arg1 = reinterpret_cast< torqueRodOutputIntMsg * >(argp1);
+  {
+    int i;
+    void *blankPtr = 0 ;
+    int resOut = 0 ;
+    if (!PySequence_Check(obj1)) {
+      PyErr_SetString(PyExc_ValueError,"Expected a sequence");
+      return NULL;
+    }
+    if (PySequence_Length(obj1) > 3) {
+      printf("Value: %d\n", 3);
+      PyErr_SetString(PyExc_ValueError,"Size mismatch. Expected 3 elements");
+      return NULL;
+    }
+    memset(temp2, 0x0, 3*sizeof(double));
+    for (i = 0; i < PySequence_Length(obj1); i++) {
+      PyObject *o = PySequence_GetItem(obj1,i);
+      if (PyNumber_Check(o)) {
+        temp2[i] = (double) PyFloat_AsDouble(o);
+      } else {
+        resOut = SWIG_ConvertPtr(o, &blankPtr,SWIGTYPE_p_double, 0 |  0 );
+        if (!SWIG_IsOK(resOut)) {
+          SWIG_exception_fail(SWIG_ArgError(resOut), "Could not convert that double into a pointer for some reason.  This is an ugly SWIG failure.  Good luck.\n");
+          return NULL;
+        }
+        memcpy(&(temp2[i]), blankPtr, sizeof(double));
+      }
+    }
+    arg2 = temp2;
+  }
+  {
+    int i;
+    for (i = 0; i < 3; i++) {
+      memcpy(&(arg1->dipole_constrained[i]), &(arg2[i]), sizeof(double));
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_torqueRodOutputIntMsg_dipole_constrained_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  torqueRodOutputIntMsg *arg1 = (torqueRodOutputIntMsg *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  double *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:torqueRodOutputIntMsg_dipole_constrained_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_torqueRodOutputIntMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "torqueRodOutputIntMsg_dipole_constrained_get" "', argument " "1"" of type '" "torqueRodOutputIntMsg *""'"); 
+  }
+  arg1 = reinterpret_cast< torqueRodOutputIntMsg * >(argp1);
+  result = (double *)(double *) ((arg1)->dipole_constrained);
+  {
+    int i;
+    resultobj = PyList_New(0);
+    PyObject *locOutObj = 0;
+    for (i = 0; i < 3; i++) {
+      locOutObj = SWIG_NewPointerObj(SWIG_as_voidptr(&(result[i])), SWIGTYPE_p_double, 0 |  0 );
+      
+      if(PyNumber_Check(locOutObj)){
+        PyObject *outObject = PyFloat_FromDouble((double) result[i]);
+        PyList_Append(resultobj,outObject);
+        Py_DECREF(outObject);
+      }
+      else
+      {
+        PyList_SetItem(resultobj, i, locOutObj);
+      }
+    }
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_torqueRodOutputIntMsg__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  torqueRodOutputIntMsg *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_torqueRodOutputIntMsg")) SWIG_fail;
+  result = (torqueRodOutputIntMsg *)new torqueRodOutputIntMsg();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_torqueRodOutputIntMsg, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_torqueRodOutputIntMsg__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  torqueRodOutputIntMsg *arg1 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  torqueRodOutputIntMsg *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_torqueRodOutputIntMsg",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_torqueRodOutputIntMsg,  0  | 0);
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_torqueRodOutputIntMsg" "', argument " "1"" of type '" "torqueRodOutputIntMsg const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_torqueRodOutputIntMsg" "', argument " "1"" of type '" "torqueRodOutputIntMsg const &""'"); 
+  }
+  arg1 = reinterpret_cast< torqueRodOutputIntMsg * >(argp1);
+  result = (torqueRodOutputIntMsg *)new torqueRodOutputIntMsg((torqueRodOutputIntMsg const &)*arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_torqueRodOutputIntMsg, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_torqueRodOutputIntMsg(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 1) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 0) {
+    return _wrap_new_torqueRodOutputIntMsg__SWIG_0(self, args);
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_torqueRodOutputIntMsg, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_torqueRodOutputIntMsg__SWIG_1(self, args);
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'new_torqueRodOutputIntMsg'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    torqueRodOutputIntMsg::torqueRodOutputIntMsg()\n"
+    "    torqueRodOutputIntMsg::torqueRodOutputIntMsg(torqueRodOutputIntMsg const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_torqueRodOutputIntMsg(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  torqueRodOutputIntMsg *arg1 = (torqueRodOutputIntMsg *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_torqueRodOutputIntMsg",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_torqueRodOutputIntMsg, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_torqueRodOutputIntMsg" "', argument " "1"" of type '" "torqueRodOutputIntMsg *""'"); 
+  }
+  arg1 = reinterpret_cast< torqueRodOutputIntMsg * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *torqueRodOutputIntMsg_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char *)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_torqueRodOutputIntMsg, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
 static PyMethodDef SwigMethods[] = {
 	 { (char *)"SWIG_PyInstanceMethod_New", (PyCFunction)SWIG_PyInstanceMethod_New, METH_O, NULL},
 	 { (char *)"new_doubleArray", _wrap_new_doubleArray, METH_VARARGS, NULL},
@@ -23586,6 +23933,15 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"new_CmdTorqueRodsIntMsg", _wrap_new_CmdTorqueRodsIntMsg, METH_VARARGS, NULL},
 	 { (char *)"delete_CmdTorqueRodsIntMsg", _wrap_delete_CmdTorqueRodsIntMsg, METH_VARARGS, NULL},
 	 { (char *)"CmdTorqueRodsIntMsg_swigregister", CmdTorqueRodsIntMsg_swigregister, METH_VARARGS, NULL},
+	 { (char *)"torqueRodOutputIntMsg_timeTag_set", _wrap_torqueRodOutputIntMsg_timeTag_set, METH_VARARGS, NULL},
+	 { (char *)"torqueRodOutputIntMsg_timeTag_get", _wrap_torqueRodOutputIntMsg_timeTag_get, METH_VARARGS, NULL},
+	 { (char *)"torqueRodOutputIntMsg_torque_constrained_set", _wrap_torqueRodOutputIntMsg_torque_constrained_set, METH_VARARGS, NULL},
+	 { (char *)"torqueRodOutputIntMsg_torque_constrained_get", _wrap_torqueRodOutputIntMsg_torque_constrained_get, METH_VARARGS, NULL},
+	 { (char *)"torqueRodOutputIntMsg_dipole_constrained_set", _wrap_torqueRodOutputIntMsg_dipole_constrained_set, METH_VARARGS, NULL},
+	 { (char *)"torqueRodOutputIntMsg_dipole_constrained_get", _wrap_torqueRodOutputIntMsg_dipole_constrained_get, METH_VARARGS, NULL},
+	 { (char *)"new_torqueRodOutputIntMsg", _wrap_new_torqueRodOutputIntMsg, METH_VARARGS, NULL},
+	 { (char *)"delete_torqueRodOutputIntMsg", _wrap_delete_torqueRodOutputIntMsg, METH_VARARGS, NULL},
+	 { (char *)"torqueRodOutputIntMsg_swigregister", torqueRodOutputIntMsg_swigregister, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 
@@ -23638,6 +23994,7 @@ static swig_type_info _swigt__p_std__vectorT_int_std__allocatorT_int_t_t = {"_p_
 static swig_type_info _swigt__p_std__vectorT_std__string_std__allocatorT_std__string_t_t = {"_p_std__vectorT_std__string_std__allocatorT_std__string_t_t", "std::vector< std::string,std::allocator< std::string > > *|std::vector< std::string > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t = {"_p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t", "std::vector< std::vector< double > > *|std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > *|std::vector< std::vector< double,std::allocator< double > > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_swig__SwigPyIterator = {"_p_swig__SwigPyIterator", "swig::SwigPyIterator *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_torqueRodOutputIntMsg = {"_p_torqueRodOutputIntMsg", "torqueRodOutputIntMsg *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_char = {"_p_unsigned_char", "unsigned char *|uint_least8_t *|uint_fast8_t *|uint8_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_int = {"_p_unsigned_int", "uintptr_t *|uint_least32_t *|uint_fast32_t *|uint32_t *|unsigned int *|uint_fast16_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_long_long = {"_p_unsigned_long_long", "uint_least64_t *|uint_fast64_t *|uint64_t *|unsigned long long *|uintmax_t *", 0, 0, (void*)0, 0};
@@ -23691,6 +24048,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__vectorT_std__string_std__allocatorT_std__string_t_t,
   &_swigt__p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t,
   &_swigt__p_swig__SwigPyIterator,
+  &_swigt__p_torqueRodOutputIntMsg,
   &_swigt__p_unsigned_char,
   &_swigt__p_unsigned_int,
   &_swigt__p_unsigned_long_long,
@@ -23744,6 +24102,7 @@ static swig_cast_info _swigc__p_std__vectorT_int_std__allocatorT_int_t_t[] = {  
 static swig_cast_info _swigc__p_std__vectorT_std__string_std__allocatorT_std__string_t_t[] = {  {&_swigt__p_std__vectorT_std__string_std__allocatorT_std__string_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t[] = {  {&_swigt__p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_swig__SwigPyIterator[] = {  {&_swigt__p_swig__SwigPyIterator, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_torqueRodOutputIntMsg[] = {  {&_swigt__p_torqueRodOutputIntMsg, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_char[] = {  {&_swigt__p_unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_int[] = {  {&_swigt__p_unsigned_int, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_long_long[] = {  {&_swigt__p_unsigned_long_long, 0, 0, 0},{0, 0, 0, 0}};
@@ -23797,6 +24156,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__vectorT_std__string_std__allocatorT_std__string_t_t,
   _swigc__p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t,
   _swigc__p_swig__SwigPyIterator,
+  _swigc__p_torqueRodOutputIntMsg,
   _swigc__p_unsigned_char,
   _swigc__p_unsigned_int,
   _swigc__p_unsigned_long_long,
@@ -24507,6 +24867,7 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "sizeof_THRArrayOnTimeCmdIntMsg",SWIG_From_size_t(static_cast< size_t >(sizeof(THRArrayOnTimeCmdIntMsg))));
   SWIG_Python_SetConstant(d, "sizeof_MagMeterIntMsg",SWIG_From_size_t(static_cast< size_t >(sizeof(MagMeterIntMsg))));
   SWIG_Python_SetConstant(d, "sizeof_CmdTorqueRodsIntMsg",SWIG_From_size_t(static_cast< size_t >(sizeof(CmdTorqueRodsIntMsg))));
+  SWIG_Python_SetConstant(d, "sizeof_torqueRodOutputIntMsg",SWIG_From_size_t(static_cast< size_t >(sizeof(torqueRodOutputIntMsg))));
 #if PY_VERSION_HEX >= 0x03000000
   return m;
 #else

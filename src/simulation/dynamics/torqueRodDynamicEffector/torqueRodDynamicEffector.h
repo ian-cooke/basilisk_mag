@@ -24,6 +24,8 @@
 #include "../_GeneralModuleFiles/dynamicEffector.h"
 #include "../../simFswInterfaceMessages/cmdTorqueRodsIntMsg.h"
 #include "../../simFswInterfaceMessages/MagMeterIntMsg.h"
+#include "../../simFswInterfaceMessages/torqueRodOutputIntMsg.h"
+#include "../../../utilities/bsk_Print.h"
 
 
 class torqueRodDynamicEffector: public SysModel, public DynamicEffector{
@@ -42,8 +44,10 @@ public:
 private:
     int64_t cmdTorqueRodsMsgID;           //!< -- Message ID for incoming data
     int64_t magFieldMsgID;
+    int64_t torqueRodOutputMsgID;
     CmdTorqueRodsIntMsg DipoleMomentCmd;
     MagMeterIntMsg MagFieldCurrent;
+    torqueRodOutputIntMsg torqueRodOutput;
 
 
 public:
@@ -53,6 +57,7 @@ public:
     Eigen::Vector3d extTorquePntB_B;    //!< [Nm] external torque in body frame components
     std::string cmdTorqueRodsMsgName;     //!< -- message used to read torque command inputs
     std::string magFieldMsgName;
+    std::string torqueRodOutputMsgName;
     double MaxDipoleMoment;
 
 };

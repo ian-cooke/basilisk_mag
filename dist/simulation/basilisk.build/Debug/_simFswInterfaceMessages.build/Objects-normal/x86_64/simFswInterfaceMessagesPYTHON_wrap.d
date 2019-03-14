@@ -76,4 +76,5 @@ dependencies: \
   /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/stSensorIntMsg.h \
   /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/thrArrayOnTimeCmdIntMsg.h \
   /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/MagMeterIntMsg.h \
-  /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/cmdTorqueRodsIntMsg.h
+  /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/cmdTorqueRodsIntMsg.h \
+  /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/torqueRodOutputIntMsg.h

@@ -9,22 +9,22 @@
 /* Begin PBXAggregateTarget section */
 		8A9A70A9C9C24BA18B9721FC /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = EBC2F66578DC4FFE82F6B5C7 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 51D4442384254121882C80D5 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
-				A7A87A89BB4444A3ADDB34CB /* CMake Rules */,
+				A579F6E7BDC94997AA602098 /* CMake Rules */,
 			);
 			dependencies = (
-				E9DEBF9D0BD0429C909DBA76 /* PBXTargetDependency */,
-				71831D8388DF4DD18E4B886C /* PBXTargetDependency */,
+				85A86A37901A4E2CAE848CC9 /* PBXTargetDependency */,
+				BA015F271BA540E690F15EDD /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
 		};
 		FA1DB6405656407BACC23299 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = F7E5BF1C6D35483AA4243CCC /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 434B199971D04C5586CF5A29 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				6DF9F42F85D74CD4B35178B7 /* CMake Rules */,
+				CED9B8EAA1444A07BEFE0F92 /* CMake Rules */,
 			);
 			dependencies = (
 			);
@@ -34,39 +34,39 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		1602C49D410A4763A17132C3 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.h */ = {isa = PBXBuildFile; fileRef = 96BCE5C2228844A59E5BB3E8 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.h */; };
-		7763913C6D6248EDB4830DCA /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.cpp */ = {isa = PBXBuildFile; fileRef = 395D84C83A4D468A9D1610D0 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.cpp */; };
-		9076A1E3FCA84F6B91036423 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.h */ = {isa = PBXBuildFile; fileRef = 38F7F3A47C424320B5EE10B9 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.h */; };
-		A8502491D48B49FDBAA8C649 /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswicePYTHON_wrap.cxx */ = {isa = PBXBuildFile; fileRef = 29EEF4EF20F64B309C8D7E1D /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswicePYTHON_wrap.cxx */; };
-		B0BB5E2BC2914ED0BA0B8E6C /* /Users/iancooke/basilisk_mag/src/topLevelModules/pyswice/pyswice.i */ = {isa = PBXBuildFile; fileRef = C75192A3F6D747AAAA24693D /* /Users/iancooke/basilisk_mag/src/topLevelModules/pyswice/pyswice.i */; };
-		BFF352DCD6F5494DAB7A479A /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswice.py */ = {isa = PBXBuildFile; fileRef = EF1E6AD4C91749BB8408599F /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswice.py */; };
-		C97EF6797916462E8CFF0B6B /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.cpp */ = {isa = PBXBuildFile; fileRef = 5994A53C783C4AA38279FDE9 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.cpp */; };
-		F8644706D99D436CA54662A6 /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 12E5874441C6402E8DDCB978 /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */; };
+		1A4664C0B45F4F4597696EED /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.cpp */ = {isa = PBXBuildFile; fileRef = BC985F6CD893483A8EB50853 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.cpp */; };
+		2496B008E796454282D1851B /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = CE5F3C0DE9FE4A7FA197604A /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */; };
+		3D3561468BC8486F943CDEEC /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.h */ = {isa = PBXBuildFile; fileRef = 4919A6560CB540C18C4848BB /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.h */; };
+		49B28A4E865E4051AFB089F4 /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswicePYTHON_wrap.cxx */ = {isa = PBXBuildFile; fileRef = 7F037C40DFF54F15B2CF1624 /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswicePYTHON_wrap.cxx */; };
+		6B14F53CC7BB46EC99166F61 /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswice.py */ = {isa = PBXBuildFile; fileRef = 0FD0AD4F710B4CDD906116A1 /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswice.py */; };
+		833A8976C3F44B2F9F8182E2 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.cpp */ = {isa = PBXBuildFile; fileRef = 5222187C278E49EB986624A8 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.cpp */; };
+		D6882BCB41F74E709ECBB09E /* /Users/iancooke/basilisk_mag/src/topLevelModules/pyswice/pyswice.i */ = {isa = PBXBuildFile; fileRef = A63D9FEC2EB14658981DBD14 /* /Users/iancooke/basilisk_mag/src/topLevelModules/pyswice/pyswice.i */; };
+		E4C50BD6963A4EC083D08CD9 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.h */ = {isa = PBXBuildFile; fileRef = 7ADCDEEF0E3F489CA589B3C8 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		23267181DAC14EF5B88F369D /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-		92D0C003420A4F33A612B38B /* MinSizeRel */ = {
+		13AD2821162E4A3E944E545C /* MinSizeRel */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = MinSizeRel;
 		};
-		DC2AD212FABE4970BFDE1E51 /* Debug */ = {
+		223F9627181244708C134E52 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		7A4DFFC03040478684F42E54 /* Debug */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = Debug;
 		};
-		E1D250682EE048D792448C63 /* Release */ = {
+		A925A6820D2842829BEE54BB /* Release */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -76,21 +76,21 @@
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		25FA553B95A54D06B5AEF1BF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9B6AA610FB234D82B1933326 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A0FC056680544794BCA7F801;
-			remoteInfo = _pyswice;
-		};
-		3EF8623A8A854C06B569A662 /* PBXContainerItemProxy */ = {
+		88105679414F49249E5A2775 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9B6AA610FB234D82B1933326 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FA1DB6405656407BACC23299;
 			remoteInfo = ZERO_CHECK;
 		};
-		F6EE8B2719CE40DD8A60E263 /* PBXContainerItemProxy */ = {
+		C9B529054F1C46F288E44A61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B6AA610FB234D82B1933326 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0FC056680544794BCA7F801;
+			remoteInfo = _pyswice;
+		};
+		CA7A9FA80C3F45B1B5FAB10D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9B6AA610FB234D82B1933326 /* Project object */;
 			proxyType = 1;
@@ -100,115 +100,115 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		12E5874441C6402E8DDCB978 /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		29EEF4EF20F64B309C8D7E1D /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswicePYTHON_wrap.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = pyswicePYTHON_wrap.cxx; path = ../../dist/Basilisk/pyswice/pyswicePYTHON_wrap.cxx; sourceTree = SOURCE_ROOT; };
-		38F7F3A47C424320B5EE10B9 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sys_interface.h; path = ../simulation/_GeneralModuleFiles/sys_interface.h; sourceTree = SOURCE_ROOT; };
-		395D84C83A4D468A9D1610D0 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sys_interface.cpp; path = ../simulation/_GeneralModuleFiles/sys_interface.cpp; sourceTree = SOURCE_ROOT; };
-		5994A53C783C4AA38279FDE9 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sys_model.cpp; path = ../simulation/_GeneralModuleFiles/sys_model.cpp; sourceTree = SOURCE_ROOT; };
-		96BCE5C2228844A59E5BB3E8 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sys_model.h; path = ../simulation/_GeneralModuleFiles/sys_model.h; sourceTree = SOURCE_ROOT; };
-		A2E391D5868441A4B353650C /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		B2010FF33C05443EAD6AF08E /* _pyswice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = _pyswice.so; sourceTree = BUILT_PRODUCTS_DIR; };
-		C75192A3F6D747AAAA24693D /* /Users/iancooke/basilisk_mag/src/topLevelModules/pyswice/pyswice.i */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = pyswice.i; path = pyswice/pyswice.i; sourceTree = SOURCE_ROOT; };
-		E7C867CB12C6437DB9859CCD /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		EF1E6AD4C91749BB8408599F /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswice.py */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = pyswice.py; path = ../../dist/Basilisk/pyswice/pyswice.py; sourceTree = SOURCE_ROOT; };
+		0FD0AD4F710B4CDD906116A1 /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswice.py */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = pyswice.py; path = ../../dist/Basilisk/pyswice/pyswice.py; sourceTree = SOURCE_ROOT; };
+		3C31D901BA4049F0A62327A6 /* _pyswice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = _pyswice.so; sourceTree = BUILT_PRODUCTS_DIR; };
+		4919A6560CB540C18C4848BB /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sys_model.h; path = ../simulation/_GeneralModuleFiles/sys_model.h; sourceTree = SOURCE_ROOT; };
+		5222187C278E49EB986624A8 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sys_interface.cpp; path = ../simulation/_GeneralModuleFiles/sys_interface.cpp; sourceTree = SOURCE_ROOT; };
+		7ADCDEEF0E3F489CA589B3C8 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sys_interface.h; path = ../simulation/_GeneralModuleFiles/sys_interface.h; sourceTree = SOURCE_ROOT; };
+		7E80C270EE754B36AEABAC2D /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		7F037C40DFF54F15B2CF1624 /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswicePYTHON_wrap.cxx */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = pyswicePYTHON_wrap.cxx; path = ../../dist/Basilisk/pyswice/pyswicePYTHON_wrap.cxx; sourceTree = SOURCE_ROOT; };
+		A63D9FEC2EB14658981DBD14 /* /Users/iancooke/basilisk_mag/src/topLevelModules/pyswice/pyswice.i */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = pyswice.i; path = pyswice/pyswice.i; sourceTree = SOURCE_ROOT; };
+		BC985F6CD893483A8EB50853 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sys_model.cpp; path = ../simulation/_GeneralModuleFiles/sys_model.cpp; sourceTree = SOURCE_ROOT; };
+		CE5F3C0DE9FE4A7FA197604A /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F14174CF38ED454084891488 /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		02346A2DC0B7489E9773DD6B = {
+		05B314690D6A49409E947748 /* ALL_BUILD */ = {
 			isa = PBXGroup;
 			children = (
-				4D905F5CCC724A04947BED0E /* topLevelModules */,
-				06A3AEDA8D834CE396A9CD04 /* ALL_BUILD */,
-				CB69C1D4DF944DCB8CF97557 /* ZERO_CHECK */,
-				2FB7FCED4738452DAEAD7B6E /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		06A3AEDA8D834CE396A9CD04 /* ALL_BUILD */ = {
-			isa = PBXGroup;
-			children = (
-				BA11869611D746AA9AEB21D8 /* CMake Rules */,
-				A2E391D5868441A4B353650C /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */,
+				A8A058D289BD4FFF863E80C0 /* CMake Rules */,
+				F14174CF38ED454084891488 /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		086DF41CAF8348339ACFD9ED /* _pyswice */ = {
+		1C0B74ABE0C74438BDB1A0BF /* _pyswice */ = {
 			isa = PBXGroup;
 			children = (
-				2CB4A6DEC21943E18DEC1056 /* Source Files */,
-				EF1C02B24FAA432B8AF67ED7 /* Header Files */,
-				EF1E6AD4C91749BB8408599F /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswice.py */,
-				12E5874441C6402E8DDCB978 /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */,
-				C75192A3F6D747AAAA24693D /* /Users/iancooke/basilisk_mag/src/topLevelModules/pyswice/pyswice.i */,
+				4F2872EADAE7445D809DC04B /* Source Files */,
+				4C7A67498D734FB1B635E6B1 /* Header Files */,
+				0FD0AD4F710B4CDD906116A1 /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswice.py */,
+				CE5F3C0DE9FE4A7FA197604A /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */,
+				A63D9FEC2EB14658981DBD14 /* /Users/iancooke/basilisk_mag/src/topLevelModules/pyswice/pyswice.i */,
 			);
 			name = _pyswice;
 			sourceTree = "<group>";
 		};
-		168509CC24CD4AD0A8F39E00 /* pyswice */ = {
+		1DCEE355EC6640B4B1E7F3AB = {
 			isa = PBXGroup;
 			children = (
-				086DF41CAF8348339ACFD9ED /* _pyswice */,
+				F0F01C9D19E44CB1A9093FE9 /* topLevelModules */,
+				05B314690D6A49409E947748 /* ALL_BUILD */,
+				FA6687A3142A4FB1AA252B40 /* ZERO_CHECK */,
+				D441585A59924B27AF60D5C3 /* Products */,
 			);
-			name = pyswice;
 			sourceTree = "<group>";
 		};
-		2CB4A6DEC21943E18DEC1056 /* Source Files */ = {
+		4C7A67498D734FB1B635E6B1 /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
-				29EEF4EF20F64B309C8D7E1D /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswicePYTHON_wrap.cxx */,
-				395D84C83A4D468A9D1610D0 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.cpp */,
-				5994A53C783C4AA38279FDE9 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.cpp */,
+				7ADCDEEF0E3F489CA589B3C8 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.h */,
+				4919A6560CB540C18C4848BB /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		4F2872EADAE7445D809DC04B /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F037C40DFF54F15B2CF1624 /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswicePYTHON_wrap.cxx */,
+				5222187C278E49EB986624A8 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.cpp */,
+				BC985F6CD893483A8EB50853 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.cpp */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		2FB7FCED4738452DAEAD7B6E /* Products */ = {
+		7E5848D70D6D40EBACEFFDF0 /* pyswice */ = {
 			isa = PBXGroup;
 			children = (
-				B2010FF33C05443EAD6AF08E /* _pyswice */,
+				1C0B74ABE0C74438BDB1A0BF /* _pyswice */,
+			);
+			name = pyswice;
+			sourceTree = "<group>";
+		};
+		A8A058D289BD4FFF863E80C0 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		D441585A59924B27AF60D5C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C31D901BA4049F0A62327A6 /* _pyswice */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4D905F5CCC724A04947BED0E /* topLevelModules */ = {
+		F0F01C9D19E44CB1A9093FE9 /* topLevelModules */ = {
 			isa = PBXGroup;
 			children = (
-				168509CC24CD4AD0A8F39E00 /* pyswice */,
+				7E5848D70D6D40EBACEFFDF0 /* pyswice */,
 			);
 			name = topLevelModules;
 			sourceTree = "<group>";
 		};
-		91A661B1686C4A5EAAF1A18A /* CMake Rules */ = {
+		FA6687A3142A4FB1AA252B40 /* ZERO_CHECK */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		BA11869611D746AA9AEB21D8 /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		CB69C1D4DF944DCB8CF97557 /* ZERO_CHECK */ = {
-			isa = PBXGroup;
-			children = (
-				91A661B1686C4A5EAAF1A18A /* CMake Rules */,
-				E7C867CB12C6437DB9859CCD /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */,
+				FE0770FF5BB144DEA89A3C3B /* CMake Rules */,
+				7E80C270EE754B36AEABAC2D /* /Users/iancooke/basilisk_mag/src/topLevelModules/CMakeLists.txt */,
 			);
 			name = ZERO_CHECK;
 			sourceTree = "<group>";
 		};
-		EF1C02B24FAA432B8AF67ED7 /* Header Files */ = {
+		FE0770FF5BB144DEA89A3C3B /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
-				38F7F3A47C424320B5EE10B9 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.h */,
-				96BCE5C2228844A59E5BB3E8 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.h */,
 			);
-			name = "Header Files";
+			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,19 +216,19 @@
 /* Begin PBXNativeTarget section */
 		A0FC056680544794BCA7F801 /* _pyswice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE031F646D2F4D919DE88E31 /* Build configuration list for PBXNativeTarget "_pyswice" */;
+			buildConfigurationList = EB5BEAB2F3A9484884EAA330 /* Build configuration list for PBXNativeTarget "_pyswice" */;
 			buildPhases = (
-				F817720E27A84EEFA26EBB55 /* CMake Rules */,
-				4A8341EACF59490790C45326 /* Sources */,
+				96ADBE8F0594473D80B56DE0 /* CMake Rules */,
+				B06C49D643C34E41880F9B32 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				66C14D2A494C4ADDB0F3BBA2 /* PBXTargetDependency */,
+				ACF5168A83FE419BBA6F97E3 /* PBXTargetDependency */,
 			);
 			name = _pyswice;
 			productName = _pyswice;
-			productReference = B2010FF33C05443EAD6AF08E /* _pyswice */;
+			productReference = 3C31D901BA4049F0A62327A6 /* _pyswice */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -240,18 +240,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1010;
 			};
-			buildConfigurationList = E84F383FA6604E5891E72027 /* Build configuration list for PBXProject "topLevelModules" */;
+			buildConfigurationList = C5C43C5C638144BA908F254A /* Build configuration list for PBXProject "topLevelModules" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				DC2AD212FABE4970BFDE1E51 /* Debug */,
-				E1D250682EE048D792448C63 /* Release */,
-				92D0C003420A4F33A612B38B /* MinSizeRel */,
-				23267181DAC14EF5B88F369D /* RelWithDebInfo */,
+				7A4DFFC03040478684F42E54 /* Debug */,
+				A925A6820D2842829BEE54BB /* Release */,
+				13AD2821162E4A3E944E545C /* MinSizeRel */,
+				223F9627181244708C134E52 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 02346A2DC0B7489E9773DD6B;
+			mainGroup = 1DCEE355EC6640B4B1E7F3AB;
 			projectDirPath = /Users/iancooke/basilisk_mag/src/topLevelModules;
 			projectRoot = "";
 			targets = (
@@ -263,59 +263,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		63DF65BAAC6D48FE927B6628 = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		6DF9F42F85D74CD4B35178B7 /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/iancooke/basilisk_mag/dist/topLevelModules -f /Users/iancooke/basilisk_mag/dist/topLevelModules/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
-			showEnvVarsInLog = 0;
-		};
-		A1865B4853C145B09BAC3F09 = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		A7A87A89BB4444A3ADDB34CB /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/iancooke/basilisk_mag/dist/topLevelModules -f /Users/iancooke/basilisk_mag/dist/topLevelModules/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
-			showEnvVarsInLog = 0;
-		};
-		F817720E27A84EEFA26EBB55 /* CMake Rules */ = {
+		96ADBE8F0594473D80B56DE0 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,115 +274,93 @@ exit 0";
 			shellScript = "make -C /Users/iancooke/basilisk_mag/dist/topLevelModules -f /Users/iancooke/basilisk_mag/dist/topLevelModules/CMakeScripts/_pyswice_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
+		A096D0DDB9AC479690393CD9 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		A579F6E7BDC94997AA602098 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/iancooke/basilisk_mag/dist/topLevelModules -f /Users/iancooke/basilisk_mag/dist/topLevelModules/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		C021381906BB4089BE1C6394 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		CED9B8EAA1444A07BEFE0F92 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/iancooke/basilisk_mag/dist/topLevelModules -f /Users/iancooke/basilisk_mag/dist/topLevelModules/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4A8341EACF59490790C45326 /* Sources */ = {
+		B06C49D643C34E41880F9B32 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8502491D48B49FDBAA8C649 /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswicePYTHON_wrap.cxx */,
-				7763913C6D6248EDB4830DCA /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.cpp */,
-				C97EF6797916462E8CFF0B6B /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.cpp */,
+				49B28A4E865E4051AFB089F4 /* /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice/pyswicePYTHON_wrap.cxx */,
+				833A8976C3F44B2F9F8182E2 /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_interface.cpp */,
+				1A4664C0B45F4F4597696EED /* /Users/iancooke/basilisk_mag/src/simulation/_GeneralModuleFiles/sys_model.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		66C14D2A494C4ADDB0F3BBA2 /* PBXTargetDependency */ = {
+		85A86A37901A4E2CAE848CC9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FA1DB6405656407BACC23299 /* ZERO_CHECK */;
-			targetProxy = F6EE8B2719CE40DD8A60E263 /* PBXContainerItemProxy */;
+			targetProxy = CA7A9FA80C3F45B1B5FAB10D /* PBXContainerItemProxy */;
 		};
-		71831D8388DF4DD18E4B886C /* PBXTargetDependency */ = {
+		ACF5168A83FE419BBA6F97E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA1DB6405656407BACC23299 /* ZERO_CHECK */;
+			targetProxy = 88105679414F49249E5A2775 /* PBXContainerItemProxy */;
+		};
+		BA015F271BA540E690F15EDD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A0FC056680544794BCA7F801 /* _pyswice */;
-			targetProxy = 25FA553B95A54D06B5AEF1BF /* PBXContainerItemProxy */;
-		};
-		E9DEBF9D0BD0429C909DBA76 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FA1DB6405656407BACC23299 /* ZERO_CHECK */;
-			targetProxy = 3EF8623A8A854C06B569A662 /* PBXContainerItemProxy */;
+			targetProxy = C9B529054F1C46F288E44A61 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0F0E9D515EC14E2182E07A64 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules/build;
-			};
-			name = Debug;
-		};
-		1FF024B5244549C79FE266E9 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/src/simulation,/Users/iancooke/basilisk_mag/src/../libs,/usr/include/python2.7,/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules;
-				SYSTEM_HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/libs/boost_1_61_0);
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		2663810022D241398862527D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules/build;
-			};
-			name = Release;
-		};
-		3517DA649FA84BACB64501CF /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules/build;
-			};
-			name = MinSizeRel;
-		};
-		380F1EDE359F4D7FABDC36AE /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/src/simulation,/Users/iancooke/basilisk_mag/src/../libs,/usr/include/python2.7,/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules;
-				SYSTEM_HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/libs/boost_1_61_0);
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		3C0CAD6FB4434991B61B35A6 /* Release */ = {
+		199CB508F2BA42DAAE1BFB64 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -456,29 +382,7 @@ exit 0";
 			};
 			name = Release;
 		};
-		673A31CC0E6A42B2AB7311F6 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/src/simulation,/Users/iancooke/basilisk_mag/src/../libs,/usr/include/python2.7,/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules;
-				SYSTEM_HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/libs/boost_1_61_0);
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		67AC14EB2EC2421BBFDBF6DD /* MinSizeRel */ = {
+		253260B080B04AF9B32592C8 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -509,123 +413,7 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		97011E4C48DE472591AEAA7D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/src/simulation,/Users/iancooke/basilisk_mag/src/../libs,/usr/include/python2.7,/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules;
-				SYSTEM_HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/libs/boost_1_61_0);
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		BD1976C5C4F2444D8CBFAADE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/src/simulation,/Users/iancooke/basilisk_mag/src/../libs,/usr/include/python2.7,/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules;
-				SYSTEM_HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/libs/boost_1_61_0);
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		C22D42FA691744A1A061A8D9 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules/build;
-			};
-			name = RelWithDebInfo;
-		};
-		C3DA2443DB85465EB72EAF27 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = .so;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_pyswice_EXPORTS);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/src/simulation,/Users/iancooke/basilisk_mag/src/../libs,/usr/include/python2.7,/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice);
-				INSTALL_PATH = "";
-				LD_RUNPATH_SEARCH_PATHS = "/Users/iancooke/basilisk_mag/dist/Basilisk /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx";
-				LIBRARY_SEARCH_PATHS = " /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx";
-				LIBRARY_STYLE = BUNDLE;
-				MACH_O_TYPE = mh_bundle;
-				OTHER_CPLUSPLUSFLAGS = "              -std=c++11 -stdlib=libc++ -Wno-deprecated-register     -DNDEBUG      -Wall -fPIC -I/Users/iancooke/basilisk_mag/src/topLevelModules -fPIC  ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /opt/local/lib/libpython2.7.dylib /Users/iancooke/basilisk_mag/dist/Basilisk/libSimUtilities.a /Users/iancooke/basilisk_mag/dist/Basilisk/libSimMessaging.dylib /Users/iancooke/basilisk_mag/src/../libs/cspice/lib/cspice_osx.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_filesystem.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_serialization.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_thread.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_system.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_chrono.a";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = _pyswice;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules;
-				SYSTEM_HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/libs/boost_1_61_0);
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		D08845EF1B0C4FDA97AC3DFC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = .so;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_pyswice_EXPORTS);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/src/simulation,/Users/iancooke/basilisk_mag/src/../libs,/usr/include/python2.7,/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice);
-				INSTALL_PATH = "";
-				LD_RUNPATH_SEARCH_PATHS = "/Users/iancooke/basilisk_mag/dist/Basilisk /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx";
-				LIBRARY_SEARCH_PATHS = " /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx";
-				LIBRARY_STYLE = BUNDLE;
-				MACH_O_TYPE = mh_bundle;
-				OTHER_CPLUSPLUSFLAGS = "              -std=c++11 -stdlib=libc++ -Wno-deprecated-register                  -Wall -fPIC -I/Users/iancooke/basilisk_mag/src/topLevelModules -fPIC  ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /opt/local/lib/libpython2.7.dylib /Users/iancooke/basilisk_mag/dist/Basilisk/libSimUtilities.a /Users/iancooke/basilisk_mag/dist/Basilisk/libSimMessaging.dylib /Users/iancooke/basilisk_mag/src/../libs/cspice/lib/cspice_osx.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_filesystem.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_serialization.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_thread.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_system.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_chrono.a";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = _pyswice;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules;
-				SYSTEM_HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/libs/boost_1_61_0);
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		D3AA62F89AF24EC093DC76C1 /* RelWithDebInfo */ = {
+		42B722D1E1D942A2BC19F0D2 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -656,7 +444,51 @@ exit 0";
 			};
 			name = RelWithDebInfo;
 		};
-		E693CA9391844F19B36DC227 /* MinSizeRel */ = {
+		45174380006149F19A078691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/src/simulation,/Users/iancooke/basilisk_mag/src/../libs,/usr/include/python2.7,/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules;
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/libs/boost_1_61_0);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		4CF078A1F9E04C179D277E11 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/src/simulation,/Users/iancooke/basilisk_mag/src/../libs,/usr/include/python2.7,/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules;
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/libs/boost_1_61_0);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		4D68D27D45BF461F95886A77 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -678,7 +510,144 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		FF70E32BB9A74C21B76475DE /* Release */ = {
+		59EFBDDF1EB247328795BA75 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/src/simulation,/Users/iancooke/basilisk_mag/src/../libs,/usr/include/python2.7,/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules;
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/libs/boost_1_61_0);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		617A0E8C5A454CCC9AA31126 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules/build;
+			};
+			name = MinSizeRel;
+		};
+		6C91777B5F074BD082D7FEE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_pyswice_EXPORTS);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/src/simulation,/Users/iancooke/basilisk_mag/src/../libs,/usr/include/python2.7,/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/Users/iancooke/basilisk_mag/dist/Basilisk /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx";
+				LIBRARY_SEARCH_PATHS = " /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx";
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				OTHER_CPLUSPLUSFLAGS = "              -std=c++11 -stdlib=libc++ -Wno-deprecated-register                  -Wall -fPIC -I/Users/iancooke/basilisk_mag/src/topLevelModules -fPIC  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /opt/local/lib/libpython2.7.dylib /Users/iancooke/basilisk_mag/dist/Basilisk/libSimUtilities.a /Users/iancooke/basilisk_mag/dist/Basilisk/libSimMessaging.dylib /Users/iancooke/basilisk_mag/src/../libs/cspice/lib/cspice_osx.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_filesystem.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_serialization.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_thread.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_system.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_chrono.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = _pyswice;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules;
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/libs/boost_1_61_0);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		95BE82581F314689ACA1AAEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/src/simulation,/Users/iancooke/basilisk_mag/src/../libs,/usr/include/python2.7,/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules;
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/libs/boost_1_61_0);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		ADAABE59AADD46CCBBE55758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules/build;
+			};
+			name = Debug;
+		};
+		B7957693D053401DB671AC55 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules/build;
+			};
+			name = RelWithDebInfo;
+		};
+		B8A8CABF29D2492887E870CF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/src/simulation,/Users/iancooke/basilisk_mag/src/../libs,/usr/include/python2.7,/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules;
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/libs/boost_1_61_0);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		DD1CBB7D28F84B1C988A1463 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules/build;
+			};
+			name = Release;
+		};
+		EB4AF82C76D34227A864F72D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -700,49 +669,80 @@ exit 0";
 			};
 			name = Release;
 		};
+		F13DD07227D444AF9C82914A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/iancooke/basilisk_mag/dist/Basilisk/pyswice;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = .so;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_pyswice_EXPORTS);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/src/simulation,/Users/iancooke/basilisk_mag/src/../libs,/usr/include/python2.7,/Users/iancooke/basilisk_mag/src/topLevelModules/pyswice);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/Users/iancooke/basilisk_mag/dist/Basilisk /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx";
+				LIBRARY_SEARCH_PATHS = " /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx";
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				OTHER_CPLUSPLUSFLAGS = "              -std=c++11 -stdlib=libc++ -Wno-deprecated-register     -DNDEBUG      -Wall -fPIC -I/Users/iancooke/basilisk_mag/src/topLevelModules -fPIC  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /opt/local/lib/libpython2.7.dylib /Users/iancooke/basilisk_mag/dist/Basilisk/libSimUtilities.a /Users/iancooke/basilisk_mag/dist/Basilisk/libSimMessaging.dylib /Users/iancooke/basilisk_mag/src/../libs/cspice/lib/cspice_osx.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_filesystem.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_serialization.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_thread.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_system.a /Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_chrono.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = _pyswice;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/iancooke/basilisk_mag/dist/topLevelModules;
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/iancooke/basilisk_mag/libs/boost_1_61_0);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AE031F646D2F4D919DE88E31 /* Build configuration list for PBXNativeTarget "_pyswice" */ = {
+		434B199971D04C5586CF5A29 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D08845EF1B0C4FDA97AC3DFC /* Debug */,
-				C3DA2443DB85465EB72EAF27 /* Release */,
-				67AC14EB2EC2421BBFDBF6DD /* MinSizeRel */,
-				D3AA62F89AF24EC093DC76C1 /* RelWithDebInfo */,
+				45174380006149F19A078691 /* Debug */,
+				EB4AF82C76D34227A864F72D /* Release */,
+				4D68D27D45BF461F95886A77 /* MinSizeRel */,
+				59EFBDDF1EB247328795BA75 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		E84F383FA6604E5891E72027 /* Build configuration list for PBXProject "topLevelModules" */ = {
+		51D4442384254121882C80D5 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0F0E9D515EC14E2182E07A64 /* Debug */,
-				2663810022D241398862527D /* Release */,
-				3517DA649FA84BACB64501CF /* MinSizeRel */,
-				C22D42FA691744A1A061A8D9 /* RelWithDebInfo */,
+				95BE82581F314689ACA1AAEE /* Debug */,
+				199CB508F2BA42DAAE1BFB64 /* Release */,
+				4CF078A1F9E04C179D277E11 /* MinSizeRel */,
+				B8A8CABF29D2492887E870CF /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		EBC2F66578DC4FFE82F6B5C7 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		C5C43C5C638144BA908F254A /* Build configuration list for PBXProject "topLevelModules" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				97011E4C48DE472591AEAA7D /* Debug */,
-				3C0CAD6FB4434991B61B35A6 /* Release */,
-				1FF024B5244549C79FE266E9 /* MinSizeRel */,
-				380F1EDE359F4D7FABDC36AE /* RelWithDebInfo */,
+				ADAABE59AADD46CCBBE55758 /* Debug */,
+				DD1CBB7D28F84B1C988A1463 /* Release */,
+				617A0E8C5A454CCC9AA31126 /* MinSizeRel */,
+				B7957693D053401DB671AC55 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F7E5BF1C6D35483AA4243CCC /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		EB5BEAB2F3A9484884EAA330 /* Build configuration list for PBXNativeTarget "_pyswice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD1976C5C4F2444D8CBFAADE /* Debug */,
-				FF70E32BB9A74C21B76475DE /* Release */,
-				E693CA9391844F19B36DC227 /* MinSizeRel */,
-				673A31CC0E6A42B2AB7311F6 /* RelWithDebInfo */,
+				6C91777B5F074BD082D7FEE3 /* Debug */,
+				F13DD07227D444AF9C82914A /* Release */,
+				253260B080B04AF9B32592C8 /* MinSizeRel */,
+				42B722D1E1D942A2BC19F0D2 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

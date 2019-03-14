@@ -27,7 +27,10 @@
 %include "../_GeneralModuleFiles/dynamicEffector.h"
 %include "torqueRodDynamicEffector.h"
 %include "../../simFswInterfaceMessages/cmdTorqueRodsIntMsg.h"
+%include "../../simFswInterfaceMessages/torqueRodOutputIntMsg.h"
+%include "../../../utilities/bsk_Print.h"
 GEN_SIZEOF(CmdTorqueRodsIntMsg);
+GEN_SIZEOF(torqueRodOutputIntMsg);
 
 %pythoncode %{
 import sys

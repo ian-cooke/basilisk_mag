@@ -116,9 +116,9 @@ def run(show_plots, useUnmodeledTorque):
     scObject = spacecraftPlus.SpacecraftPlus()
     scObject.ModelTag = "spacecraftBody"
     # define the simulation inertia
-    I = [0.02, 0., 0.,
-         0., 0.04, 0.,
-         0., 0., 0.04]
+    I = [0.008, 0., 0.,
+         0., 0.26, 0.,
+         0., 0., 0.26]
     scObject.hub.mHub = 4.8  # kg - spacecraft mass
     scObject.hub.r_BcB_B = [[0.0], [0.0], [0.0]]  # m - position vector of body-fixed point B relative to CM
     scObject.hub.IHubPntBc_B = unitTestSupport.np2EigenMatrix3d(I)
@@ -270,7 +270,7 @@ def run(show_plots, useUnmodeledTorque):
     torqueRodConfig.ModelTag = "torqueRods"
     torqueRodConfig.magFieldMsgName = MagMeter.outputStateMessage
     torqueRodConfig.cmdTorqueRodsMsgName = bdotControlConfig.outputDataName
-    torqueRodConfig.MaxDipoleMoment = 3*0.11  # [Am^2]
+    torqueRodConfig.MaxDipoleMoment = 0.11  # [Am^2]
     scObject.addDynamicEffector(torqueRodConfig)
     scSim.AddModelToTask(simTaskName, torqueRodConfig)
 

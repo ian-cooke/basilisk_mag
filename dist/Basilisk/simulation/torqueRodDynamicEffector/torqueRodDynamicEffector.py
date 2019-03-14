@@ -1164,6 +1164,10 @@ class torqueRodDynamicEffector(SysModel, DynamicEffector):
     __swig_getmethods__["magFieldMsgName"] = _torqueRodDynamicEffector.torqueRodDynamicEffector_magFieldMsgName_get
     if _newclass:
         magFieldMsgName = _swig_property(_torqueRodDynamicEffector.torqueRodDynamicEffector_magFieldMsgName_get, _torqueRodDynamicEffector.torqueRodDynamicEffector_magFieldMsgName_set)
+    __swig_setmethods__["torqueRodOutputMsgName"] = _torqueRodDynamicEffector.torqueRodDynamicEffector_torqueRodOutputMsgName_set
+    __swig_getmethods__["torqueRodOutputMsgName"] = _torqueRodDynamicEffector.torqueRodDynamicEffector_torqueRodOutputMsgName_get
+    if _newclass:
+        torqueRodOutputMsgName = _swig_property(_torqueRodDynamicEffector.torqueRodDynamicEffector_torqueRodOutputMsgName_get, _torqueRodDynamicEffector.torqueRodDynamicEffector_torqueRodOutputMsgName_set)
     __swig_setmethods__["MaxDipoleMoment"] = _torqueRodDynamicEffector.torqueRodDynamicEffector_MaxDipoleMoment_set
     __swig_getmethods__["MaxDipoleMoment"] = _torqueRodDynamicEffector.torqueRodDynamicEffector_MaxDipoleMoment_get
     if _newclass:
@@ -1200,7 +1204,44 @@ class CmdTorqueRodsIntMsg(_object):
 CmdTorqueRodsIntMsg_swigregister = _torqueRodDynamicEffector.CmdTorqueRodsIntMsg_swigregister
 CmdTorqueRodsIntMsg_swigregister(CmdTorqueRodsIntMsg)
 
+class torqueRodOutputIntMsg(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, torqueRodOutputIntMsg, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, torqueRodOutputIntMsg, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["timeTag"] = _torqueRodDynamicEffector.torqueRodOutputIntMsg_timeTag_set
+    __swig_getmethods__["timeTag"] = _torqueRodDynamicEffector.torqueRodOutputIntMsg_timeTag_get
+    if _newclass:
+        timeTag = _swig_property(_torqueRodDynamicEffector.torqueRodOutputIntMsg_timeTag_get, _torqueRodDynamicEffector.torqueRodOutputIntMsg_timeTag_set)
+    __swig_setmethods__["torque_constrained"] = _torqueRodDynamicEffector.torqueRodOutputIntMsg_torque_constrained_set
+    __swig_getmethods__["torque_constrained"] = _torqueRodDynamicEffector.torqueRodOutputIntMsg_torque_constrained_get
+    if _newclass:
+        torque_constrained = _swig_property(_torqueRodDynamicEffector.torqueRodOutputIntMsg_torque_constrained_get, _torqueRodDynamicEffector.torqueRodOutputIntMsg_torque_constrained_set)
+    __swig_setmethods__["dipole_constrained"] = _torqueRodDynamicEffector.torqueRodOutputIntMsg_dipole_constrained_set
+    __swig_getmethods__["dipole_constrained"] = _torqueRodDynamicEffector.torqueRodOutputIntMsg_dipole_constrained_get
+    if _newclass:
+        dipole_constrained = _swig_property(_torqueRodDynamicEffector.torqueRodOutputIntMsg_dipole_constrained_get, _torqueRodDynamicEffector.torqueRodOutputIntMsg_dipole_constrained_set)
+
+    def __init__(self, *args):
+        this = _torqueRodDynamicEffector.new_torqueRodOutputIntMsg(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _torqueRodDynamicEffector.delete_torqueRodOutputIntMsg
+    __del__ = lambda self: None
+torqueRodOutputIntMsg_swigregister = _torqueRodDynamicEffector.torqueRodOutputIntMsg_swigregister
+torqueRodOutputIntMsg_swigregister(torqueRodOutputIntMsg)
+
+MSG_DEBUG = _torqueRodDynamicEffector.MSG_DEBUG
+MSG_INFORMATION = _torqueRodDynamicEffector.MSG_INFORMATION
+MSG_WARNING = _torqueRodDynamicEffector.MSG_WARNING
+MSG_ERROR = _torqueRodDynamicEffector.MSG_ERROR
+MSG_SILENT = _torqueRodDynamicEffector.MSG_SILENT
+WHERESTR = _torqueRodDynamicEffector.WHERESTR
 sizeof_CmdTorqueRodsIntMsg = _torqueRodDynamicEffector.sizeof_CmdTorqueRodsIntMsg
+sizeof_torqueRodOutputIntMsg = _torqueRodDynamicEffector.sizeof_torqueRodOutputIntMsg
 
 import sys
 protectAllClasses(sys.modules[__name__])

@@ -90,7 +90,7 @@ def run(show_plots, useUnmodeledTorque, useJitterSimple, useRWVoltageIO):
     scSim.TotalSim.terminateSimulation()
 
     # set the simulation time variable used later on
-    simulationTime = macros.sec2nano(500)
+    simulationTime = macros.sec2nano(2500.)
 
     #
     #  create the simulation process
@@ -267,6 +267,7 @@ def run(show_plots, useUnmodeledTorque, useJitterSimple, useRWVoltageIO):
     torqueRodConfig.ModelTag = "torqueRods"
     torqueRodConfig.magFieldMsgName = MagMeter.outputStateMessage
     torqueRodConfig.cmdTorqueRodsMsgName = bdotControlConfig.outputDataName
+    torqueRodConfig.torqueRodOutputMsgName = "torqueRodOutput"
     torqueRodConfig.MaxDipoleMoment = 0.11  # [Am^2]
     scObject.addDynamicEffector(torqueRodConfig)
     scSim.AddModelToTask(simTaskName, torqueRodConfig)
@@ -282,6 +283,7 @@ def run(show_plots, useUnmodeledTorque, useJitterSimple, useRWVoltageIO):
     scSim.TotalSim.logThisMessage(sNavObject.outputAttName, samplingTime)
     scSim.TotalSim.logThisMessage(MagMeter.outputStateMessage, samplingTime)
     scSim.TotalSim.logThisMessage(bdotControlConfig.outputDataName, samplingTime)
+    scSim.TotalSim.logThisMessage(torqueRodConfig.torqueRodOutputMsgName, samplingTime)
 
     #
     # create simulation messages
@@ -312,7 +314,8 @@ def run(show_plots, useUnmodeledTorque, useJitterSimple, useRWVoltageIO):
     dataOmegaBN = scSim.pullMessageLogData(sNavObject.outputAttName + ".omega_BN_B", range(3))
     dataImuRates = scSim.pullMessageLogData(ImuSensor.OutputDataMsg + ".AngVelPlatform", range(3))
     dataMagMeter = scSim.pullMessageLogData(MagMeter.outputStateMessage + ".mag_bf", range(3))
-    dataLr = scSim.pullMessageLogData(bdotControlConfig.outputDataName + ".torqueRequestBody", range(3))
+    dataLr = scSim.pullMessageLogData(torqueRodConfig.torqueRodOutputMsgName + ".torque_constrained", range(3))
+    dataDipole = scSim.pullMessageLogData(torqueRodConfig.torqueRodOutputMsgName + ".dipole_constrained", range(3))
 
     plt.figure(1)
     for idx in range(1, 4):
@@ -353,6 +356,16 @@ def run(show_plots, useUnmodeledTorque, useJitterSimple, useRWVoltageIO):
     plt.legend(loc='lower right')
     plt.xlabel('Time [min]')
     plt.ylabel('Control Torque $L_r$ [Nm]')
+
+    # plot dipole moment
+    plt.figure(4)
+    for idx in range(1, 4):
+        plt.plot(dataDipole[1:, 0] * macros.NANO2MIN, dataDipole[1:, idx],
+                 color=unitTestSupport.getLineColor(idx, 3),
+                 label='$M_{r,' + str(idx) + '}$')
+    plt.legend(loc='lower right')
+    plt.xlabel('Time [min]')
+    plt.ylabel('Dipole Moment $m$ [A-m$^2$]')
 
     if show_plots:
         plt.show()

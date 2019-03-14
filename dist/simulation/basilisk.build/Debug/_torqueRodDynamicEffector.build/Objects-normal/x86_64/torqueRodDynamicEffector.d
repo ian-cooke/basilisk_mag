@@ -162,6 +162,8 @@ dependencies: \
   /Users/iancooke/basilisk_mag/src/simulation/dynamics/torqueRodDynamicEffector/../_GeneralModuleFiles/stateData.h \
   /Users/iancooke/basilisk_mag/src/simulation/dynamics/torqueRodDynamicEffector/../../simFswInterfaceMessages/cmdTorqueRodsIntMsg.h \
   /Users/iancooke/basilisk_mag/src/simulation/dynamics/torqueRodDynamicEffector/../../simFswInterfaceMessages/MagMeterIntMsg.h \
+  /Users/iancooke/basilisk_mag/src/simulation/dynamics/torqueRodDynamicEffector/../../simFswInterfaceMessages/torqueRodOutputIntMsg.h \
+  /Users/iancooke/basilisk_mag/src/simulation/architecture/asio/message_router/../../../utilities/bsk_Print.h \
   /Users/iancooke/basilisk_mag/src/simulation/architecture/messaging/system_messaging.h \
   /Users/iancooke/basilisk_mag/src/simulation/architecture/messaging/blank_storage.h \
   /Users/iancooke/basilisk_mag/src/simulation/utilities/avsEigenSupport.h \

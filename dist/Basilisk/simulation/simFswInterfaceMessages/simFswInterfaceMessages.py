@@ -1424,6 +1424,37 @@ CmdTorqueRodsIntMsg_swigregister = _simFswInterfaceMessages.CmdTorqueRodsIntMsg_
 CmdTorqueRodsIntMsg_swigregister(CmdTorqueRodsIntMsg)
 
 sizeof_CmdTorqueRodsIntMsg = _simFswInterfaceMessages.sizeof_CmdTorqueRodsIntMsg
+class torqueRodOutputIntMsg(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, torqueRodOutputIntMsg, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, torqueRodOutputIntMsg, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["timeTag"] = _simFswInterfaceMessages.torqueRodOutputIntMsg_timeTag_set
+    __swig_getmethods__["timeTag"] = _simFswInterfaceMessages.torqueRodOutputIntMsg_timeTag_get
+    if _newclass:
+        timeTag = _swig_property(_simFswInterfaceMessages.torqueRodOutputIntMsg_timeTag_get, _simFswInterfaceMessages.torqueRodOutputIntMsg_timeTag_set)
+    __swig_setmethods__["torque_constrained"] = _simFswInterfaceMessages.torqueRodOutputIntMsg_torque_constrained_set
+    __swig_getmethods__["torque_constrained"] = _simFswInterfaceMessages.torqueRodOutputIntMsg_torque_constrained_get
+    if _newclass:
+        torque_constrained = _swig_property(_simFswInterfaceMessages.torqueRodOutputIntMsg_torque_constrained_get, _simFswInterfaceMessages.torqueRodOutputIntMsg_torque_constrained_set)
+    __swig_setmethods__["dipole_constrained"] = _simFswInterfaceMessages.torqueRodOutputIntMsg_dipole_constrained_set
+    __swig_getmethods__["dipole_constrained"] = _simFswInterfaceMessages.torqueRodOutputIntMsg_dipole_constrained_get
+    if _newclass:
+        dipole_constrained = _swig_property(_simFswInterfaceMessages.torqueRodOutputIntMsg_dipole_constrained_get, _simFswInterfaceMessages.torqueRodOutputIntMsg_dipole_constrained_set)
+
+    def __init__(self, *args):
+        this = _simFswInterfaceMessages.new_torqueRodOutputIntMsg(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _simFswInterfaceMessages.delete_torqueRodOutputIntMsg
+    __del__ = lambda self: None
+torqueRodOutputIntMsg_swigregister = _simFswInterfaceMessages.torqueRodOutputIntMsg_swigregister
+torqueRodOutputIntMsg_swigregister(torqueRodOutputIntMsg)
+
+sizeof_torqueRodOutputIntMsg = _simFswInterfaceMessages.sizeof_torqueRodOutputIntMsg
 
 import sys
 protectAllClasses(sys.modules[__name__])
