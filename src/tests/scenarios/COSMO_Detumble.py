@@ -66,11 +66,14 @@ from Basilisk.simulation import radiation_pressure
 
 # import FSW Algorithm related support
 from Basilisk.fswAlgorithms import inertial3D
+from Basilisk.fswAlgorithms import inertial3DSpin
 from Basilisk.fswAlgorithms import attTrackingError
+from Basilisk.fswAlgorithms import MRP_Feedback
 from Basilisk.fswAlgorithms import rwMotorVoltage
 from Basilisk.fswAlgorithms import rwMotorTorque
 from Basilisk.fswAlgorithms import maxwellLS
 from Basilisk.fswAlgorithms import B_DOT
+from Basilisk.fswAlgorithms import mag_attTrack
 from Basilisk.fswAlgorithms import cssWlsEst
 from Basilisk.fswAlgorithms import sunSafePoint
 
@@ -81,7 +84,7 @@ bskPath = __path__[0]
 from Basilisk import pyswice
 
 
-def run(show_plots, useUnmodeledTorque):
+def run(show_plots):
     '''Call this routine directly to run the tutorial scenario.'''
 
     # Create simulation variable names
@@ -117,8 +120,8 @@ def run(show_plots, useUnmodeledTorque):
     scObject.ModelTag = "spacecraftBody"
     # define the simulation inertia
     I = [0.008, 0., 0.,
-         0., 0.26, 0.,
-         0., 0., 0.26]
+         0., 0.04, 0.,
+         0., 0., 0.04]
     scObject.hub.mHub = 4.8  # kg - spacecraft mass
     scObject.hub.r_BcB_B = [[0.0], [0.0], [0.0]]  # m - position vector of body-fixed point B relative to CM
     scObject.hub.IHubPntBc_B = unitTestSupport.np2EigenMatrix3d(I)
@@ -161,8 +164,8 @@ def run(show_plots, useUnmodeledTorque):
     pyswice.furnsh_c(gravFactory.spiceObject.SPICEDataPath + 'pck00010.tpc')  # generic Planetary Constants Kernel
     sunPositionMsg = simMessages.SpicePlanetStateSimMsg()
     sunInitialState = 1000 * pyswice.spkRead('SUN', timeInitString, 'J2000', 'EARTH')
-    rN_sun = sunInitialState[0:3]  # meters
-    vN_sun = sunInitialState[3:6]  # m/s
+    rN_sun = sunInitialState[0:2]  # meters
+    vN_sun = sunInitialState[3:5]  # m/s
     sunPositionMsg.PositionVector = rN_sun
     sunPositionMsg.VelocityVector = vN_sun
 
@@ -186,12 +189,12 @@ def run(show_plots, useUnmodeledTorque):
     oe.i = 51.6388 * macros.D2R
     oe.Omega = 0.0 * macros.D2R
     oe.omega = 0.0 * macros.D2R
-    oe.f = 180.0 * macros.D2R
+    oe.f =     80.0 * macros.D2R
     rN, vN = orbitalMotion.elem2rv(mu, oe)
     scObject.hub.r_CN_NInit = unitTestSupport.np2EigenVectorXd(rN)  # m   - r_CN_N
     scObject.hub.v_CN_NInit = unitTestSupport.np2EigenVectorXd(vN)  # m/s - v_CN_N
-    scObject.hub.sigma_BNInit = [[0.4], [0.2], [-0.3]]  # sigma_BN_B
-    scObject.hub.omega_BN_BInit = [[5.5 * macros.D2R], [5.5 * macros.D2R], [-5.5 * macros.D2R]]  # rad/s - omega_CN_B
+    scObject.hub.sigma_BNInit = [[0.1], [0.2], [-0.3]]  # sigma_BN_B
+    scObject.hub.omega_BN_BInit = [[1.0 * macros.D2R], [1.0 * macros.D2R], [-1.0 * macros.D2R]]  # rad/s - omega_CN_B
 
 
     # setup extForceTorque module
@@ -201,8 +204,6 @@ def run(show_plots, useUnmodeledTorque):
     # use the input flag to determine which external torque should be applied
     # Note that all variables are initialized to zero.  Thus, not setting this
     # vector would leave it's components all zero for the simulation.
-    if useUnmodeledTorque:
-        extFTObject.extTorquePntB_B = [[0.00003], [-0.00003], [0.00003]]
     scObject.addDynamicEffector(extFTObject)
     scSim.AddModelToTask(simTaskName, extFTObject)
 
@@ -211,79 +212,97 @@ def run(show_plots, useUnmodeledTorque):
     # velocity navigation message
     sNavObject = simple_nav.SimpleNav()
     sNavObject.ModelTag = "SimpleNavigation"
+    sNavObject.outputAttName = "outAtt"
     scSim.AddModelToTask(simTaskName, sNavObject)
 
     #
     #   setup sensors
     #
 
-    # Add IMU Sensor
-    ImuSensor = imu_sensor.ImuSensor()
-    ImuSensor.ModelTag = "imusensor"
-    r_SB_B = np.array([0.0, 0.0, 0.0])  # Sensor position wrt body frame origin
-    ImuSensor.sensorPos_B = np.array(r_SB_B)
-
-    # IMU Parameters
-    accelLSBIn = 0.0  # Not Used
-    gyroLSBIn = 0.0001  # Discretization value (least significant bit)
-    senRotBiasIn = 0.0  # Rotational sensor bias
-    senRotMaxIn = 50.0  # Gyro saturation value
-    gyroScale = [1., 1., 1.]  # Scale factor for each axis
-    errorBoundsGryo = [0] * 3  # Bounds random walk
-    gyroNoise = 0.00  # Noise
-
-    ImuSensor.setLSBs(accelLSBIn, gyroLSBIn)
-    ImuSensor.senRotBias = np.array([senRotBiasIn] * 3)
-    ImuSensor.senRotMax = senRotMaxIn
-    ImuSensor.gyroScale = np.array(gyroScale)
-    ImuSensor.PMatrixGyro = np.eye(3) * gyroNoise
-    ImuSensor.walkBoundsGyro = np.array(errorBoundsGryo)
-    ImuSensor.OutputDataMsg = "AngVelocities"
-
-    # add IMU to Simulation Process
-    scSim.AddModelToTask(simTaskName, ImuSensor)
-
     # Add Mag Meter
     MagMeter = mag_meter.MagMeter()
     MagMeter.ModelTag = "MagMeter"
     MagMeterNoise = 0.00000
     MagMeterBias = 0.0
-    ImuSensor.senRotBias = np.array([MagMeterBias] * 3)
     MagMeter.PMatrix = np.eye(3) * MagMeterNoise
     MagMeter.inclination = oe.i
     MagMeter.orbitRadius = oe.a / 1000  # 6371.0 + orbitRadius
     scSim.AddModelToTask(simTaskName, MagMeter)
 
-    # setup the BDOT Feedback control module
-    bdotControlConfig = B_DOT.B_DOTConfig()
-    bdotControlWrap = scSim.setModelDataWrap(bdotControlConfig)
-    bdotControlWrap.ModelTag = "B_DOT"
-    scSim.AddModelToTask(simTaskName, bdotControlWrap, bdotControlConfig)
-    bdotControlConfig.inputMagMeterName = MagMeter.outputStateMessage
-    bdotControlConfig.vehConfigInMsgName = "vehicleConfigName"
-    bdotControlConfig.outputDataName = "LrRequested"
-    bdotControlConfig.K_detumble = 5000000.0
+    # set up inertial3D guidance module
+    attGuidanceConfig = inertial3D.inertial3DConfig()
+    attGuidanceWrap = scSim.setModelDataWrap(attGuidanceConfig)
+    attGuidanceWrap.ModelTag = "inertial3D"
+    scSim.AddModelToTask(simTaskName, attGuidanceWrap, attGuidanceConfig)
+    attGuidanceConfig.sigma_R0N = [0.0, 0.0, 0.0]
+    attGuidanceConfig.outputDataName = "guidanceInertial3D"
 
-    bdotControlConfig.use_rw_wheels = 0
+    # set up the inertial3D spin guidance module
+    #attGuidanceConfig = inertial3DSpin.inertial3DSpinConfig()
+    #attGuidanceWrap = scSim.setModelDataWrap(attGuidanceConfig)
+    #attGuidanceWrap.ModelTag = "inertial3DSpin"
+    #scSim.AddModelToTask(simTaskName, attGuidanceWrap, attGuidanceConfig)
+    #attGuidanceConfig.sigma_RN = [0.0, 0.0, 0.0]
+    #attGuidanceConfig.omega_spin = [0.0, 0.0, 0.0]
+    #attGuidanceConfig.outputDataName = "guidanceInertial3DSpin"
+    #attGuidanceConfig.inputRefName = "inertialSpinRef"
+
+    # setup the attitude tracking error evaluation module
+    attErrorConfig = attTrackingError.attTrackingErrorConfig()
+    attErrorWrap = scSim.setModelDataWrap(attErrorConfig)
+    attErrorWrap.ModelTag = "attErrorInertial3D"
+    scSim.AddModelToTask(simTaskName, attErrorWrap, attErrorConfig)
+    attErrorConfig.outputDataName = "attErrorInertial3DMsg"
+    attErrorConfig.inputRefName = attGuidanceConfig.outputDataName
+    attErrorConfig.inputNavName = sNavObject.outputAttName
+
+    # setup the mag_attTrack Feedback control module
+    mag_attTrackControlConfig = mag_attTrack.mag_attTrackConfig()
+    mag_attTrackControlWrap = scSim.setModelDataWrap(mag_attTrackControlConfig)
+    mag_attTrackControlWrap.ModelTag = "mag_attTrack"
+    scSim.AddModelToTask(simTaskName, mag_attTrackControlWrap, mag_attTrackControlConfig)
+    mag_attTrackControlConfig.inputMagMeterName = MagMeter.outputStateMessage
+    mag_attTrackControlConfig.vehConfigInMsgName = "vehicleConfigName"
+    mag_attTrackControlConfig.outputDataName = "LrRequested"
+    mag_attTrackControlConfig.inputNavAttName = sNavObject.outputAttName
+    mag_attTrackControlConfig.inputGuidName = attErrorConfig.outputDataName
+    mag_attTrackControlConfig.K_sigma = 500.0
+    mag_attTrackControlConfig.K_omega = 0.1
+    mag_attTrackControlConfig.controlLaw = 3
+    mag_attTrackControlConfig.use_rw_wheels = 0
+
+    # setup the BDOT Feedback control module
+    #bdotControlConfig = B_DOT.B_DOTConfig()
+    #bdotControlWrap = scSim.setModelDataWrap(bdotControlConfig)
+    #bdotControlWrap.ModelTag = "B_DOT"
+    #scSim.AddModelToTask(simTaskName, bdotControlWrap, bdotControlConfig)
+    #bdotControlConfig.inputMagMeterName = MagMeter.outputStateMessage
+    #bdotControlConfig.vehConfigInMsgName = "vehicleConfigName"
+    #bdotControlConfig.outputDataName = "LrRequested"
+    #bdotControlConfig.K_detumble = 5000000.0
+
+    mag_attTrackControlConfig.use_rw_wheels = 0
     torqueRodConfig = torqueRodDynamicEffector.torqueRodDynamicEffector()
     # torqueRodWrap = scSim.setModelDataWrap(torqueRodConfig)
+    # scSim.AddModelToTask(simTaskName, torqueRodWrap, torqueRodConfig)
     torqueRodConfig.ModelTag = "torqueRods"
     torqueRodConfig.magFieldMsgName = MagMeter.outputStateMessage
-    torqueRodConfig.cmdTorqueRodsMsgName = bdotControlConfig.outputDataName
+    torqueRodConfig.cmdTorqueRodsMsgName = mag_attTrackControlConfig.outputDataName
+    torqueRodConfig.torqueRodOutputMsgName = "torqueRodOutput"
     torqueRodConfig.MaxDipoleMoment = 0.11  # [Am^2]
     scObject.addDynamicEffector(torqueRodConfig)
     scSim.AddModelToTask(simTaskName, torqueRodConfig)
 
     # add drag dynamic effector (assumes simple cannonball model, attitude dependency not currently supported)
-    dragModelConfig = dragDynamicEffector.DragDynamicEffector()
-    dragModelConfig.modelType = "cannonball"
-    dragModelConfig.ModelTag = "cannonballDrag"
-    dragModelConfig.coreParams.velocityMag = 0.
-    dragModelConfig.coreParams.projectedArea = 0.068  # drag area in m^2
-    dragModelConfig.coreParams.dragCoeff = 2.0  # coefficient of drag
-    dragModelConfig.coreParams.comOffset = [0., 0.05, 0.05]  # distance from center of mass to  center of projected area
-    scObject.addDynamicEffector(dragModelConfig)
-    scSim.AddModelToTask(simTaskName, dragModelConfig)
+    #dragModelConfig = dragDynamicEffector.DragDynamicEffector()
+    #dragModelConfig.modelType = "cannonball"
+    #dragModelConfig.ModelTag = "cannonballDrag"
+    #dragModelConfig.coreParams.velocityMag = 0.
+    #dragModelConfig.coreParams.projectedArea = 0.068  # drag area in m^2
+    #dragModelConfig.coreParams.dragCoeff = 2.0  # coefficient of drag
+    #dragModelConfig.coreParams.comOffset = [0., 0.05, 0.05]  # distance from center of mass to  center of projected area
+    #scObject.addDynamicEffector(dragModelConfig)
+    #scSim.AddModelToTask(simTaskName, dragModelConfig)
 
     # add srp dynamic effector
     #srpModelConfig = radiation_pressure.RadiationPressure()
@@ -299,7 +318,9 @@ def run(show_plots, useUnmodeledTorque):
     samplingTime = simulationTime / (numDataPoints - 1)
     scSim.TotalSim.logThisMessage(sNavObject.outputAttName, samplingTime)
     scSim.TotalSim.logThisMessage(MagMeter.outputStateMessage, samplingTime)
-
+    scSim.TotalSim.logThisMessage(attErrorConfig.outputDataName, samplingTime)
+    scSim.TotalSim.logThisMessage(torqueRodConfig.torqueRodOutputMsgName, samplingTime)
+    scSim.TotalSim.logThisMessage(mag_attTrackControlConfig.outputDataName, samplingTime)
     #
     # create simulation messages
     #
@@ -309,7 +330,7 @@ def run(show_plots, useUnmodeledTorque):
     vehicleConfigOut.ISCPntB_B = I  # use the same inertia in the FSW algorithm as in the simulation
     unitTestSupport.setMessage(scSim.TotalSim,
                                 simProcessName,
-                                bdotControlConfig.vehConfigInMsgName,
+                                mag_attTrackControlConfig.vehConfigInMsgName,
                                 vehicleConfigOut)
 
     #
@@ -327,12 +348,15 @@ def run(show_plots, useUnmodeledTorque):
     #   retrieve the logged data
     #
     dataOmegaBN = scSim.pullMessageLogData(sNavObject.outputAttName + ".omega_BN_B", range(3))
-    dataImuRates = scSim.pullMessageLogData(ImuSensor.OutputDataMsg + ".AngVelPlatform", range(3))
     dataMagMeter = scSim.pullMessageLogData(MagMeter.outputStateMessage + ".mag_bf", range(3))
+    dataSigmaBR = scSim.pullMessageLogData(attErrorConfig.outputDataName + ".sigma_BR", range(3))
+    dataOmegaBR = scSim.pullMessageLogData(attErrorConfig.outputDataName + ".omega_BR_B", range(3))
+    dataDipole = scSim.pullMessageLogData(torqueRodConfig.torqueRodOutputMsgName + ".dipole_constrained", range(3))
+    dataTorque = scSim.pullMessageLogData(torqueRodConfig.torqueRodOutputMsgName + ".torque_constrained", range(3))
 
     plt.figure(1)
     for idx in range(1, 4):
-        plt.plot(dataOmegaBN[:, 0] * macros.NANO2SEC, dataOmegaBN[:, idx]*macros.R2D,
+        plt.plot(dataOmegaBN[:, 0] * macros.NANO2MIN, dataOmegaBN[:, idx]*macros.R2D,
                  color=unitTestSupport.getLineColor(idx, 3),
                  label='$\omega_' + str(idx) + '$')
     plt.xlabel('Time [min]', fontsize=34)
@@ -360,6 +384,32 @@ def run(show_plots, useUnmodeledTorque):
     plt.tick_params(labelsize=12)
     plt.legend(loc='upper right', fontsize=12)
 
+    # constrained dipole moment
+    plt.figure(3)
+    for idx in range(1, 4):
+        plt.plot(dataDipole[:, 0] * macros.NANO2MIN, dataDipole[:, idx],
+                 color=unitTestSupport.getLineColor(idx, 3),
+                 label = '$m_' + str(idx) + '$')
+    plt.xlabel('Time [min]', fontsize=34)
+    plt.ylabel('Dipole Moment (A-m$^2$) ', fontsize=12)
+    plt.title('Torque Rods Constrained Dipole Moment', fontsize=12)
+    plt.tick_params(labelsize=12)
+    plt.legend(loc='upper right', fontsize=12)
+
+    # constrained torque
+    plt.figure(4)
+    for idx in range(1, 4):
+        plt.plot(dataTorque[:, 0] * macros.NANO2MIN, dataTorque[:, idx],
+                 color=unitTestSupport.getLineColor(idx, 3),
+                 label='$\tau_' + str(idx) + '$')
+    plt.xlabel('Time [min]', fontsize=34)
+    plt.ylabel('Torque (N-m) ', fontsize=12)
+    plt.title('Torque Rods Constrained Torque', fontsize=12)
+    plt.tick_params(labelsize=12)
+    plt.legend(loc='upper right', fontsize=12)
+
+
+
     if show_plots:
         plt.show()
 
@@ -376,5 +426,4 @@ def run(show_plots, useUnmodeledTorque):
 if __name__ == "__main__":
     run(
         True,  # show_plots
-        False,   # useUnmodeledTorque
     )

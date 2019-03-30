@@ -11,6 +11,7 @@
 /Users/iancooke/basilisk_mag/dist/simulation/CMakeFiles/_simple_nav.dir
 /Users/iancooke/basilisk_mag/dist/simulation/CMakeFiles/_eclipse.dir
 /Users/iancooke/basilisk_mag/dist/simulation/CMakeFiles/_torqueRodDynamicEffector.dir
+/Users/iancooke/basilisk_mag/dist/simulation/CMakeFiles/_gravityGradientTorque.dir
 /Users/iancooke/basilisk_mag/dist/simulation/CMakeFiles/_extForceTorque.dir
 /Users/iancooke/basilisk_mag/dist/simulation/CMakeFiles/_stateArchitecture.dir
 /Users/iancooke/basilisk_mag/dist/simulation/CMakeFiles/_sys_model_task.dir

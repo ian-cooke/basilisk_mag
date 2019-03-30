@@ -94,14 +94,9 @@ void torqueRodDynamicEffector::linkInStates(DynParamManager& statesIn)
 void torqueRodDynamicEffector::writeOutputMessages(uint64_t currentClock)
 {
     SystemMessaging *messageSys = SystemMessaging::GetInstance();
-    
-    for (int i = 0; i < 3; i ++) {
-        torqueRodOutput.dipole_constrained[i] = DipoleMomentCmd.dipole_moment[i];
-        torqueRodOutput.torque_constrained[i] = torqueExternalPntB_B[i];
-    }
     messageSys->WriteMessage(this->torqueRodOutputMsgID, currentClock,
                              sizeof(torqueRodOutputIntMsg), reinterpret_cast<uint8_t*> (&torqueRodOutput), this->moduleID);
-     return;
+    return;
      
 }
 
@@ -145,18 +140,24 @@ void torqueRodDynamicEffector::computeForceTorque(double integTime)
     double cmdVecOutput[3];
     int i;
     for (i=0;i<3;i++){
-        //BSK_PRINT(MSG_ERROR, "Dipole Moment Before is: %f", DipoleMomentCmd.dipole_moment[i]);
         if(DipoleMomentCmd.dipole_moment[i] > MaxDipoleMoment)
             DipoleMomentCmd.dipole_moment[i] = MaxDipoleMoment;
         if(DipoleMomentCmd.dipole_moment[i] < -MaxDipoleMoment)
             DipoleMomentCmd.dipole_moment[i] = -MaxDipoleMoment;
-        //BSK_PRINT(MSG_ERROR, "Dipole Moment after is: %f", DipoleMomentCmd.dipole_moment[i]);
+        
+        // assign constrained dipole to output message struct, wasn't working if I assigned it in the writeoutputmessages
+        torqueRodOutput.dipole_constrained[i] = DipoleMomentCmd.dipole_moment[i];
     }
     
     v3Cross(DipoleMomentCmd.dipole_moment, MagFieldCurrent.mag_bf, cmdVecOutput);
     
     cmdVec = cArray2EigenVector3d(cmdVecOutput);
     this->torqueExternalPntB_B = cmdVec;
+    
+    // assign constrained torque
+    for (int i = 0; i < 3; i++) {
+        torqueRodOutput.torque_constrained[i] = torqueExternalPntB_B[i];
+    }
     
     return;
 }

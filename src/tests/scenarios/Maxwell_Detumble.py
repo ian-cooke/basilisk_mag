@@ -90,7 +90,7 @@ def run(show_plots, useUnmodeledTorque, useJitterSimple, useRWVoltageIO):
     scSim.TotalSim.terminateSimulation()
 
     # set the simulation time variable used later on
-    simulationTime = macros.sec2nano(2500.)
+    simulationTime = macros.min2nano(90.)
 
     #
     #  create the simulation process
@@ -259,7 +259,7 @@ def run(show_plots, useUnmodeledTorque, useJitterSimple, useRWVoltageIO):
     bdotControlConfig.inputMagMeterName = MagMeter.outputStateMessage
     bdotControlConfig.vehConfigInMsgName = "vehicleConfigName"
     bdotControlConfig.outputDataName = "LrRequested"
-    bdotControlConfig.K_detumble = 5000000.0
+    bdotControlConfig.K_detumble = 50000.0
 
     bdotControlConfig.use_rw_wheels = 0
     torqueRodConfig = torqueRodDynamicEffector.torqueRodDynamicEffector()

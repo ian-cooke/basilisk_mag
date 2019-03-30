@@ -29,6 +29,7 @@
 #include "simulation/utilities/types.h"
 #include "fswMessages/rwArrayConfigFswMsg.h"
 #include "simFswInterfaceMessages/rwSpeedIntMsg.h"
+#include "simFswInterfaceMessages/navAttIntMsg.h"
 
 
 
@@ -42,6 +43,7 @@ typedef struct {
     double K_omega;                           /*!< Derivative gain applied to angular rate errors */
     float use_rw_wheels;
     double knownTorquePntB_B[3];        /*!< [N*m]     known external torque in body frame vector components */
+    int controlLaw;
     
     
     /* declare module IO interfaces */
@@ -53,7 +55,8 @@ typedef struct {
     int32_t rwAvailInMsgID;                             /*!< [-] ID for the incoming  RWs availability data*/
     char inputGuidName[MAX_STAT_MSG_LENGTH];            /*!< [-] The name of the Input message*/
     int32_t inputGuidID;                                /*!< [-] ID for the incoming guidance errors*/
-
+    char inputNavAttName[MAX_STAT_MSG_LENGTH];
+    int32_t inputNavAttID;
 
     /* declare module IO interfaces */                      /*!< [-] ID for the incoming  RWs availability data*/
     char outputDataName[MAX_STAT_MSG_LENGTH];             /*!< The name of the output message*/
@@ -79,7 +82,10 @@ extern "C" {
     void CrossInit_mag_attTrack(mag_attTrackConfig *ConfigData, uint64_t moduleID);
     void Update_mag_attTrack(mag_attTrackConfig *ConfigData, uint64_t callTime, uint64_t moduleID);
     void Reset_mag_attTrack(mag_attTrackConfig *ConfigData, uint64_t callTime, uint64_t moduleID);
-    void ctl_mag_att_track(double *mag_bf, double *ctl_gain, double *out_u, double *sigma_BR, double *omega_BR_B, double *omega_RN_B, double *domega_RN_B, double *omega_BN_B, double *I);
+    void ctl_mag_att_track_one(double *mag_bf, double *ctl_gain, double *out_m, double *sigma_BR, double *omega_BR_B, double *omega_RN_B, double *domega_RN_B, double *omega_BN_B, double *I);
+    void ctl_mag_att_track_two(double *mag_bf, double *ctl_gain, double *out_m, double *sigma_BR, double *omega_BN_B);
+    void ctl_mag_att_track_three(double *mag_bf, double *ctl_gain, double *out_m, double *omega_BN_B);
+    void ctl_mag_att_track_four(double *mag_bf, double *ctl_gain, double *out_m);
 #ifdef __cplusplus
 }
 #endif

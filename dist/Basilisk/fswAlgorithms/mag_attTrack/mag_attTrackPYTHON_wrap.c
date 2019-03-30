@@ -2982,24 +2982,25 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_AttGuidFswMsg swig_types[0]
 #define SWIGTYPE_p_CmdTorqueBodyIntMsg swig_types[1]
 #define SWIGTYPE_p_CmdTorqueRodsIntMsg swig_types[2]
-#define SWIGTYPE_p_RWArrayConfigFswMsg swig_types[3]
-#define SWIGTYPE_p_VehicleConfigFswMsg swig_types[4]
-#define SWIGTYPE_p_char swig_types[5]
-#define SWIGTYPE_p_double swig_types[6]
-#define SWIGTYPE_p_f_p_void_unsigned_long_long__void swig_types[7]
-#define SWIGTYPE_p_f_p_void_unsigned_long_long_unsigned_long_long__void swig_types[8]
-#define SWIGTYPE_p_int swig_types[9]
-#define SWIGTYPE_p_long swig_types[10]
-#define SWIGTYPE_p_long_long swig_types[11]
-#define SWIGTYPE_p_mag_attTrackConfig swig_types[12]
-#define SWIGTYPE_p_short swig_types[13]
-#define SWIGTYPE_p_signed_char swig_types[14]
-#define SWIGTYPE_p_unsigned_char swig_types[15]
-#define SWIGTYPE_p_unsigned_int swig_types[16]
-#define SWIGTYPE_p_unsigned_long_long swig_types[17]
-#define SWIGTYPE_p_unsigned_short swig_types[18]
-static swig_type_info *swig_types[20];
-static swig_module_info swig_module = {swig_types, 19, 0, 0, 0, 0};
+#define SWIGTYPE_p_NavAttIntMsg swig_types[3]
+#define SWIGTYPE_p_RWArrayConfigFswMsg swig_types[4]
+#define SWIGTYPE_p_VehicleConfigFswMsg swig_types[5]
+#define SWIGTYPE_p_char swig_types[6]
+#define SWIGTYPE_p_double swig_types[7]
+#define SWIGTYPE_p_f_p_void_unsigned_long_long__void swig_types[8]
+#define SWIGTYPE_p_f_p_void_unsigned_long_long_unsigned_long_long__void swig_types[9]
+#define SWIGTYPE_p_int swig_types[10]
+#define SWIGTYPE_p_long swig_types[11]
+#define SWIGTYPE_p_long_long swig_types[12]
+#define SWIGTYPE_p_mag_attTrackConfig swig_types[13]
+#define SWIGTYPE_p_short swig_types[14]
+#define SWIGTYPE_p_signed_char swig_types[15]
+#define SWIGTYPE_p_unsigned_char swig_types[16]
+#define SWIGTYPE_p_unsigned_int swig_types[17]
+#define SWIGTYPE_p_unsigned_long_long swig_types[18]
+#define SWIGTYPE_p_unsigned_short swig_types[19]
+static swig_type_info *swig_types[21];
+static swig_module_info swig_module = {swig_types, 20, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -5119,6 +5120,390 @@ SWIGINTERN PyObject *CmdTorqueBodyIntMsg_swigregister(PyObject *SWIGUNUSEDPARM(s
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_NavAttIntMsg_timeTag_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NavAttIntMsg *arg1 = (NavAttIntMsg *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:NavAttIntMsg_timeTag_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_NavAttIntMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NavAttIntMsg_timeTag_set" "', argument " "1"" of type '" "NavAttIntMsg *""'"); 
+  }
+  arg1 = (NavAttIntMsg *)(argp1);
+  ecode2 = SWIG_AsVal_double(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "NavAttIntMsg_timeTag_set" "', argument " "2"" of type '" "double""'");
+  } 
+  arg2 = (double)(val2);
+  if (arg1) (arg1)->timeTag = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NavAttIntMsg_timeTag_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NavAttIntMsg *arg1 = (NavAttIntMsg *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  double result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:NavAttIntMsg_timeTag_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_NavAttIntMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NavAttIntMsg_timeTag_get" "', argument " "1"" of type '" "NavAttIntMsg *""'"); 
+  }
+  arg1 = (NavAttIntMsg *)(argp1);
+  result = (double) ((arg1)->timeTag);
+  resultobj = SWIG_From_double((double)(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NavAttIntMsg_sigma_BN_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NavAttIntMsg *arg1 = (NavAttIntMsg *) 0 ;
+  double *arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double temp2[3] ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:NavAttIntMsg_sigma_BN_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_NavAttIntMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NavAttIntMsg_sigma_BN_set" "', argument " "1"" of type '" "NavAttIntMsg *""'"); 
+  }
+  arg1 = (NavAttIntMsg *)(argp1);
+  {
+    int i;
+    void *blankPtr = 0 ;
+    int resOut = 0 ;
+    if (!PySequence_Check(obj1)) {
+      PyErr_SetString(PyExc_ValueError,"Expected a sequence");
+      return NULL;
+    }
+    if (PySequence_Length(obj1) > 3) {
+      printf("Value: %d\n", 3);
+      PyErr_SetString(PyExc_ValueError,"Size mismatch. Expected 3 elements");
+      return NULL;
+    }
+    memset(temp2, 0x0, 3*sizeof(double));
+    for (i = 0; i < PySequence_Length(obj1); i++) {
+      PyObject *o = PySequence_GetItem(obj1,i);
+      if (PyNumber_Check(o)) {
+        temp2[i] = (double) PyFloat_AsDouble(o);
+      } else {
+        resOut = SWIG_ConvertPtr(o, &blankPtr,SWIGTYPE_p_double, 0 |  0 );
+        if (!SWIG_IsOK(resOut)) {
+          SWIG_exception_fail(SWIG_ArgError(resOut), "Could not convert that double into a pointer for some reason.  This is an ugly SWIG failure.  Good luck.\n");
+          return NULL;
+        }
+        memcpy(&(temp2[i]), blankPtr, sizeof(double));
+      }
+    }
+    arg2 = temp2;
+  }
+  {
+    int i;
+    for (i = 0; i < 3; i++) {
+      memcpy(&(arg1->sigma_BN[i]), &(arg2[i]), sizeof(double));
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NavAttIntMsg_sigma_BN_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NavAttIntMsg *arg1 = (NavAttIntMsg *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  double *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:NavAttIntMsg_sigma_BN_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_NavAttIntMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NavAttIntMsg_sigma_BN_get" "', argument " "1"" of type '" "NavAttIntMsg *""'"); 
+  }
+  arg1 = (NavAttIntMsg *)(argp1);
+  result = (double *)(double *) ((arg1)->sigma_BN);
+  {
+    int i;
+    resultobj = PyList_New(0);
+    PyObject *locOutObj = 0;
+    for (i = 0; i < 3; i++) {
+      locOutObj = SWIG_NewPointerObj(SWIG_as_voidptr(&(result[i])), SWIGTYPE_p_double, 0 |  0 );
+      
+      if(PyNumber_Check(locOutObj)){
+        PyObject *outObject = PyFloat_FromDouble((double) result[i]);
+        PyList_Append(resultobj,outObject);
+        Py_DECREF(outObject);
+      }
+      else
+      {
+        PyList_SetItem(resultobj, i, locOutObj);
+      }
+    }
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NavAttIntMsg_omega_BN_B_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NavAttIntMsg *arg1 = (NavAttIntMsg *) 0 ;
+  double *arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double temp2[3] ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:NavAttIntMsg_omega_BN_B_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_NavAttIntMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NavAttIntMsg_omega_BN_B_set" "', argument " "1"" of type '" "NavAttIntMsg *""'"); 
+  }
+  arg1 = (NavAttIntMsg *)(argp1);
+  {
+    int i;
+    void *blankPtr = 0 ;
+    int resOut = 0 ;
+    if (!PySequence_Check(obj1)) {
+      PyErr_SetString(PyExc_ValueError,"Expected a sequence");
+      return NULL;
+    }
+    if (PySequence_Length(obj1) > 3) {
+      printf("Value: %d\n", 3);
+      PyErr_SetString(PyExc_ValueError,"Size mismatch. Expected 3 elements");
+      return NULL;
+    }
+    memset(temp2, 0x0, 3*sizeof(double));
+    for (i = 0; i < PySequence_Length(obj1); i++) {
+      PyObject *o = PySequence_GetItem(obj1,i);
+      if (PyNumber_Check(o)) {
+        temp2[i] = (double) PyFloat_AsDouble(o);
+      } else {
+        resOut = SWIG_ConvertPtr(o, &blankPtr,SWIGTYPE_p_double, 0 |  0 );
+        if (!SWIG_IsOK(resOut)) {
+          SWIG_exception_fail(SWIG_ArgError(resOut), "Could not convert that double into a pointer for some reason.  This is an ugly SWIG failure.  Good luck.\n");
+          return NULL;
+        }
+        memcpy(&(temp2[i]), blankPtr, sizeof(double));
+      }
+    }
+    arg2 = temp2;
+  }
+  {
+    int i;
+    for (i = 0; i < 3; i++) {
+      memcpy(&(arg1->omega_BN_B[i]), &(arg2[i]), sizeof(double));
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NavAttIntMsg_omega_BN_B_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NavAttIntMsg *arg1 = (NavAttIntMsg *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  double *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:NavAttIntMsg_omega_BN_B_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_NavAttIntMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NavAttIntMsg_omega_BN_B_get" "', argument " "1"" of type '" "NavAttIntMsg *""'"); 
+  }
+  arg1 = (NavAttIntMsg *)(argp1);
+  result = (double *)(double *) ((arg1)->omega_BN_B);
+  {
+    int i;
+    resultobj = PyList_New(0);
+    PyObject *locOutObj = 0;
+    for (i = 0; i < 3; i++) {
+      locOutObj = SWIG_NewPointerObj(SWIG_as_voidptr(&(result[i])), SWIGTYPE_p_double, 0 |  0 );
+      
+      if(PyNumber_Check(locOutObj)){
+        PyObject *outObject = PyFloat_FromDouble((double) result[i]);
+        PyList_Append(resultobj,outObject);
+        Py_DECREF(outObject);
+      }
+      else
+      {
+        PyList_SetItem(resultobj, i, locOutObj);
+      }
+    }
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NavAttIntMsg_vehSunPntBdy_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NavAttIntMsg *arg1 = (NavAttIntMsg *) 0 ;
+  double *arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double temp2[3] ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:NavAttIntMsg_vehSunPntBdy_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_NavAttIntMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NavAttIntMsg_vehSunPntBdy_set" "', argument " "1"" of type '" "NavAttIntMsg *""'"); 
+  }
+  arg1 = (NavAttIntMsg *)(argp1);
+  {
+    int i;
+    void *blankPtr = 0 ;
+    int resOut = 0 ;
+    if (!PySequence_Check(obj1)) {
+      PyErr_SetString(PyExc_ValueError,"Expected a sequence");
+      return NULL;
+    }
+    if (PySequence_Length(obj1) > 3) {
+      printf("Value: %d\n", 3);
+      PyErr_SetString(PyExc_ValueError,"Size mismatch. Expected 3 elements");
+      return NULL;
+    }
+    memset(temp2, 0x0, 3*sizeof(double));
+    for (i = 0; i < PySequence_Length(obj1); i++) {
+      PyObject *o = PySequence_GetItem(obj1,i);
+      if (PyNumber_Check(o)) {
+        temp2[i] = (double) PyFloat_AsDouble(o);
+      } else {
+        resOut = SWIG_ConvertPtr(o, &blankPtr,SWIGTYPE_p_double, 0 |  0 );
+        if (!SWIG_IsOK(resOut)) {
+          SWIG_exception_fail(SWIG_ArgError(resOut), "Could not convert that double into a pointer for some reason.  This is an ugly SWIG failure.  Good luck.\n");
+          return NULL;
+        }
+        memcpy(&(temp2[i]), blankPtr, sizeof(double));
+      }
+    }
+    arg2 = temp2;
+  }
+  {
+    int i;
+    for (i = 0; i < 3; i++) {
+      memcpy(&(arg1->vehSunPntBdy[i]), &(arg2[i]), sizeof(double));
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_NavAttIntMsg_vehSunPntBdy_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NavAttIntMsg *arg1 = (NavAttIntMsg *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  double *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:NavAttIntMsg_vehSunPntBdy_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_NavAttIntMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "NavAttIntMsg_vehSunPntBdy_get" "', argument " "1"" of type '" "NavAttIntMsg *""'"); 
+  }
+  arg1 = (NavAttIntMsg *)(argp1);
+  result = (double *)(double *) ((arg1)->vehSunPntBdy);
+  {
+    int i;
+    resultobj = PyList_New(0);
+    PyObject *locOutObj = 0;
+    for (i = 0; i < 3; i++) {
+      locOutObj = SWIG_NewPointerObj(SWIG_as_voidptr(&(result[i])), SWIGTYPE_p_double, 0 |  0 );
+      
+      if(PyNumber_Check(locOutObj)){
+        PyObject *outObject = PyFloat_FromDouble((double) result[i]);
+        PyList_Append(resultobj,outObject);
+        Py_DECREF(outObject);
+      }
+      else
+      {
+        PyList_SetItem(resultobj, i, locOutObj);
+      }
+    }
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_NavAttIntMsg(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NavAttIntMsg *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_NavAttIntMsg")) SWIG_fail;
+  result = (NavAttIntMsg *)calloc(1, sizeof(NavAttIntMsg));
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_NavAttIntMsg, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_NavAttIntMsg(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  NavAttIntMsg *arg1 = (NavAttIntMsg *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_NavAttIntMsg",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_NavAttIntMsg, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_NavAttIntMsg" "', argument " "1"" of type '" "NavAttIntMsg *""'"); 
+  }
+  arg1 = (NavAttIntMsg *)(argp1);
+  free((char *) arg1);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *NavAttIntMsg_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char *)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_NavAttIntMsg, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
 SWIGINTERN PyObject *_wrap_mag_attTrackConfig_K_sigma_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   mag_attTrackConfig *arg1 = (mag_attTrackConfig *) 0 ;
@@ -5366,6 +5751,58 @@ SWIGINTERN PyObject *_wrap_mag_attTrackConfig_knownTorquePntB_B_get(PyObject *SW
       }
     }
   }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_mag_attTrackConfig_controlLaw_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  mag_attTrackConfig *arg1 = (mag_attTrackConfig *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:mag_attTrackConfig_controlLaw_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_mag_attTrackConfig, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "mag_attTrackConfig_controlLaw_set" "', argument " "1"" of type '" "mag_attTrackConfig *""'"); 
+  }
+  arg1 = (mag_attTrackConfig *)(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "mag_attTrackConfig_controlLaw_set" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = (int)(val2);
+  if (arg1) (arg1)->controlLaw = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_mag_attTrackConfig_controlLaw_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  mag_attTrackConfig *arg1 = (mag_attTrackConfig *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:mag_attTrackConfig_controlLaw_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_mag_attTrackConfig, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "mag_attTrackConfig_controlLaw_get" "', argument " "1"" of type '" "mag_attTrackConfig *""'"); 
+  }
+  arg1 = (mag_attTrackConfig *)(argp1);
+  result = (int) ((arg1)->controlLaw);
+  resultobj = SWIG_From_int((int)(result));
   return resultobj;
 fail:
   return NULL;
@@ -5809,6 +6246,117 @@ SWIGINTERN PyObject *_wrap_mag_attTrackConfig_inputGuidID_get(PyObject *SWIGUNUS
   }
   arg1 = (mag_attTrackConfig *)(argp1);
   result = (int32_t) ((arg1)->inputGuidID);
+  resultobj = SWIG_From_int((int)(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_mag_attTrackConfig_inputNavAttName_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  mag_attTrackConfig *arg1 = (mag_attTrackConfig *) 0 ;
+  char *arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  char temp2[MAX_STAT_MSG_LENGTH] ;
+  int res2 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:mag_attTrackConfig_inputNavAttName_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_mag_attTrackConfig, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "mag_attTrackConfig_inputNavAttName_set" "', argument " "1"" of type '" "mag_attTrackConfig *""'"); 
+  }
+  arg1 = (mag_attTrackConfig *)(argp1);
+  res2 = SWIG_AsCharArray(obj1, temp2, MAX_STAT_MSG_LENGTH);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "mag_attTrackConfig_inputNavAttName_set" "', argument " "2"" of type '" "char [MAX_STAT_MSG_LENGTH]""'");
+  }
+  arg2 = (char *)(temp2);
+  if (arg2) memcpy(arg1->inputNavAttName,arg2,MAX_STAT_MSG_LENGTH*sizeof(char));
+  else memset(arg1->inputNavAttName,0,MAX_STAT_MSG_LENGTH*sizeof(char));
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_mag_attTrackConfig_inputNavAttName_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  mag_attTrackConfig *arg1 = (mag_attTrackConfig *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  char *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:mag_attTrackConfig_inputNavAttName_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_mag_attTrackConfig, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "mag_attTrackConfig_inputNavAttName_get" "', argument " "1"" of type '" "mag_attTrackConfig *""'"); 
+  }
+  arg1 = (mag_attTrackConfig *)(argp1);
+  result = (char *)(char *) ((arg1)->inputNavAttName);
+  {
+    size_t size = SWIG_strnlen(result, MAX_STAT_MSG_LENGTH);
+    
+    
+    
+    resultobj = SWIG_FromCharPtrAndSize(result, size);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_mag_attTrackConfig_inputNavAttID_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  mag_attTrackConfig *arg1 = (mag_attTrackConfig *) 0 ;
+  int32_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:mag_attTrackConfig_inputNavAttID_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_mag_attTrackConfig, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "mag_attTrackConfig_inputNavAttID_set" "', argument " "1"" of type '" "mag_attTrackConfig *""'"); 
+  }
+  arg1 = (mag_attTrackConfig *)(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "mag_attTrackConfig_inputNavAttID_set" "', argument " "2"" of type '" "int32_t""'");
+  } 
+  arg2 = (int32_t)(val2);
+  if (arg1) (arg1)->inputNavAttID = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_mag_attTrackConfig_inputNavAttID_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  mag_attTrackConfig *arg1 = (mag_attTrackConfig *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int32_t result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:mag_attTrackConfig_inputNavAttID_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_mag_attTrackConfig, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "mag_attTrackConfig_inputNavAttID_get" "', argument " "1"" of type '" "mag_attTrackConfig *""'"); 
+  }
+  arg1 = (mag_attTrackConfig *)(argp1);
+  result = (int32_t) ((arg1)->inputNavAttID);
   resultobj = SWIG_From_int((int)(result));
   return resultobj;
 fail:
@@ -6469,7 +7017,7 @@ SWIGINTERN PyObject *mag_attTrackConfig_swigregister(PyObject *SWIGUNUSEDPARM(se
   return SWIG_Py_Void();
 }
 
-SWIGINTERN PyObject *_wrap_ctl_mag_att_track(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_ctl_mag_att_track_one(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   double *arg1 = (double *) 0 ;
   double *arg2 = (double *) 0 ;
@@ -6508,53 +7056,197 @@ SWIGINTERN PyObject *_wrap_ctl_mag_att_track(PyObject *SWIGUNUSEDPARM(self), PyO
   PyObject * obj7 = 0 ;
   PyObject * obj8 = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOOOOOOOO:ctl_mag_att_track",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5,&obj6,&obj7,&obj8)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOOOOOOOO:ctl_mag_att_track_one",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5,&obj6,&obj7,&obj8)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_double, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ctl_mag_att_track" "', argument " "1"" of type '" "double *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ctl_mag_att_track_one" "', argument " "1"" of type '" "double *""'"); 
   }
   arg1 = (double *)(argp1);
   res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_double, 0 |  0 );
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ctl_mag_att_track" "', argument " "2"" of type '" "double *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ctl_mag_att_track_one" "', argument " "2"" of type '" "double *""'"); 
   }
   arg2 = (double *)(argp2);
   res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_double, 0 |  0 );
   if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "ctl_mag_att_track" "', argument " "3"" of type '" "double *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "ctl_mag_att_track_one" "', argument " "3"" of type '" "double *""'"); 
   }
   arg3 = (double *)(argp3);
   res4 = SWIG_ConvertPtr(obj3, &argp4,SWIGTYPE_p_double, 0 |  0 );
   if (!SWIG_IsOK(res4)) {
-    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "ctl_mag_att_track" "', argument " "4"" of type '" "double *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "ctl_mag_att_track_one" "', argument " "4"" of type '" "double *""'"); 
   }
   arg4 = (double *)(argp4);
   res5 = SWIG_ConvertPtr(obj4, &argp5,SWIGTYPE_p_double, 0 |  0 );
   if (!SWIG_IsOK(res5)) {
-    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "ctl_mag_att_track" "', argument " "5"" of type '" "double *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "ctl_mag_att_track_one" "', argument " "5"" of type '" "double *""'"); 
   }
   arg5 = (double *)(argp5);
   res6 = SWIG_ConvertPtr(obj5, &argp6,SWIGTYPE_p_double, 0 |  0 );
   if (!SWIG_IsOK(res6)) {
-    SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "ctl_mag_att_track" "', argument " "6"" of type '" "double *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "ctl_mag_att_track_one" "', argument " "6"" of type '" "double *""'"); 
   }
   arg6 = (double *)(argp6);
   res7 = SWIG_ConvertPtr(obj6, &argp7,SWIGTYPE_p_double, 0 |  0 );
   if (!SWIG_IsOK(res7)) {
-    SWIG_exception_fail(SWIG_ArgError(res7), "in method '" "ctl_mag_att_track" "', argument " "7"" of type '" "double *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res7), "in method '" "ctl_mag_att_track_one" "', argument " "7"" of type '" "double *""'"); 
   }
   arg7 = (double *)(argp7);
   res8 = SWIG_ConvertPtr(obj7, &argp8,SWIGTYPE_p_double, 0 |  0 );
   if (!SWIG_IsOK(res8)) {
-    SWIG_exception_fail(SWIG_ArgError(res8), "in method '" "ctl_mag_att_track" "', argument " "8"" of type '" "double *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res8), "in method '" "ctl_mag_att_track_one" "', argument " "8"" of type '" "double *""'"); 
   }
   arg8 = (double *)(argp8);
   res9 = SWIG_ConvertPtr(obj8, &argp9,SWIGTYPE_p_double, 0 |  0 );
   if (!SWIG_IsOK(res9)) {
-    SWIG_exception_fail(SWIG_ArgError(res9), "in method '" "ctl_mag_att_track" "', argument " "9"" of type '" "double *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res9), "in method '" "ctl_mag_att_track_one" "', argument " "9"" of type '" "double *""'"); 
   }
   arg9 = (double *)(argp9);
-  ctl_mag_att_track(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9);
+  ctl_mag_att_track_one(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ctl_mag_att_track_two(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  double *arg1 = (double *) 0 ;
+  double *arg2 = (double *) 0 ;
+  double *arg3 = (double *) 0 ;
+  double *arg4 = (double *) 0 ;
+  double *arg5 = (double *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  void *argp5 = 0 ;
+  int res5 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  PyObject * obj4 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOOO:ctl_mag_att_track_two",&obj0,&obj1,&obj2,&obj3,&obj4)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_double, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ctl_mag_att_track_two" "', argument " "1"" of type '" "double *""'"); 
+  }
+  arg1 = (double *)(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_double, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ctl_mag_att_track_two" "', argument " "2"" of type '" "double *""'"); 
+  }
+  arg2 = (double *)(argp2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_double, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "ctl_mag_att_track_two" "', argument " "3"" of type '" "double *""'"); 
+  }
+  arg3 = (double *)(argp3);
+  res4 = SWIG_ConvertPtr(obj3, &argp4,SWIGTYPE_p_double, 0 |  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "ctl_mag_att_track_two" "', argument " "4"" of type '" "double *""'"); 
+  }
+  arg4 = (double *)(argp4);
+  res5 = SWIG_ConvertPtr(obj4, &argp5,SWIGTYPE_p_double, 0 |  0 );
+  if (!SWIG_IsOK(res5)) {
+    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "ctl_mag_att_track_two" "', argument " "5"" of type '" "double *""'"); 
+  }
+  arg5 = (double *)(argp5);
+  ctl_mag_att_track_two(arg1,arg2,arg3,arg4,arg5);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ctl_mag_att_track_three(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  double *arg1 = (double *) 0 ;
+  double *arg2 = (double *) 0 ;
+  double *arg3 = (double *) 0 ;
+  double *arg4 = (double *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOO:ctl_mag_att_track_three",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_double, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ctl_mag_att_track_three" "', argument " "1"" of type '" "double *""'"); 
+  }
+  arg1 = (double *)(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_double, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ctl_mag_att_track_three" "', argument " "2"" of type '" "double *""'"); 
+  }
+  arg2 = (double *)(argp2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_double, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "ctl_mag_att_track_three" "', argument " "3"" of type '" "double *""'"); 
+  }
+  arg3 = (double *)(argp3);
+  res4 = SWIG_ConvertPtr(obj3, &argp4,SWIGTYPE_p_double, 0 |  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "ctl_mag_att_track_three" "', argument " "4"" of type '" "double *""'"); 
+  }
+  arg4 = (double *)(argp4);
+  ctl_mag_att_track_three(arg1,arg2,arg3,arg4);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ctl_mag_att_track_four(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  double *arg1 = (double *) 0 ;
+  double *arg2 = (double *) 0 ;
+  double *arg3 = (double *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:ctl_mag_att_track_four",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_double, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ctl_mag_att_track_four" "', argument " "1"" of type '" "double *""'"); 
+  }
+  arg1 = (double *)(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_double, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ctl_mag_att_track_four" "', argument " "2"" of type '" "double *""'"); 
+  }
+  arg2 = (double *)(argp2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_double, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "ctl_mag_att_track_four" "', argument " "3"" of type '" "double *""'"); 
+  }
+  arg3 = (double *)(argp3);
+  ctl_mag_att_track_four(arg1,arg2,arg3);
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -6607,6 +7299,17 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"new_CmdTorqueBodyIntMsg", _wrap_new_CmdTorqueBodyIntMsg, METH_VARARGS, NULL},
 	 { (char *)"delete_CmdTorqueBodyIntMsg", _wrap_delete_CmdTorqueBodyIntMsg, METH_VARARGS, NULL},
 	 { (char *)"CmdTorqueBodyIntMsg_swigregister", CmdTorqueBodyIntMsg_swigregister, METH_VARARGS, NULL},
+	 { (char *)"NavAttIntMsg_timeTag_set", _wrap_NavAttIntMsg_timeTag_set, METH_VARARGS, NULL},
+	 { (char *)"NavAttIntMsg_timeTag_get", _wrap_NavAttIntMsg_timeTag_get, METH_VARARGS, NULL},
+	 { (char *)"NavAttIntMsg_sigma_BN_set", _wrap_NavAttIntMsg_sigma_BN_set, METH_VARARGS, NULL},
+	 { (char *)"NavAttIntMsg_sigma_BN_get", _wrap_NavAttIntMsg_sigma_BN_get, METH_VARARGS, NULL},
+	 { (char *)"NavAttIntMsg_omega_BN_B_set", _wrap_NavAttIntMsg_omega_BN_B_set, METH_VARARGS, NULL},
+	 { (char *)"NavAttIntMsg_omega_BN_B_get", _wrap_NavAttIntMsg_omega_BN_B_get, METH_VARARGS, NULL},
+	 { (char *)"NavAttIntMsg_vehSunPntBdy_set", _wrap_NavAttIntMsg_vehSunPntBdy_set, METH_VARARGS, NULL},
+	 { (char *)"NavAttIntMsg_vehSunPntBdy_get", _wrap_NavAttIntMsg_vehSunPntBdy_get, METH_VARARGS, NULL},
+	 { (char *)"new_NavAttIntMsg", _wrap_new_NavAttIntMsg, METH_VARARGS, NULL},
+	 { (char *)"delete_NavAttIntMsg", _wrap_delete_NavAttIntMsg, METH_VARARGS, NULL},
+	 { (char *)"NavAttIntMsg_swigregister", NavAttIntMsg_swigregister, METH_VARARGS, NULL},
 	 { (char *)"mag_attTrackConfig_K_sigma_set", _wrap_mag_attTrackConfig_K_sigma_set, METH_VARARGS, NULL},
 	 { (char *)"mag_attTrackConfig_K_sigma_get", _wrap_mag_attTrackConfig_K_sigma_get, METH_VARARGS, NULL},
 	 { (char *)"mag_attTrackConfig_K_omega_set", _wrap_mag_attTrackConfig_K_omega_set, METH_VARARGS, NULL},
@@ -6615,6 +7318,8 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"mag_attTrackConfig_use_rw_wheels_get", _wrap_mag_attTrackConfig_use_rw_wheels_get, METH_VARARGS, NULL},
 	 { (char *)"mag_attTrackConfig_knownTorquePntB_B_set", _wrap_mag_attTrackConfig_knownTorquePntB_B_set, METH_VARARGS, NULL},
 	 { (char *)"mag_attTrackConfig_knownTorquePntB_B_get", _wrap_mag_attTrackConfig_knownTorquePntB_B_get, METH_VARARGS, NULL},
+	 { (char *)"mag_attTrackConfig_controlLaw_set", _wrap_mag_attTrackConfig_controlLaw_set, METH_VARARGS, NULL},
+	 { (char *)"mag_attTrackConfig_controlLaw_get", _wrap_mag_attTrackConfig_controlLaw_get, METH_VARARGS, NULL},
 	 { (char *)"mag_attTrackConfig_vehConfigInMsgName_set", _wrap_mag_attTrackConfig_vehConfigInMsgName_set, METH_VARARGS, NULL},
 	 { (char *)"mag_attTrackConfig_vehConfigInMsgName_get", _wrap_mag_attTrackConfig_vehConfigInMsgName_get, METH_VARARGS, NULL},
 	 { (char *)"mag_attTrackConfig_vehConfigInMsgID_set", _wrap_mag_attTrackConfig_vehConfigInMsgID_set, METH_VARARGS, NULL},
@@ -6631,6 +7336,10 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"mag_attTrackConfig_inputGuidName_get", _wrap_mag_attTrackConfig_inputGuidName_get, METH_VARARGS, NULL},
 	 { (char *)"mag_attTrackConfig_inputGuidID_set", _wrap_mag_attTrackConfig_inputGuidID_set, METH_VARARGS, NULL},
 	 { (char *)"mag_attTrackConfig_inputGuidID_get", _wrap_mag_attTrackConfig_inputGuidID_get, METH_VARARGS, NULL},
+	 { (char *)"mag_attTrackConfig_inputNavAttName_set", _wrap_mag_attTrackConfig_inputNavAttName_set, METH_VARARGS, NULL},
+	 { (char *)"mag_attTrackConfig_inputNavAttName_get", _wrap_mag_attTrackConfig_inputNavAttName_get, METH_VARARGS, NULL},
+	 { (char *)"mag_attTrackConfig_inputNavAttID_set", _wrap_mag_attTrackConfig_inputNavAttID_set, METH_VARARGS, NULL},
+	 { (char *)"mag_attTrackConfig_inputNavAttID_get", _wrap_mag_attTrackConfig_inputNavAttID_get, METH_VARARGS, NULL},
 	 { (char *)"mag_attTrackConfig_outputDataName_set", _wrap_mag_attTrackConfig_outputDataName_set, METH_VARARGS, NULL},
 	 { (char *)"mag_attTrackConfig_outputDataName_get", _wrap_mag_attTrackConfig_outputDataName_get, METH_VARARGS, NULL},
 	 { (char *)"mag_attTrackConfig_inputMagMeterName_set", _wrap_mag_attTrackConfig_inputMagMeterName_set, METH_VARARGS, NULL},
@@ -6656,7 +7365,10 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"new_mag_attTrackConfig", _wrap_new_mag_attTrackConfig, METH_VARARGS, NULL},
 	 { (char *)"delete_mag_attTrackConfig", _wrap_delete_mag_attTrackConfig, METH_VARARGS, NULL},
 	 { (char *)"mag_attTrackConfig_swigregister", mag_attTrackConfig_swigregister, METH_VARARGS, NULL},
-	 { (char *)"ctl_mag_att_track", _wrap_ctl_mag_att_track, METH_VARARGS, NULL},
+	 { (char *)"ctl_mag_att_track_one", _wrap_ctl_mag_att_track_one, METH_VARARGS, NULL},
+	 { (char *)"ctl_mag_att_track_two", _wrap_ctl_mag_att_track_two, METH_VARARGS, NULL},
+	 { (char *)"ctl_mag_att_track_three", _wrap_ctl_mag_att_track_three, METH_VARARGS, NULL},
+	 { (char *)"ctl_mag_att_track_four", _wrap_ctl_mag_att_track_four, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 
@@ -6666,6 +7378,7 @@ static PyMethodDef SwigMethods[] = {
 static swig_type_info _swigt__p_AttGuidFswMsg = {"_p_AttGuidFswMsg", "AttGuidFswMsg *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_CmdTorqueBodyIntMsg = {"_p_CmdTorqueBodyIntMsg", "CmdTorqueBodyIntMsg *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_CmdTorqueRodsIntMsg = {"_p_CmdTorqueRodsIntMsg", "CmdTorqueRodsIntMsg *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_NavAttIntMsg = {"_p_NavAttIntMsg", "NavAttIntMsg *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_RWArrayConfigFswMsg = {"_p_RWArrayConfigFswMsg", "RWArrayConfigFswMsg *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_VehicleConfigFswMsg = {"_p_VehicleConfigFswMsg", "VehicleConfigFswMsg *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
@@ -6687,6 +7400,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_AttGuidFswMsg,
   &_swigt__p_CmdTorqueBodyIntMsg,
   &_swigt__p_CmdTorqueRodsIntMsg,
+  &_swigt__p_NavAttIntMsg,
   &_swigt__p_RWArrayConfigFswMsg,
   &_swigt__p_VehicleConfigFswMsg,
   &_swigt__p_char,
@@ -6708,6 +7422,7 @@ static swig_type_info *swig_type_initial[] = {
 static swig_cast_info _swigc__p_AttGuidFswMsg[] = {  {&_swigt__p_AttGuidFswMsg, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_CmdTorqueBodyIntMsg[] = {  {&_swigt__p_CmdTorqueBodyIntMsg, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_CmdTorqueRodsIntMsg[] = {  {&_swigt__p_CmdTorqueRodsIntMsg, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_NavAttIntMsg[] = {  {&_swigt__p_NavAttIntMsg, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_RWArrayConfigFswMsg[] = {  {&_swigt__p_RWArrayConfigFswMsg, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_VehicleConfigFswMsg[] = {  {&_swigt__p_VehicleConfigFswMsg, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
@@ -6729,6 +7444,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_AttGuidFswMsg,
   _swigc__p_CmdTorqueBodyIntMsg,
   _swigc__p_CmdTorqueRodsIntMsg,
+  _swigc__p_NavAttIntMsg,
   _swigc__p_RWArrayConfigFswMsg,
   _swigc__p_VehicleConfigFswMsg,
   _swigc__p_char,
@@ -7447,6 +8163,7 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "sizeof_AttGuidFswMsg",SWIG_From_size_t((size_t)(sizeof(AttGuidFswMsg))));
   SWIG_Python_SetConstant(d, "sizeof_VehicleConfigFswMsg",SWIG_From_size_t((size_t)(sizeof(VehicleConfigFswMsg))));
   SWIG_Python_SetConstant(d, "sizeof_CmdTorqueBodyIntMsg",SWIG_From_size_t((size_t)(sizeof(CmdTorqueBodyIntMsg))));
+  SWIG_Python_SetConstant(d, "sizeof_NavAttIntMsg",SWIG_From_size_t((size_t)(sizeof(NavAttIntMsg))));
 #if PY_VERSION_HEX >= 0x03000000
   return m;
 #else

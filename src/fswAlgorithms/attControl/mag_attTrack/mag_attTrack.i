@@ -37,6 +37,8 @@ GEN_SIZEOF(AttGuidFswMsg);
 GEN_SIZEOF(VehicleConfigFswMsg);
 %include "simFswInterfaceMessages/cmdTorqueBodyIntMsg.h"
 GEN_SIZEOF(CmdTorqueBodyIntMsg);
+%include "simFswInterfaceMessages/navAttIntMsg.h"
+GEN_SIZEOF(NavAttIntMsg);
 
 %include "mag_attTrack.h"
 %pythoncode %{

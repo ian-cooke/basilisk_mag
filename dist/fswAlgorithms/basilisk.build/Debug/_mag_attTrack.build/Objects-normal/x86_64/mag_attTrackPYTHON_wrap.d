@@ -71,4 +71,5 @@ dependencies: \
   /Users/iancooke/basilisk_mag/src/simulation/utilities/types.h \
   /Users/iancooke/basilisk_mag/src/fswAlgorithms/fswMessages/rwArrayConfigFswMsg.h \
   /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/macroDefinitions.h \
-  /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/rwSpeedIntMsg.h
+  /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/rwSpeedIntMsg.h \
+  /Users/iancooke/basilisk_mag/src/simulation/simFswInterfaceMessages/navAttIntMsg.h

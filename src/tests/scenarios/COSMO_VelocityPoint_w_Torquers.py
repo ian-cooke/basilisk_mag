@@ -233,7 +233,7 @@ def run(show_plots, useAltBodyFrame):
     scSim.TotalSim.terminateSimulation()
 
     # set the simulation time variable used later on
-    simulationTime = macros.sec2nano(5000.0)
+    simulationTime = macros.min2nano(300.0)
 
     #
     #  create the simulation process
@@ -407,8 +407,9 @@ def run(show_plots, useAltBodyFrame):
     mag_attTrackControlConfig.inputMagMeterName = MagMeter.outputStateMessage
     mag_attTrackControlConfig.vehConfigInMsgName = "vehicleConfigName"
     mag_attTrackControlConfig.outputDataName = "LrRequested"
-    mag_attTrackControlConfig.K_sigma = 0.1
-    mag_attTrackControlConfig.K_omega = 0.1
+    mag_attTrackControlConfig.K_sigma = 10
+    mag_attTrackControlConfig.K_omega = 10
+    mag_attTrackControlConfig.controlLawName = "two"
     mag_attTrackControlConfig.use_rw_wheels = 0
 
     # setup torque rods
@@ -418,7 +419,7 @@ def run(show_plots, useAltBodyFrame):
     torqueRodConfig.magFieldMsgName = MagMeter.outputStateMessage
     torqueRodConfig.cmdTorqueRodsMsgName = mag_attTrackControlConfig.outputDataName
     torqueRodConfig.torqueRodOutputMsgName = "torqueRodOutput"
-    torqueRodConfig.MaxDipoleMoment = 1.1  # [Am^2]
+    torqueRodConfig.MaxDipoleMoment = 3*0.11  # [Am^2]
     scObject.addDynamicEffector(torqueRodConfig)
     scSim.AddModelToTask(simTaskName, torqueRodConfig)
 

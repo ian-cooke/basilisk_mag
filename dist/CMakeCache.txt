@@ -361,6 +361,9 @@ _gaussMarkovCheck_LIB_DEPENDS:STATIC=general;/opt/local/lib/libpython2.7.dylib;g
 _gravityEffector_LIB_DEPENDS:STATIC=general;/opt/local/lib/libpython2.7.dylib;general;SimUtilities;general;SimMessaging;general;/Users/iancooke/basilisk_mag/src/../libs/cspice/lib/cspice_osx.a;general;/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_filesystem.a;general;/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_serialization.a;general;/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_thread.a;general;/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_system.a;general;/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_chrono.a;
 
 //Dependencies for the target
+_gravityGradientTorque_LIB_DEPENDS:STATIC=general;/opt/local/lib/libpython2.7.dylib;general;SimUtilities;general;SimMessaging;general;/Users/iancooke/basilisk_mag/src/../libs/cspice/lib/cspice_osx.a;general;/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_filesystem.a;general;/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_serialization.a;general;/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_thread.a;general;/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_system.a;general;/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_chrono.a;
+
+//Dependencies for the target
 _hillPoint_LIB_DEPENDS:STATIC=general;/opt/local/lib/libpython2.7.dylib;general;AlgorithmMessaging;
 
 //Dependencies for the target
@@ -877,6 +880,8 @@ _fuelTank_GUID_CMAKE:INTERNAL=25E33CC71CC844B8BCDD2419
 _gaussMarkovCheck_GUID_CMAKE:INTERNAL=F01DB38A6F0840AF9B1C201B
 //Stored Xcode object GUID
 _gravityEffector_GUID_CMAKE:INTERNAL=0AFEE549AE0F4860AF159561
+//Stored Xcode object GUID
+_gravityGradientTorque_GUID_CMAKE:INTERNAL=57A163C81F3446688706DAA3
 //Stored Xcode object GUID
 _hillPoint_GUID_CMAKE:INTERNAL=D03DA7AC15BD4BA18FFEFDD0
 //Stored Xcode object GUID

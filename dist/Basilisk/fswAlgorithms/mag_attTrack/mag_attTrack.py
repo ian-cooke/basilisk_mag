@@ -288,6 +288,41 @@ CmdTorqueBodyIntMsg_swigregister = _mag_attTrack.CmdTorqueBodyIntMsg_swigregiste
 CmdTorqueBodyIntMsg_swigregister(CmdTorqueBodyIntMsg)
 
 sizeof_CmdTorqueBodyIntMsg = _mag_attTrack.sizeof_CmdTorqueBodyIntMsg
+class NavAttIntMsg(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, NavAttIntMsg, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, NavAttIntMsg, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["timeTag"] = _mag_attTrack.NavAttIntMsg_timeTag_set
+    __swig_getmethods__["timeTag"] = _mag_attTrack.NavAttIntMsg_timeTag_get
+    if _newclass:
+        timeTag = _swig_property(_mag_attTrack.NavAttIntMsg_timeTag_get, _mag_attTrack.NavAttIntMsg_timeTag_set)
+    __swig_setmethods__["sigma_BN"] = _mag_attTrack.NavAttIntMsg_sigma_BN_set
+    __swig_getmethods__["sigma_BN"] = _mag_attTrack.NavAttIntMsg_sigma_BN_get
+    if _newclass:
+        sigma_BN = _swig_property(_mag_attTrack.NavAttIntMsg_sigma_BN_get, _mag_attTrack.NavAttIntMsg_sigma_BN_set)
+    __swig_setmethods__["omega_BN_B"] = _mag_attTrack.NavAttIntMsg_omega_BN_B_set
+    __swig_getmethods__["omega_BN_B"] = _mag_attTrack.NavAttIntMsg_omega_BN_B_get
+    if _newclass:
+        omega_BN_B = _swig_property(_mag_attTrack.NavAttIntMsg_omega_BN_B_get, _mag_attTrack.NavAttIntMsg_omega_BN_B_set)
+    __swig_setmethods__["vehSunPntBdy"] = _mag_attTrack.NavAttIntMsg_vehSunPntBdy_set
+    __swig_getmethods__["vehSunPntBdy"] = _mag_attTrack.NavAttIntMsg_vehSunPntBdy_get
+    if _newclass:
+        vehSunPntBdy = _swig_property(_mag_attTrack.NavAttIntMsg_vehSunPntBdy_get, _mag_attTrack.NavAttIntMsg_vehSunPntBdy_set)
+
+    def __init__(self):
+        this = _mag_attTrack.new_NavAttIntMsg()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _mag_attTrack.delete_NavAttIntMsg
+    __del__ = lambda self: None
+NavAttIntMsg_swigregister = _mag_attTrack.NavAttIntMsg_swigregister
+NavAttIntMsg_swigregister(NavAttIntMsg)
+
+sizeof_NavAttIntMsg = _mag_attTrack.sizeof_NavAttIntMsg
 class mag_attTrackConfig(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, mag_attTrackConfig, name, value)
@@ -310,6 +345,10 @@ class mag_attTrackConfig(_object):
     __swig_getmethods__["knownTorquePntB_B"] = _mag_attTrack.mag_attTrackConfig_knownTorquePntB_B_get
     if _newclass:
         knownTorquePntB_B = _swig_property(_mag_attTrack.mag_attTrackConfig_knownTorquePntB_B_get, _mag_attTrack.mag_attTrackConfig_knownTorquePntB_B_set)
+    __swig_setmethods__["controlLaw"] = _mag_attTrack.mag_attTrackConfig_controlLaw_set
+    __swig_getmethods__["controlLaw"] = _mag_attTrack.mag_attTrackConfig_controlLaw_get
+    if _newclass:
+        controlLaw = _swig_property(_mag_attTrack.mag_attTrackConfig_controlLaw_get, _mag_attTrack.mag_attTrackConfig_controlLaw_set)
     __swig_setmethods__["vehConfigInMsgName"] = _mag_attTrack.mag_attTrackConfig_vehConfigInMsgName_set
     __swig_getmethods__["vehConfigInMsgName"] = _mag_attTrack.mag_attTrackConfig_vehConfigInMsgName_get
     if _newclass:
@@ -342,6 +381,14 @@ class mag_attTrackConfig(_object):
     __swig_getmethods__["inputGuidID"] = _mag_attTrack.mag_attTrackConfig_inputGuidID_get
     if _newclass:
         inputGuidID = _swig_property(_mag_attTrack.mag_attTrackConfig_inputGuidID_get, _mag_attTrack.mag_attTrackConfig_inputGuidID_set)
+    __swig_setmethods__["inputNavAttName"] = _mag_attTrack.mag_attTrackConfig_inputNavAttName_set
+    __swig_getmethods__["inputNavAttName"] = _mag_attTrack.mag_attTrackConfig_inputNavAttName_get
+    if _newclass:
+        inputNavAttName = _swig_property(_mag_attTrack.mag_attTrackConfig_inputNavAttName_get, _mag_attTrack.mag_attTrackConfig_inputNavAttName_set)
+    __swig_setmethods__["inputNavAttID"] = _mag_attTrack.mag_attTrackConfig_inputNavAttID_set
+    __swig_getmethods__["inputNavAttID"] = _mag_attTrack.mag_attTrackConfig_inputNavAttID_get
+    if _newclass:
+        inputNavAttID = _swig_property(_mag_attTrack.mag_attTrackConfig_inputNavAttID_get, _mag_attTrack.mag_attTrackConfig_inputNavAttID_set)
     __swig_setmethods__["outputDataName"] = _mag_attTrack.mag_attTrackConfig_outputDataName_set
     __swig_getmethods__["outputDataName"] = _mag_attTrack.mag_attTrackConfig_outputDataName_get
     if _newclass:
@@ -399,9 +446,21 @@ mag_attTrackConfig_swigregister = _mag_attTrack.mag_attTrackConfig_swigregister
 mag_attTrackConfig_swigregister(mag_attTrackConfig)
 
 
-def ctl_mag_att_track(mag_bf, ctl_gain, out_u, sigma_BR, omega_BR_B, omega_RN_B, domega_RN_B, omega_BN_B, I):
-    return _mag_attTrack.ctl_mag_att_track(mag_bf, ctl_gain, out_u, sigma_BR, omega_BR_B, omega_RN_B, domega_RN_B, omega_BN_B, I)
-ctl_mag_att_track = _mag_attTrack.ctl_mag_att_track
+def ctl_mag_att_track_one(mag_bf, ctl_gain, out_m, sigma_BR, omega_BR_B, omega_RN_B, domega_RN_B, omega_BN_B, I):
+    return _mag_attTrack.ctl_mag_att_track_one(mag_bf, ctl_gain, out_m, sigma_BR, omega_BR_B, omega_RN_B, domega_RN_B, omega_BN_B, I)
+ctl_mag_att_track_one = _mag_attTrack.ctl_mag_att_track_one
+
+def ctl_mag_att_track_two(mag_bf, ctl_gain, out_m, sigma_BR, omega_BN_B):
+    return _mag_attTrack.ctl_mag_att_track_two(mag_bf, ctl_gain, out_m, sigma_BR, omega_BN_B)
+ctl_mag_att_track_two = _mag_attTrack.ctl_mag_att_track_two
+
+def ctl_mag_att_track_three(mag_bf, ctl_gain, out_m, omega_BN_B):
+    return _mag_attTrack.ctl_mag_att_track_three(mag_bf, ctl_gain, out_m, omega_BN_B)
+ctl_mag_att_track_three = _mag_attTrack.ctl_mag_att_track_three
+
+def ctl_mag_att_track_four(mag_bf, ctl_gain, out_m):
+    return _mag_attTrack.ctl_mag_att_track_four(mag_bf, ctl_gain, out_m)
+ctl_mag_att_track_four = _mag_attTrack.ctl_mag_att_track_four
 
 import sys
 protectAllClasses(sys.modules[__name__])

@@ -263,6 +263,22 @@ PostBuild.SimMessaging.Debug: /Users/iancooke/basilisk_mag/dist/Basilisk/simulat
 	/bin/rm -f /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityEffector/_gravityEffector.so
 
 
+PostBuild._gravityGradientTorque.Debug:
+PostBuild.SimUtilities.Debug: /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/_gravityGradientTorque.so
+PostBuild.SimMessaging.Debug: /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/_gravityGradientTorque.so
+/Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/_gravityGradientTorque.so:\
+	/opt/local/lib/libpython2.7.dylib\
+	/Users/iancooke/basilisk_mag/dist/Basilisk/libSimUtilities.a\
+	/Users/iancooke/basilisk_mag/dist/Basilisk/libSimMessaging.dylib\
+	/Users/iancooke/basilisk_mag/src/../libs/cspice/lib/cspice_osx.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_filesystem.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_serialization.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_thread.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_system.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_chrono.a
+	/bin/rm -f /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/_gravityGradientTorque.so
+
+
 PostBuild._hingedRigidBodyStateEffector.Debug:
 PostBuild.SimUtilities.Debug: /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/hingedRigidBodyStateEffector/_hingedRigidBodyStateEffector.so
 PostBuild.SimMessaging.Debug: /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/hingedRigidBodyStateEffector/_hingedRigidBodyStateEffector.so
@@ -975,6 +991,22 @@ PostBuild.SimMessaging.Release: /Users/iancooke/basilisk_mag/dist/Basilisk/simul
 	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_system.a\
 	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_chrono.a
 	/bin/rm -f /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityEffector/_gravityEffector.so
+
+
+PostBuild._gravityGradientTorque.Release:
+PostBuild.SimUtilities.Release: /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/_gravityGradientTorque.so
+PostBuild.SimMessaging.Release: /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/_gravityGradientTorque.so
+/Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/_gravityGradientTorque.so:\
+	/opt/local/lib/libpython2.7.dylib\
+	/Users/iancooke/basilisk_mag/dist/Basilisk/libSimUtilities.a\
+	/Users/iancooke/basilisk_mag/dist/Basilisk/libSimMessaging.dylib\
+	/Users/iancooke/basilisk_mag/src/../libs/cspice/lib/cspice_osx.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_filesystem.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_serialization.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_thread.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_system.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_chrono.a
+	/bin/rm -f /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/_gravityGradientTorque.so
 
 
 PostBuild._hingedRigidBodyStateEffector.Release:
@@ -1691,6 +1723,22 @@ PostBuild.SimMessaging.MinSizeRel: /Users/iancooke/basilisk_mag/dist/Basilisk/si
 	/bin/rm -f /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityEffector/MinSizeRel/_gravityEffector.so
 
 
+PostBuild._gravityGradientTorque.MinSizeRel:
+PostBuild.SimUtilities.MinSizeRel: /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/MinSizeRel/_gravityGradientTorque.so
+PostBuild.SimMessaging.MinSizeRel: /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/MinSizeRel/_gravityGradientTorque.so
+/Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/MinSizeRel/_gravityGradientTorque.so:\
+	/opt/local/lib/libpython2.7.dylib\
+	/Users/iancooke/basilisk_mag/dist/Basilisk/MinSizeRel/libSimUtilities.a\
+	/Users/iancooke/basilisk_mag/dist/Basilisk/MinSizeRel/libSimMessaging.dylib\
+	/Users/iancooke/basilisk_mag/src/../libs/cspice/lib/cspice_osx.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_filesystem.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_serialization.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_thread.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_system.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_chrono.a
+	/bin/rm -f /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/MinSizeRel/_gravityGradientTorque.so
+
+
 PostBuild._hingedRigidBodyStateEffector.MinSizeRel:
 PostBuild.SimUtilities.MinSizeRel: /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/hingedRigidBodyStateEffector/MinSizeRel/_hingedRigidBodyStateEffector.so
 PostBuild.SimMessaging.MinSizeRel: /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/hingedRigidBodyStateEffector/MinSizeRel/_hingedRigidBodyStateEffector.so
@@ -2403,6 +2451,22 @@ PostBuild.SimMessaging.RelWithDebInfo: /Users/iancooke/basilisk_mag/dist/Basilis
 	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_system.a\
 	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_chrono.a
 	/bin/rm -f /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityEffector/RelWithDebInfo/_gravityEffector.so
+
+
+PostBuild._gravityGradientTorque.RelWithDebInfo:
+PostBuild.SimUtilities.RelWithDebInfo: /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/RelWithDebInfo/_gravityGradientTorque.so
+PostBuild.SimMessaging.RelWithDebInfo: /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/RelWithDebInfo/_gravityGradientTorque.so
+/Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/RelWithDebInfo/_gravityGradientTorque.so:\
+	/opt/local/lib/libpython2.7.dylib\
+	/Users/iancooke/basilisk_mag/dist/Basilisk/RelWithDebInfo/libSimUtilities.a\
+	/Users/iancooke/basilisk_mag/dist/Basilisk/RelWithDebInfo/libSimMessaging.dylib\
+	/Users/iancooke/basilisk_mag/src/../libs/cspice/lib/cspice_osx.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_filesystem.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_serialization.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_thread.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_system.a\
+	/Users/iancooke/basilisk_mag/libs/boost_1_61_0/lib64-osx/libboost_chrono.a
+	/bin/rm -f /Users/iancooke/basilisk_mag/dist/Basilisk/simulation/gravityGradientTorque/RelWithDebInfo/_gravityGradientTorque.so
 
 
 PostBuild._hingedRigidBodyStateEffector.RelWithDebInfo:
