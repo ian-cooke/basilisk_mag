@@ -186,11 +186,11 @@ void Update_mag_attTrack(mag_attTrackConfig *ConfigData, uint64_t callTime,
     /* compute body rate */
     v3Add(guidCmd.omega_BR_B, guidCmd.omega_RN_B, omega_BN_B);
     // Compare calculated to true
-    BSK_PRINT(MSG_ERROR, "omega_RN_B: %f", guidCmd.omega_RN_B[1]);
-    BSK_PRINT(MSG_ERROR, "omega_BR_B: %f", guidCmd.omega_BR_B[1]);
-    BSK_PRINT(MSG_ERROR, "omega_BN_B calc: %f", omega_BN_B[1]);
-    BSK_PRINT(MSG_ERROR, "omega_BN_B nav: %f", navAtt.omega_BN_B[1]);
-    BSK_PRINT(MSG_ERROR, "domega_RN_B: %f", guidCmd.domega_RN_B[1]);
+    //BSK_PRINT(MSG_ERROR, "omega_RN_B: %f", guidCmd.omega_RN_B[1]);
+    //BSK_PRINT(MSG_ERROR, "omega_BR_B: %f", guidCmd.omega_BR_B[1]);
+    //BSK_PRINT(MSG_ERROR, "omega_BN_B calc: %f", omega_BN_B[1]);
+    //BSK_PRINT(MSG_ERROR, "omega_BN_B nav: %f", navAtt.omega_BN_B[1]);
+    //BSK_PRINT(MSG_ERROR, "delomega_RN_B: %f", guidCmd.omega_BR_B[1] - guidCmd.omega_RN_B[1]);
     
 
     // Run control law
@@ -200,7 +200,7 @@ void Update_mag_attTrack(mag_attTrackConfig *ConfigData, uint64_t callTime,
         }
     } else {
         if (ConfigData->controlLaw == 1) {
-            ctl_mag_att_track_one(magCmd.mag_bf, ctl_gain, out_m, guidCmd.sigma_BR, guidCmd.omega_BR_B, guidCmd.omega_RN_B, guidCmd.domega_RN_B, omega_BN_B, sc.ISCPntB_B);
+            ctl_mag_att_track_one(magCmd.mag_bf, ctl_gain, out_m, guidCmd.sigma_BR, guidCmd.omega_BR_B, guidCmd.omega_RN_B, omega_BN_B, sc.ISCPntB_B);
         }
         else if (ConfigData->controlLaw == 2) {
             ctl_mag_att_track_two(magCmd.mag_bf, ctl_gain, out_m, guidCmd.sigma_BR, omega_BN_B);
@@ -236,18 +236,22 @@ void Update_mag_attTrack(mag_attTrackConfig *ConfigData, uint64_t callTime,
 }
 
 /* Use control law from equation 8.84 in Schaub's book (Chapter 8.4, nonlinear control) but excludes the torque 'L' Term */
-void ctl_mag_att_track_one(double *mag_bf, double *ctl_gain, double *out_m, double *sigma_BR, double *omega_BR_B, double *omega_RN_B, double *domega_RN_B, double *omega_BN_B, double *I)
+void ctl_mag_att_track_one(double *mag_bf, double *ctl_gain, double *out_m, double *sigma_BR, double *omega_BR_B, double *omega_RN_B, double *omega_BN_B, double *I)
 {
     // Get Gains
     double K_s = ctl_gain[0];
     double K_w = ctl_gain[1];
     double ks_times_sigma[3];
     double kw_times_delomega_r[3];
-    double domega_r_minus_omega_cross_omega_r[3];
+    double delomega_r_minus_omega_cross_omega_r[3];
     double omega_r_cross_I_omega[3];
+    double delomega_RN_B[3];
     double mag_norm;
     double sq = 2.0;
     size_t dim_I = 3;
+    
+    // delomega
+    v3Subtract(omega_BR_B, omega_RN_B, delomega_RN_B);
 
     // magnetic field norm
     mag_norm = v3Norm(mag_bf);
@@ -256,17 +260,17 @@ void ctl_mag_att_track_one(double *mag_bf, double *ctl_gain, double *out_m, doub
     // K times omega minus omega_r
     v3Subtract(omega_BN_B, omega_RN_B, kw_times_delomega_r);
     v3Scale(K_w, kw_times_delomega_r, kw_times_delomega_r);
-    // domega_r minus omega times omega_r
-    v3Cross(omega_BN_B, omega_RN_B, domega_r_minus_omega_cross_omega_r);
-    v3Subtract(domega_RN_B, domega_r_minus_omega_cross_omega_r, domega_r_minus_omega_cross_omega_r);
-    mMultV(I, dim_I, dim_I, domega_r_minus_omega_cross_omega_r, domega_r_minus_omega_cross_omega_r);
+    // delomega_r minus omega times omega_r
+    v3Cross(omega_BN_B, omega_RN_B, delomega_r_minus_omega_cross_omega_r);
+    v3Subtract(delomega_RN_B, delomega_r_minus_omega_cross_omega_r, delomega_r_minus_omega_cross_omega_r);
+    mMultV(I, dim_I, dim_I, delomega_r_minus_omega_cross_omega_r, delomega_r_minus_omega_cross_omega_r);
     // omega_r cross I omega
     mMultV(I, dim_I, dim_I, omega_BN_B, omega_r_cross_I_omega);
     v3Cross(omega_RN_B, omega_r_cross_I_omega, omega_r_cross_I_omega);
     
     // Compute total law
     v3Add(ks_times_sigma, kw_times_delomega_r, out_m);
-    v3Subtract(out_m, domega_r_minus_omega_cross_omega_r, out_m);
+    v3Subtract(out_m, delomega_r_minus_omega_cross_omega_r, out_m);
     v3Subtract(out_m, omega_r_cross_I_omega, out_m);
     
     // Now compute commanded dipole
@@ -278,26 +282,37 @@ void ctl_mag_att_track_one(double *mag_bf, double *ctl_gain, double *out_m, doub
 
 void ctl_mag_att_track_two(double *mag_bf, double *ctl_gain, double *out_m, double *sigma_BR, double *omega_BN_B)
 {
-    // Get Gains
-    double K_s = ctl_gain[0];
-    double K_w = ctl_gain[1];
-    double ks_times_sigma[3];
-    double kw_times_omega[3];
-    double minusLaw[3];
-    double sq = 2.0;
-    double mag_norm;
+    static uint32_t cnt = 1;
+    if (cnt >= 10) {
+        // Get Gains
+        double K_s = ctl_gain[0];
+        double K_w = ctl_gain[1];
+        double ks_times_sigma[3];
+        double kw_times_omega[3];
+        double minusLaw[3];
+        double sq = 2.0;
+        double mag_norm;
     
-    // norm of mag field
-    mag_norm = v3Norm(mag_bf);
+        // norm of mag field
+        mag_norm = v3Norm(mag_bf);
     
-    // control law
-    v3Scale(K_s, sigma_BR, ks_times_sigma);
-    v3Scale(K_w, omega_BN_B, kw_times_omega);
+        // control law
+        v3Scale(K_s, sigma_BR, ks_times_sigma);
+        v3Scale(K_w, omega_BN_B, kw_times_omega);
+        v3Add(ks_times_sigma, kw_times_omega, minusLaw);
+        v3Scale(1.0/pow(mag_norm, sq), minusLaw, minusLaw);
     
-    // compute commanded dipole
-    v3Cross(minusLaw, mag_bf, out_m);
-    v3Scale(1.0/pow(mag_norm, sq), out_m, out_m);
-    
+        // compute commanded dipole
+        v3Cross(minusLaw, mag_bf, out_m);
+        v3Scale(1.0/pow(mag_norm, sq), out_m, out_m);
+        cnt = 1;
+    } else {
+        for (int i = 0; i < 3; i++) {
+            out_m[i] = 0.0;
+        }
+        cnt += 1;
+    }
+    return;
     
 }
 
@@ -305,41 +320,50 @@ void ctl_mag_att_track_three(double *mag_bf, double *ctl_gain, double *out_m, do
     // Full control law is:
     // 1/norm(b)^2*b x ((I - b*b')*(-K_w*w - K_s*s))
     // Get Gains
-    double K_w = ctl_gain[1]; // make negative
-    double identity[3][3];
-    double eye_minus_bbtrans[3][3];
-    double bbtrans[3][3];
-    double left_term[3];
-    double right_term[3];
-    double mag_norm;
-    double mag_bf_hat[3];
-    
-    // norm of mag field and unit vector
-    mag_norm = v3Norm(mag_bf);
-    for (int i = 0; i < 3; i++) {
-        mag_bf_hat[i] = mag_bf[i] / mag_norm;
+    static uint32_t cnt = 1;
+    if (cnt >= 10) {
+        double K_w = ctl_gain[1]; // make negative
+        double identity[3][3];
+        double eye_minus_bbtrans[3][3];
+        double bbtrans[3][3];
+        double left_term[3];
+        double right_term[3];
+        double mag_norm;
+        double mag_bf_hat[3];
+        
+        // norm of mag field and unit vector
+        mag_norm = v3Norm(mag_bf);
+        for (int i = 0; i < 3; i++) {
+            mag_bf_hat[i] = mag_bf[i] / mag_norm;
+        }
+        
+        // control law
+        //v3Scale(K_s, sigma_BR, ks_times_sigma);
+        //v3Scale(K_w, omega_BN_B, law);
+        //v3Add(ks_times_sigma, kw_times_omega, law);
+        //m33SetIdentity(identity);
+        //v3OuterProduct(mag_bf_hat, mag_bf_hat, bbtrans);
+        //m33Subtract(identity, bbtrans, eye_minus_bbtrans);
+        //m33MultV3(eye_minus_bbtrans, law, left_term);
+        //v3Scale(1.0 / mag_norm, mag_bf_hat, right_term);
+        //v3Cross(left_term, right_term, out_m);
+        
+        m33SetIdentity(identity);
+        v3OuterProduct(mag_bf_hat, mag_bf_hat, bbtrans);
+        m33Subtract(identity, bbtrans, eye_minus_bbtrans);
+        m33MultV3(eye_minus_bbtrans, omega_BN_B, right_term);
+        v3Scale(-1.0*K_w / mag_norm, mag_bf_hat, left_term);
+        v3Cross(left_term, right_term, out_m);
+        
+        //BSK_PRINT(MSG_ERROR, "dimo: %f", out_m[1]);
+        //BSK_PRINT(MSG_ERROR, "cnt: %i", cnt);
+    } else {
+        for (int i = 0; i < 3; i++) {
+            out_m[i] = 0.0;
+        }
+        cnt += 1;
     }
-    
-    // control law
-    //v3Scale(K_s, sigma_BR, ks_times_sigma);
-    //v3Scale(K_w, omega_BN_B, law);
-    //v3Add(ks_times_sigma, kw_times_omega, law);
-    //m33SetIdentity(identity);
-    //v3OuterProduct(mag_bf_hat, mag_bf_hat, bbtrans);
-    //m33Subtract(identity, bbtrans, eye_minus_bbtrans);
-    //m33MultV3(eye_minus_bbtrans, law, left_term);
-    //v3Scale(1.0 / mag_norm, mag_bf_hat, right_term);
-    //v3Cross(left_term, right_term, out_m);
-    
-    m33SetIdentity(identity);
-    v3OuterProduct(mag_bf_hat, mag_bf_hat, bbtrans);
-    m33Subtract(identity, bbtrans, eye_minus_bbtrans);
-    m33MultV3(eye_minus_bbtrans, omega_BN_B, right_term);
-    v3Scale(-1.0*K_w / mag_norm, mag_bf_hat, left_term);
-    v3Cross(left_term, right_term, out_m);
-    
-    BSK_PRINT(MSG_ERROR, "dimo: %f", out_m[1]);
-    
+    return;
 }
 
 // Add q_BR to input, will be the MRP to QUAT convert

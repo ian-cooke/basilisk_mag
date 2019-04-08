@@ -82,7 +82,7 @@ extern "C" {
     void CrossInit_mag_attTrack(mag_attTrackConfig *ConfigData, uint64_t moduleID);
     void Update_mag_attTrack(mag_attTrackConfig *ConfigData, uint64_t callTime, uint64_t moduleID);
     void Reset_mag_attTrack(mag_attTrackConfig *ConfigData, uint64_t callTime, uint64_t moduleID);
-    void ctl_mag_att_track_one(double *mag_bf, double *ctl_gain, double *out_m, double *sigma_BR, double *omega_BR_B, double *omega_RN_B, double *domega_RN_B, double *omega_BN_B, double *I);
+    void ctl_mag_att_track_one(double *mag_bf, double *ctl_gain, double *out_m, double *sigma_BR, double *omega_BR_B, double *omega_RN_B, double *omega_BN_B, double *I);
     void ctl_mag_att_track_two(double *mag_bf, double *ctl_gain, double *out_m, double *sigma_BR, double *omega_BN_B);
     void ctl_mag_att_track_three(double *mag_bf, double *ctl_gain, double *out_m, double *omega_BN_B);
     void ctl_mag_att_track_four(double *mag_bf, double *ctl_gain, double *out_m);

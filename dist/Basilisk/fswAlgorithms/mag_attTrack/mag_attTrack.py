@@ -446,8 +446,8 @@ mag_attTrackConfig_swigregister = _mag_attTrack.mag_attTrackConfig_swigregister
 mag_attTrackConfig_swigregister(mag_attTrackConfig)
 
 
-def ctl_mag_att_track_one(mag_bf, ctl_gain, out_m, sigma_BR, omega_BR_B, omega_RN_B, domega_RN_B, omega_BN_B, I):
-    return _mag_attTrack.ctl_mag_att_track_one(mag_bf, ctl_gain, out_m, sigma_BR, omega_BR_B, omega_RN_B, domega_RN_B, omega_BN_B, I)
+def ctl_mag_att_track_one(mag_bf, ctl_gain, out_m, sigma_BR, omega_BR_B, omega_RN_B, omega_BN_B, I):
+    return _mag_attTrack.ctl_mag_att_track_one(mag_bf, ctl_gain, out_m, sigma_BR, omega_BR_B, omega_RN_B, omega_BN_B, I)
 ctl_mag_att_track_one = _mag_attTrack.ctl_mag_att_track_one
 
 def ctl_mag_att_track_two(mag_bf, ctl_gain, out_m, sigma_BR, omega_BN_B):

@@ -96,7 +96,7 @@ def run(show_plots):
     scSim.TotalSim.terminateSimulation()
 
     # set the simulation time variable used later on
-    simulationTime = macros.min2nano(90)
+    simulationTime = macros.min2nano(90.)
 
     #
     #  create the simulation process
@@ -194,7 +194,7 @@ def run(show_plots):
     scObject.hub.r_CN_NInit = unitTestSupport.np2EigenVectorXd(rN)  # m   - r_CN_N
     scObject.hub.v_CN_NInit = unitTestSupport.np2EigenVectorXd(vN)  # m/s - v_CN_N
     scObject.hub.sigma_BNInit = [[0.1], [0.2], [-0.3]]  # sigma_BN_B
-    scObject.hub.omega_BN_BInit = [[1.0 * macros.D2R], [1.0 * macros.D2R], [-1.0 * macros.D2R]]  # rad/s - omega_CN_B
+    scObject.hub.omega_BN_BInit = [[1.0 * macros.D2R], [-1.0 * macros.D2R], [1.0 * macros.D2R]]  # rad/s - omega_CN_B
 
 
     # setup extForceTorque module
@@ -230,22 +230,22 @@ def run(show_plots):
     scSim.AddModelToTask(simTaskName, MagMeter)
 
     # set up inertial3D guidance module
-    attGuidanceConfig = inertial3D.inertial3DConfig()
-    attGuidanceWrap = scSim.setModelDataWrap(attGuidanceConfig)
-    attGuidanceWrap.ModelTag = "inertial3D"
-    scSim.AddModelToTask(simTaskName, attGuidanceWrap, attGuidanceConfig)
-    attGuidanceConfig.sigma_R0N = [0.0, 0.0, 0.0]
-    attGuidanceConfig.outputDataName = "guidanceInertial3D"
+    #attGuidanceConfig = inertial3D.inertial3DConfig()
+    #attGuidanceWrap = scSim.setModelDataWrap(attGuidanceConfig)
+    #attGuidanceWrap.ModelTag = "inertial3D"
+    #scSim.AddModelToTask(simTaskName, attGuidanceWrap, attGuidanceConfig)
+    #attGuidanceConfig.sigma_R0N = [0.0, 0.0, 0.0]
+    #attGuidanceConfig.outputDataName = "guidanceInertial3D"
 
     # set up the inertial3D spin guidance module
-    #attGuidanceConfig = inertial3DSpin.inertial3DSpinConfig()
-    #attGuidanceWrap = scSim.setModelDataWrap(attGuidanceConfig)
-    #attGuidanceWrap.ModelTag = "inertial3DSpin"
-    #scSim.AddModelToTask(simTaskName, attGuidanceWrap, attGuidanceConfig)
-    #attGuidanceConfig.sigma_RN = [0.0, 0.0, 0.0]
-    #attGuidanceConfig.omega_spin = [0.0, 0.0, 0.0]
-    #attGuidanceConfig.outputDataName = "guidanceInertial3DSpin"
-    #attGuidanceConfig.inputRefName = "inertialSpinRef"
+    attGuidanceConfig = inertial3DSpin.inertial3DSpinConfig()
+    attGuidanceWrap = scSim.setModelDataWrap(attGuidanceConfig)
+    attGuidanceWrap.ModelTag = "inertial3DSpin"
+    scSim.AddModelToTask(simTaskName, attGuidanceWrap, attGuidanceConfig)
+    attGuidanceConfig.sigma_RN = [0.0, 0.0, 0.0]
+    attGuidanceConfig.omega_spin = [0.0, 0.0, 0.0]
+    attGuidanceConfig.outputDataName = "guidanceInertial3DSpin"
+    attGuidanceConfig.inputRefName = "inertialSpinRef"
 
     # setup the attitude tracking error evaluation module
     attErrorConfig = attTrackingError.attTrackingErrorConfig()
@@ -266,8 +266,8 @@ def run(show_plots):
     mag_attTrackControlConfig.outputDataName = "LrRequested"
     mag_attTrackControlConfig.inputNavAttName = sNavObject.outputAttName
     mag_attTrackControlConfig.inputGuidName = attErrorConfig.outputDataName
-    mag_attTrackControlConfig.K_sigma = 500.0
-    mag_attTrackControlConfig.K_omega = 0.1
+    mag_attTrackControlConfig.K_sigma = 50000000
+    mag_attTrackControlConfig.K_omega = 50000000
     mag_attTrackControlConfig.controlLaw = 3
     mag_attTrackControlConfig.use_rw_wheels = 0
 
@@ -281,7 +281,6 @@ def run(show_plots):
     #bdotControlConfig.outputDataName = "LrRequested"
     #bdotControlConfig.K_detumble = 5000000.0
 
-    mag_attTrackControlConfig.use_rw_wheels = 0
     torqueRodConfig = torqueRodDynamicEffector.torqueRodDynamicEffector()
     # torqueRodWrap = scSim.setModelDataWrap(torqueRodConfig)
     # scSim.AddModelToTask(simTaskName, torqueRodWrap, torqueRodConfig)
@@ -405,6 +404,18 @@ def run(show_plots):
     plt.xlabel('Time [min]', fontsize=34)
     plt.ylabel('Torque (N-m) ', fontsize=12)
     plt.title('Torque Rods Constrained Torque', fontsize=12)
+    plt.tick_params(labelsize=12)
+    plt.legend(loc='upper right', fontsize=12)
+
+    # attitude error
+    plt.figure(5)
+    for idx in range(1, 4):
+        plt.plot(dataSigmaBR[:, 0] * macros.NANO2MIN, dataSigmaBR[:, idx],
+                 color=unitTestSupport.getLineColor(idx, 3),
+                 label='$\tau_' + str(idx) + '$')
+    plt.xlabel('Time [min]', fontsize=34)
+    plt.ylabel('$\sigma$', fontsize=12)
+    plt.title('MRP Components Relative to Reference', fontsize=12)
     plt.tick_params(labelsize=12)
     plt.legend(loc='upper right', fontsize=12)
 

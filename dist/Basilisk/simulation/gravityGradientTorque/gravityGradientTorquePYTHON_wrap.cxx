@@ -3010,46 +3010,47 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_DynamicEffector swig_types[1]
 #define SWIGTYPE_p_SCPlusStatesSimMsg swig_types[2]
 #define SWIGTYPE_p_SysModel swig_types[3]
-#define SWIGTYPE_p_allocator_type swig_types[4]
-#define SWIGTYPE_p_bool swig_types[5]
-#define SWIGTYPE_p_char swig_types[6]
-#define SWIGTYPE_p_const_reference swig_types[7]
-#define SWIGTYPE_p_difference_type swig_types[8]
-#define SWIGTYPE_p_double swig_types[9]
-#define SWIGTYPE_p_gravityGradientTorque swig_types[10]
-#define SWIGTYPE_p_int swig_types[11]
-#define SWIGTYPE_p_key_type swig_types[12]
-#define SWIGTYPE_p_long swig_types[13]
-#define SWIGTYPE_p_long_long swig_types[14]
-#define SWIGTYPE_p_msgLevel_t swig_types[15]
-#define SWIGTYPE_p_p_PyObject swig_types[16]
-#define SWIGTYPE_p_reference swig_types[17]
-#define SWIGTYPE_p_short swig_types[18]
-#define SWIGTYPE_p_signed_char swig_types[19]
-#define SWIGTYPE_p_size_type swig_types[20]
-#define SWIGTYPE_p_std__allocatorT_char_const_p_t swig_types[21]
-#define SWIGTYPE_p_std__allocatorT_double_t swig_types[22]
-#define SWIGTYPE_p_std__allocatorT_int_t swig_types[23]
-#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[24]
-#define SWIGTYPE_p_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t swig_types[25]
-#define SWIGTYPE_p_std__invalid_argument swig_types[26]
-#define SWIGTYPE_p_std__lessT_std__string_t swig_types[27]
-#define SWIGTYPE_p_std__lessT_unsigned_long_t swig_types[28]
-#define SWIGTYPE_p_std__setT_std__string_std__lessT_std__string_t_std__allocatorT_std__string_t_t swig_types[29]
-#define SWIGTYPE_p_std__setT_unsigned_long_std__lessT_unsigned_long_t_std__allocatorT_unsigned_long_t_t swig_types[30]
-#define SWIGTYPE_p_std__vectorT_char_const_p_std__allocatorT_char_const_p_t_t swig_types[31]
-#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[32]
-#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[33]
-#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[34]
-#define SWIGTYPE_p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t swig_types[35]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[36]
-#define SWIGTYPE_p_unsigned_char swig_types[37]
-#define SWIGTYPE_p_unsigned_int swig_types[38]
-#define SWIGTYPE_p_unsigned_long_long swig_types[39]
-#define SWIGTYPE_p_unsigned_short swig_types[40]
-#define SWIGTYPE_p_value_type swig_types[41]
-static swig_type_info *swig_types[43];
-static swig_module_info swig_module = {swig_types, 42, 0, 0, 0, 0};
+#define SWIGTYPE_p_VehicleConfigFswMsg swig_types[4]
+#define SWIGTYPE_p_allocator_type swig_types[5]
+#define SWIGTYPE_p_bool swig_types[6]
+#define SWIGTYPE_p_char swig_types[7]
+#define SWIGTYPE_p_const_reference swig_types[8]
+#define SWIGTYPE_p_difference_type swig_types[9]
+#define SWIGTYPE_p_double swig_types[10]
+#define SWIGTYPE_p_gravityGradientTorque swig_types[11]
+#define SWIGTYPE_p_int swig_types[12]
+#define SWIGTYPE_p_key_type swig_types[13]
+#define SWIGTYPE_p_long swig_types[14]
+#define SWIGTYPE_p_long_long swig_types[15]
+#define SWIGTYPE_p_msgLevel_t swig_types[16]
+#define SWIGTYPE_p_p_PyObject swig_types[17]
+#define SWIGTYPE_p_reference swig_types[18]
+#define SWIGTYPE_p_short swig_types[19]
+#define SWIGTYPE_p_signed_char swig_types[20]
+#define SWIGTYPE_p_size_type swig_types[21]
+#define SWIGTYPE_p_std__allocatorT_char_const_p_t swig_types[22]
+#define SWIGTYPE_p_std__allocatorT_double_t swig_types[23]
+#define SWIGTYPE_p_std__allocatorT_int_t swig_types[24]
+#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[25]
+#define SWIGTYPE_p_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t swig_types[26]
+#define SWIGTYPE_p_std__invalid_argument swig_types[27]
+#define SWIGTYPE_p_std__lessT_std__string_t swig_types[28]
+#define SWIGTYPE_p_std__lessT_unsigned_long_t swig_types[29]
+#define SWIGTYPE_p_std__setT_std__string_std__lessT_std__string_t_std__allocatorT_std__string_t_t swig_types[30]
+#define SWIGTYPE_p_std__setT_unsigned_long_std__lessT_unsigned_long_t_std__allocatorT_unsigned_long_t_t swig_types[31]
+#define SWIGTYPE_p_std__vectorT_char_const_p_std__allocatorT_char_const_p_t_t swig_types[32]
+#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[33]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[34]
+#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[35]
+#define SWIGTYPE_p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t swig_types[36]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[37]
+#define SWIGTYPE_p_unsigned_char swig_types[38]
+#define SWIGTYPE_p_unsigned_int swig_types[39]
+#define SWIGTYPE_p_unsigned_long_long swig_types[40]
+#define SWIGTYPE_p_unsigned_short swig_types[41]
+#define SWIGTYPE_p_value_type swig_types[42]
+static swig_type_info *swig_types[44];
+static swig_module_info swig_module = {swig_types, 43, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -20249,7 +20250,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_gravityGradientTorque_scPlusStatesSimMsgName_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_gravityGradientTorque_stateInMsgName_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   gravityGradientTorque *arg1 = (gravityGradientTorque *) 0 ;
   std::string *arg2 = 0 ;
@@ -20259,24 +20260,24 @@ SWIGINTERN PyObject *_wrap_gravityGradientTorque_scPlusStatesSimMsgName_set(PyOb
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:gravityGradientTorque_scPlusStatesSimMsgName_set",&obj0,&obj1)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:gravityGradientTorque_stateInMsgName_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_gravityGradientTorque, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gravityGradientTorque_scPlusStatesSimMsgName_set" "', argument " "1"" of type '" "gravityGradientTorque *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gravityGradientTorque_stateInMsgName_set" "', argument " "1"" of type '" "gravityGradientTorque *""'"); 
   }
   arg1 = reinterpret_cast< gravityGradientTorque * >(argp1);
   {
     std::string *ptr = (std::string *)0;
     res2 = SWIG_AsPtr_std_string(obj1, &ptr);
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gravityGradientTorque_scPlusStatesSimMsgName_set" "', argument " "2"" of type '" "std::string const &""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gravityGradientTorque_stateInMsgName_set" "', argument " "2"" of type '" "std::string const &""'"); 
     }
     if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gravityGradientTorque_scPlusStatesSimMsgName_set" "', argument " "2"" of type '" "std::string const &""'"); 
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gravityGradientTorque_stateInMsgName_set" "', argument " "2"" of type '" "std::string const &""'"); 
     }
     arg2 = ptr;
   }
-  if (arg1) (arg1)->scPlusStatesSimMsgName = *arg2;
+  if (arg1) (arg1)->stateInMsgName = *arg2;
   resultobj = SWIG_Py_Void();
   if (SWIG_IsNewObj(res2)) delete arg2;
   return resultobj;
@@ -20286,7 +20287,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_gravityGradientTorque_scPlusStatesSimMsgName_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_gravityGradientTorque_stateInMsgName_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   gravityGradientTorque *arg1 = (gravityGradientTorque *) 0 ;
   void *argp1 = 0 ;
@@ -20294,13 +20295,13 @@ SWIGINTERN PyObject *_wrap_gravityGradientTorque_scPlusStatesSimMsgName_get(PyOb
   PyObject * obj0 = 0 ;
   std::string *result = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:gravityGradientTorque_scPlusStatesSimMsgName_get",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:gravityGradientTorque_stateInMsgName_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_gravityGradientTorque, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gravityGradientTorque_scPlusStatesSimMsgName_get" "', argument " "1"" of type '" "gravityGradientTorque *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gravityGradientTorque_stateInMsgName_get" "', argument " "1"" of type '" "gravityGradientTorque *""'"); 
   }
   arg1 = reinterpret_cast< gravityGradientTorque * >(argp1);
-  result = (std::string *) & ((arg1)->scPlusStatesSimMsgName);
+  result = (std::string *) & ((arg1)->stateInMsgName);
   resultobj = SWIG_From_std_string(static_cast< std::string >(*result));
   return resultobj;
 fail:
@@ -20535,6 +20536,351 @@ SWIGINTERN PyObject *gravityGradientTorque_swigregister(PyObject *SWIGUNUSEDPARM
   PyObject *obj;
   if (!PyArg_ParseTuple(args,(char *)"O:swigregister", &obj)) return NULL;
   SWIG_TypeNewClientData(SWIGTYPE_p_gravityGradientTorque, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_VehicleConfigFswMsg_ISCPntB_B_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  VehicleConfigFswMsg *arg1 = (VehicleConfigFswMsg *) 0 ;
+  double *arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double temp2[9] ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:VehicleConfigFswMsg_ISCPntB_B_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_VehicleConfigFswMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "VehicleConfigFswMsg_ISCPntB_B_set" "', argument " "1"" of type '" "VehicleConfigFswMsg *""'"); 
+  }
+  arg1 = reinterpret_cast< VehicleConfigFswMsg * >(argp1);
+  {
+    int i;
+    void *blankPtr = 0 ;
+    int resOut = 0 ;
+    if (!PySequence_Check(obj1)) {
+      PyErr_SetString(PyExc_ValueError,"Expected a sequence");
+      return NULL;
+    }
+    if (PySequence_Length(obj1) > 9) {
+      printf("Value: %d\n", 9);
+      PyErr_SetString(PyExc_ValueError,"Size mismatch. Expected 9 elements");
+      return NULL;
+    }
+    memset(temp2, 0x0, 9*sizeof(double));
+    for (i = 0; i < PySequence_Length(obj1); i++) {
+      PyObject *o = PySequence_GetItem(obj1,i);
+      if (PyNumber_Check(o)) {
+        temp2[i] = (double) PyFloat_AsDouble(o);
+      } else {
+        resOut = SWIG_ConvertPtr(o, &blankPtr,SWIGTYPE_p_double, 0 |  0 );
+        if (!SWIG_IsOK(resOut)) {
+          SWIG_exception_fail(SWIG_ArgError(resOut), "Could not convert that double into a pointer for some reason.  This is an ugly SWIG failure.  Good luck.\n");
+          return NULL;
+        }
+        memcpy(&(temp2[i]), blankPtr, sizeof(double));
+      }
+    }
+    arg2 = temp2;
+  }
+  {
+    int i;
+    for (i = 0; i < 9; i++) {
+      memcpy(&(arg1->ISCPntB_B[i]), &(arg2[i]), sizeof(double));
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_VehicleConfigFswMsg_ISCPntB_B_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  VehicleConfigFswMsg *arg1 = (VehicleConfigFswMsg *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  double *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:VehicleConfigFswMsg_ISCPntB_B_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_VehicleConfigFswMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "VehicleConfigFswMsg_ISCPntB_B_get" "', argument " "1"" of type '" "VehicleConfigFswMsg *""'"); 
+  }
+  arg1 = reinterpret_cast< VehicleConfigFswMsg * >(argp1);
+  result = (double *)(double *) ((arg1)->ISCPntB_B);
+  {
+    int i;
+    resultobj = PyList_New(0);
+    PyObject *locOutObj = 0;
+    for (i = 0; i < 9; i++) {
+      locOutObj = SWIG_NewPointerObj(SWIG_as_voidptr(&(result[i])), SWIGTYPE_p_double, 0 |  0 );
+      
+      if(PyNumber_Check(locOutObj)){
+        PyObject *outObject = PyFloat_FromDouble((double) result[i]);
+        PyList_Append(resultobj,outObject);
+        Py_DECREF(outObject);
+      }
+      else
+      {
+        PyList_SetItem(resultobj, i, locOutObj);
+      }
+    }
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_VehicleConfigFswMsg_CoM_B_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  VehicleConfigFswMsg *arg1 = (VehicleConfigFswMsg *) 0 ;
+  double *arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double temp2[3] ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:VehicleConfigFswMsg_CoM_B_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_VehicleConfigFswMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "VehicleConfigFswMsg_CoM_B_set" "', argument " "1"" of type '" "VehicleConfigFswMsg *""'"); 
+  }
+  arg1 = reinterpret_cast< VehicleConfigFswMsg * >(argp1);
+  {
+    int i;
+    void *blankPtr = 0 ;
+    int resOut = 0 ;
+    if (!PySequence_Check(obj1)) {
+      PyErr_SetString(PyExc_ValueError,"Expected a sequence");
+      return NULL;
+    }
+    if (PySequence_Length(obj1) > 3) {
+      printf("Value: %d\n", 3);
+      PyErr_SetString(PyExc_ValueError,"Size mismatch. Expected 3 elements");
+      return NULL;
+    }
+    memset(temp2, 0x0, 3*sizeof(double));
+    for (i = 0; i < PySequence_Length(obj1); i++) {
+      PyObject *o = PySequence_GetItem(obj1,i);
+      if (PyNumber_Check(o)) {
+        temp2[i] = (double) PyFloat_AsDouble(o);
+      } else {
+        resOut = SWIG_ConvertPtr(o, &blankPtr,SWIGTYPE_p_double, 0 |  0 );
+        if (!SWIG_IsOK(resOut)) {
+          SWIG_exception_fail(SWIG_ArgError(resOut), "Could not convert that double into a pointer for some reason.  This is an ugly SWIG failure.  Good luck.\n");
+          return NULL;
+        }
+        memcpy(&(temp2[i]), blankPtr, sizeof(double));
+      }
+    }
+    arg2 = temp2;
+  }
+  {
+    int i;
+    for (i = 0; i < 3; i++) {
+      memcpy(&(arg1->CoM_B[i]), &(arg2[i]), sizeof(double));
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_VehicleConfigFswMsg_CoM_B_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  VehicleConfigFswMsg *arg1 = (VehicleConfigFswMsg *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  double *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:VehicleConfigFswMsg_CoM_B_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_VehicleConfigFswMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "VehicleConfigFswMsg_CoM_B_get" "', argument " "1"" of type '" "VehicleConfigFswMsg *""'"); 
+  }
+  arg1 = reinterpret_cast< VehicleConfigFswMsg * >(argp1);
+  result = (double *)(double *) ((arg1)->CoM_B);
+  {
+    int i;
+    resultobj = PyList_New(0);
+    PyObject *locOutObj = 0;
+    for (i = 0; i < 3; i++) {
+      locOutObj = SWIG_NewPointerObj(SWIG_as_voidptr(&(result[i])), SWIGTYPE_p_double, 0 |  0 );
+      
+      if(PyNumber_Check(locOutObj)){
+        PyObject *outObject = PyFloat_FromDouble((double) result[i]);
+        PyList_Append(resultobj,outObject);
+        Py_DECREF(outObject);
+      }
+      else
+      {
+        PyList_SetItem(resultobj, i, locOutObj);
+      }
+    }
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_VehicleConfigFswMsg_CurrentADCSState_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  VehicleConfigFswMsg *arg1 = (VehicleConfigFswMsg *) 0 ;
+  uint32_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:VehicleConfigFswMsg_CurrentADCSState_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_VehicleConfigFswMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "VehicleConfigFswMsg_CurrentADCSState_set" "', argument " "1"" of type '" "VehicleConfigFswMsg *""'"); 
+  }
+  arg1 = reinterpret_cast< VehicleConfigFswMsg * >(argp1);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "VehicleConfigFswMsg_CurrentADCSState_set" "', argument " "2"" of type '" "uint32_t""'");
+  } 
+  arg2 = static_cast< uint32_t >(val2);
+  if (arg1) (arg1)->CurrentADCSState = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_VehicleConfigFswMsg_CurrentADCSState_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  VehicleConfigFswMsg *arg1 = (VehicleConfigFswMsg *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  uint32_t result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:VehicleConfigFswMsg_CurrentADCSState_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_VehicleConfigFswMsg, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "VehicleConfigFswMsg_CurrentADCSState_get" "', argument " "1"" of type '" "VehicleConfigFswMsg *""'"); 
+  }
+  arg1 = reinterpret_cast< VehicleConfigFswMsg * >(argp1);
+  result = (uint32_t) ((arg1)->CurrentADCSState);
+  resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_VehicleConfigFswMsg__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  VehicleConfigFswMsg *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_VehicleConfigFswMsg")) SWIG_fail;
+  result = (VehicleConfigFswMsg *)new VehicleConfigFswMsg();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_VehicleConfigFswMsg, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_VehicleConfigFswMsg__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  VehicleConfigFswMsg *arg1 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  VehicleConfigFswMsg *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_VehicleConfigFswMsg",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_VehicleConfigFswMsg,  0  | 0);
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_VehicleConfigFswMsg" "', argument " "1"" of type '" "VehicleConfigFswMsg const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_VehicleConfigFswMsg" "', argument " "1"" of type '" "VehicleConfigFswMsg const &""'"); 
+  }
+  arg1 = reinterpret_cast< VehicleConfigFswMsg * >(argp1);
+  result = (VehicleConfigFswMsg *)new VehicleConfigFswMsg((VehicleConfigFswMsg const &)*arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_VehicleConfigFswMsg, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_VehicleConfigFswMsg(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 1) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 0) {
+    return _wrap_new_VehicleConfigFswMsg__SWIG_0(self, args);
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_VehicleConfigFswMsg, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_VehicleConfigFswMsg__SWIG_1(self, args);
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'new_VehicleConfigFswMsg'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    VehicleConfigFswMsg::VehicleConfigFswMsg()\n"
+    "    VehicleConfigFswMsg::VehicleConfigFswMsg(VehicleConfigFswMsg const &)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_VehicleConfigFswMsg(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  VehicleConfigFswMsg *arg1 = (VehicleConfigFswMsg *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_VehicleConfigFswMsg",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_VehicleConfigFswMsg, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_VehicleConfigFswMsg" "', argument " "1"" of type '" "VehicleConfigFswMsg *""'"); 
+  }
+  arg1 = reinterpret_cast< VehicleConfigFswMsg * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *VehicleConfigFswMsg_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char *)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_VehicleConfigFswMsg, SWIG_NewClientData(obj));
   return SWIG_Py_Void();
 }
 
@@ -21960,14 +22306,23 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"gravityGradientTorque_writeOutputMessages", _wrap_gravityGradientTorque_writeOutputMessages, METH_VARARGS, NULL},
 	 { (char *)"gravityGradientTorque_readInputMessages", _wrap_gravityGradientTorque_readInputMessages, METH_VARARGS, NULL},
 	 { (char *)"gravityGradientTorque_computeForceTorque", _wrap_gravityGradientTorque_computeForceTorque, METH_VARARGS, NULL},
-	 { (char *)"gravityGradientTorque_scPlusStatesSimMsgName_set", _wrap_gravityGradientTorque_scPlusStatesSimMsgName_set, METH_VARARGS, NULL},
-	 { (char *)"gravityGradientTorque_scPlusStatesSimMsgName_get", _wrap_gravityGradientTorque_scPlusStatesSimMsgName_get, METH_VARARGS, NULL},
+	 { (char *)"gravityGradientTorque_stateInMsgName_set", _wrap_gravityGradientTorque_stateInMsgName_set, METH_VARARGS, NULL},
+	 { (char *)"gravityGradientTorque_stateInMsgName_get", _wrap_gravityGradientTorque_stateInMsgName_get, METH_VARARGS, NULL},
 	 { (char *)"gravityGradientTorque_vehicleConfigFswMsgName_set", _wrap_gravityGradientTorque_vehicleConfigFswMsgName_set, METH_VARARGS, NULL},
 	 { (char *)"gravityGradientTorque_vehicleConfigFswMsgName_get", _wrap_gravityGradientTorque_vehicleConfigFswMsgName_get, METH_VARARGS, NULL},
 	 { (char *)"gravityGradientTorque_extTorquePntB_B_set", _wrap_gravityGradientTorque_extTorquePntB_B_set, METH_VARARGS, NULL},
 	 { (char *)"gravityGradientTorque_extTorquePntB_B_get", _wrap_gravityGradientTorque_extTorquePntB_B_get, METH_VARARGS, NULL},
 	 { (char *)"new_gravityGradientTorque", _wrap_new_gravityGradientTorque, METH_VARARGS, NULL},
 	 { (char *)"gravityGradientTorque_swigregister", gravityGradientTorque_swigregister, METH_VARARGS, NULL},
+	 { (char *)"VehicleConfigFswMsg_ISCPntB_B_set", _wrap_VehicleConfigFswMsg_ISCPntB_B_set, METH_VARARGS, NULL},
+	 { (char *)"VehicleConfigFswMsg_ISCPntB_B_get", _wrap_VehicleConfigFswMsg_ISCPntB_B_get, METH_VARARGS, NULL},
+	 { (char *)"VehicleConfigFswMsg_CoM_B_set", _wrap_VehicleConfigFswMsg_CoM_B_set, METH_VARARGS, NULL},
+	 { (char *)"VehicleConfigFswMsg_CoM_B_get", _wrap_VehicleConfigFswMsg_CoM_B_get, METH_VARARGS, NULL},
+	 { (char *)"VehicleConfigFswMsg_CurrentADCSState_set", _wrap_VehicleConfigFswMsg_CurrentADCSState_set, METH_VARARGS, NULL},
+	 { (char *)"VehicleConfigFswMsg_CurrentADCSState_get", _wrap_VehicleConfigFswMsg_CurrentADCSState_get, METH_VARARGS, NULL},
+	 { (char *)"new_VehicleConfigFswMsg", _wrap_new_VehicleConfigFswMsg, METH_VARARGS, NULL},
+	 { (char *)"delete_VehicleConfigFswMsg", _wrap_delete_VehicleConfigFswMsg, METH_VARARGS, NULL},
+	 { (char *)"VehicleConfigFswMsg_swigregister", VehicleConfigFswMsg_swigregister, METH_VARARGS, NULL},
 	 { (char *)"SCPlusStatesSimMsg_r_BN_N_set", _wrap_SCPlusStatesSimMsg_r_BN_N_set, METH_VARARGS, NULL},
 	 { (char *)"SCPlusStatesSimMsg_r_BN_N_get", _wrap_SCPlusStatesSimMsg_r_BN_N_get, METH_VARARGS, NULL},
 	 { (char *)"SCPlusStatesSimMsg_v_BN_N_set", _wrap_SCPlusStatesSimMsg_v_BN_N_set, METH_VARARGS, NULL},
@@ -22009,6 +22364,7 @@ static swig_type_info _swigt__p_DynParamManager = {"_p_DynParamManager", "DynPar
 static swig_type_info _swigt__p_DynamicEffector = {"_p_DynamicEffector", "DynamicEffector *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SCPlusStatesSimMsg = {"_p_SCPlusStatesSimMsg", "SCPlusStatesSimMsg *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SysModel = {"_p_SysModel", "SysModel *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_VehicleConfigFswMsg = {"_p_VehicleConfigFswMsg", "VehicleConfigFswMsg *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_allocator_type = {"_p_allocator_type", "allocator_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_bool = {"_p_bool", "bool *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
@@ -22053,6 +22409,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_DynamicEffector,
   &_swigt__p_SCPlusStatesSimMsg,
   &_swigt__p_SysModel,
+  &_swigt__p_VehicleConfigFswMsg,
   &_swigt__p_allocator_type,
   &_swigt__p_bool,
   &_swigt__p_char,
@@ -22097,6 +22454,7 @@ static swig_cast_info _swigc__p_DynParamManager[] = {  {&_swigt__p_DynParamManag
 static swig_cast_info _swigc__p_DynamicEffector[] = {  {&_swigt__p_gravityGradientTorque, _p_gravityGradientTorqueTo_p_DynamicEffector, 0, 0},  {&_swigt__p_DynamicEffector, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SCPlusStatesSimMsg[] = {  {&_swigt__p_SCPlusStatesSimMsg, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SysModel[] = {  {&_swigt__p_SysModel, 0, 0, 0},  {&_swigt__p_gravityGradientTorque, _p_gravityGradientTorqueTo_p_SysModel, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_VehicleConfigFswMsg[] = {  {&_swigt__p_VehicleConfigFswMsg, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_allocator_type[] = {  {&_swigt__p_allocator_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_bool[] = {  {&_swigt__p_bool, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
@@ -22141,6 +22499,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_DynamicEffector,
   _swigc__p_SCPlusStatesSimMsg,
   _swigc__p_SysModel,
+  _swigc__p_VehicleConfigFswMsg,
   _swigc__p_allocator_type,
   _swigc__p_bool,
   _swigc__p_char,
@@ -22875,7 +23234,8 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "MSG_ERROR",SWIG_From_int(static_cast< int >(MSG_ERROR)));
   SWIG_Python_SetConstant(d, "MSG_SILENT",SWIG_From_int(static_cast< int >(MSG_SILENT)));
   SWIG_Python_SetConstant(d, "WHERESTR",SWIG_FromCharPtr("[FILE : %s, FUNC : %s, LINE : %d]:\n"));
-    SWIG_Python_SetConstant(d, "sizeof_scPlusStatesSimMsg",SWIG_From_size_t(static_cast< size_t >(sizeof(SCPlusStatesSimMsg))));
+  SWIG_Python_SetConstant(d, "sizeof_SCPlusStatesSimMsg",SWIG_From_size_t(static_cast< size_t >(sizeof(SCPlusStatesSimMsg))));
+  SWIG_Python_SetConstant(d, "sizeof_VehicleConfigFswMsg",SWIG_From_size_t(static_cast< size_t >(sizeof(VehicleConfigFswMsg))));
 #if PY_VERSION_HEX >= 0x03000000
   return m;
 #else

@@ -1140,10 +1140,10 @@ class gravityGradientTorque(SysModel, DynamicEffector):
 
     def computeForceTorque(self, integTime):
         return _gravityGradientTorque.gravityGradientTorque_computeForceTorque(self, integTime)
-    __swig_setmethods__["scPlusStatesSimMsgName"] = _gravityGradientTorque.gravityGradientTorque_scPlusStatesSimMsgName_set
-    __swig_getmethods__["scPlusStatesSimMsgName"] = _gravityGradientTorque.gravityGradientTorque_scPlusStatesSimMsgName_get
+    __swig_setmethods__["stateInMsgName"] = _gravityGradientTorque.gravityGradientTorque_stateInMsgName_set
+    __swig_getmethods__["stateInMsgName"] = _gravityGradientTorque.gravityGradientTorque_stateInMsgName_get
     if _newclass:
-        scPlusStatesSimMsgName = _swig_property(_gravityGradientTorque.gravityGradientTorque_scPlusStatesSimMsgName_get, _gravityGradientTorque.gravityGradientTorque_scPlusStatesSimMsgName_set)
+        stateInMsgName = _swig_property(_gravityGradientTorque.gravityGradientTorque_stateInMsgName_get, _gravityGradientTorque.gravityGradientTorque_stateInMsgName_set)
     __swig_setmethods__["vehicleConfigFswMsgName"] = _gravityGradientTorque.gravityGradientTorque_vehicleConfigFswMsgName_set
     __swig_getmethods__["vehicleConfigFswMsgName"] = _gravityGradientTorque.gravityGradientTorque_vehicleConfigFswMsgName_get
     if _newclass:
@@ -1161,6 +1161,42 @@ class gravityGradientTorque(SysModel, DynamicEffector):
             self.this = this
 gravityGradientTorque_swigregister = _gravityGradientTorque.gravityGradientTorque_swigregister
 gravityGradientTorque_swigregister(gravityGradientTorque)
+
+MSG_DEBUG = _gravityGradientTorque.MSG_DEBUG
+MSG_INFORMATION = _gravityGradientTorque.MSG_INFORMATION
+MSG_WARNING = _gravityGradientTorque.MSG_WARNING
+MSG_ERROR = _gravityGradientTorque.MSG_ERROR
+MSG_SILENT = _gravityGradientTorque.MSG_SILENT
+WHERESTR = _gravityGradientTorque.WHERESTR
+class VehicleConfigFswMsg(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, VehicleConfigFswMsg, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, VehicleConfigFswMsg, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["ISCPntB_B"] = _gravityGradientTorque.VehicleConfigFswMsg_ISCPntB_B_set
+    __swig_getmethods__["ISCPntB_B"] = _gravityGradientTorque.VehicleConfigFswMsg_ISCPntB_B_get
+    if _newclass:
+        ISCPntB_B = _swig_property(_gravityGradientTorque.VehicleConfigFswMsg_ISCPntB_B_get, _gravityGradientTorque.VehicleConfigFswMsg_ISCPntB_B_set)
+    __swig_setmethods__["CoM_B"] = _gravityGradientTorque.VehicleConfigFswMsg_CoM_B_set
+    __swig_getmethods__["CoM_B"] = _gravityGradientTorque.VehicleConfigFswMsg_CoM_B_get
+    if _newclass:
+        CoM_B = _swig_property(_gravityGradientTorque.VehicleConfigFswMsg_CoM_B_get, _gravityGradientTorque.VehicleConfigFswMsg_CoM_B_set)
+    __swig_setmethods__["CurrentADCSState"] = _gravityGradientTorque.VehicleConfigFswMsg_CurrentADCSState_set
+    __swig_getmethods__["CurrentADCSState"] = _gravityGradientTorque.VehicleConfigFswMsg_CurrentADCSState_get
+    if _newclass:
+        CurrentADCSState = _swig_property(_gravityGradientTorque.VehicleConfigFswMsg_CurrentADCSState_get, _gravityGradientTorque.VehicleConfigFswMsg_CurrentADCSState_set)
+
+    def __init__(self, *args):
+        this = _gravityGradientTorque.new_VehicleConfigFswMsg(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _gravityGradientTorque.delete_VehicleConfigFswMsg
+    __del__ = lambda self: None
+VehicleConfigFswMsg_swigregister = _gravityGradientTorque.VehicleConfigFswMsg_swigregister
+VehicleConfigFswMsg_swigregister(VehicleConfigFswMsg)
 
 class SCPlusStatesSimMsg(_object):
     __swig_setmethods__ = {}
@@ -1224,13 +1260,8 @@ class SCPlusStatesSimMsg(_object):
 SCPlusStatesSimMsg_swigregister = _gravityGradientTorque.SCPlusStatesSimMsg_swigregister
 SCPlusStatesSimMsg_swigregister(SCPlusStatesSimMsg)
 
-MSG_DEBUG = _gravityGradientTorque.MSG_DEBUG
-MSG_INFORMATION = _gravityGradientTorque.MSG_INFORMATION
-MSG_WARNING = _gravityGradientTorque.MSG_WARNING
-MSG_ERROR = _gravityGradientTorque.MSG_ERROR
-MSG_SILENT = _gravityGradientTorque.MSG_SILENT
-WHERESTR = _gravityGradientTorque.WHERESTR
-sizeof_scPlusStatesSimMsg = _gravityGradientTorque.sizeof_scPlusStatesSimMsg
+sizeof_SCPlusStatesSimMsg = _gravityGradientTorque.sizeof_SCPlusStatesSimMsg
+sizeof_VehicleConfigFswMsg = _gravityGradientTorque.sizeof_VehicleConfigFswMsg
 
 import sys
 protectAllClasses(sys.modules[__name__])

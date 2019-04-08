@@ -31,8 +31,8 @@ gravityGradientTorque::gravityGradientTorque()
 {
     /* setup default input message names.  These can be over-riden by the user */
     
-    scPlusStatesSimMsgName = "gravityGradientTorque";
-    scPlusStatesSimMsgID = -1;
+    this->stateInMsgName = "scState";
+    this->stateInMsgId = -1;
     
     return;
 }
@@ -60,9 +60,17 @@ void gravityGradientTorque::CrossInit()
 {
     //! Begin method steps
     //! - Find the message ID associated with the InputCmds string.
-    scPlusStatesSimMsgID = SystemMessaging::GetInstance()->subscribeToMessage(this->scPlusStatesSimMsgName,sizeof(SCPlusStatesSimMsg), moduleID);
+
     
-    vehicleConfigFswMsgID = SystemMessaging::GetInstance()->subscribeToMessage(this->vehicleConfigFswMsgName, sizeof(VehicleConfigFswMsg), moduleID);
+    this->stateInMsgId = SystemMessaging::GetInstance()->subscribeToMessage(this->stateInMsgName, sizeof(SCPlusStatesSimMsg), moduleID);
+    if (stateInMsgId < 0) {
+        BSK_PRINT(MSG_WARNING, "Did not find a valid sc plus message with name: %s", this->stateInMsgName.c_str());
+    }
+    
+    this->vehicleConfigFswMsgID = SystemMessaging::GetInstance()->subscribeToMessage(this->vehicleConfigFswMsgName, sizeof(VehicleConfigFswMsg), moduleID);
+    if (vehicleConfigFswMsgID < 0) {
+        BSK_PRINT(MSG_WARNING, "Did not find a valid vehicle config message with name: %s", this->vehicleConfigFswMsgName.c_str());
+    }
     
     return;
 
@@ -90,17 +98,18 @@ void gravityGradientTorque::writeOutputMessages(uint64_t currentClock)
 void gravityGradientTorque::readInputMessages()
 {
     SingleMessageHeader LocalHeader;
+    memset(&LocalHeader, 0x0, sizeof(LocalHeader));
+    memset(&this->stateInBuffer, 0x0, sizeof(SCPlusStatesSimMsg));
     
-    if(this->scPlusStatesSimMsgID >= 0)
-    {
-        memset(scPlusStates.r_BN_N, 0x0, sizeof(SCPlusStatesSimMsg));
-        SystemMessaging::GetInstance()->ReadMessage(this->scPlusStatesSimMsgID, &LocalHeader,
+    if (this->stateInMsgId >= 0) {
+        memset(&this->stateInBuffer, 0x0, sizeof(SCPlusStatesSimMsg));
+        SystemMessaging::GetInstance()->ReadMessage(this->stateInMsgId, &LocalHeader,
                                                     sizeof(SCPlusStatesSimMsg),
-                                                    reinterpret_cast<uint8_t*> (&scPlusStates), moduleID);
+                                                    reinterpret_cast<uint8_t*> (&this->stateInBuffer), moduleID);
     }
     
-    if (this->vehicleConfigFswMsgID >= 0)
-    {
+    
+    if (this->vehicleConfigFswMsgID >= 0) {
         memset(sc.ISCPntB_B, 0x0, sizeof(VehicleConfigFswMsg));
         SystemMessaging::GetInstance()->ReadMessage(this->vehicleConfigFswMsgID, &LocalHeader,
                                                     sizeof(VehicleConfigFswMsg),
@@ -121,12 +130,17 @@ void gravityGradientTorque::computeForceTorque(double integTime)
     Eigen::Vector3d r_BN_B;
     Eigen::Vector3d r_BN_N;    //! Begin method steps
     
-    sigma_BN_eigen = cArray2EigenVector3d(this->scPlusStates.sigma_BN);
-    r_BN_N = cArray2EigenVector3d(this->scPlusStates.r_BN_N);
+    sigma_BN_eigen = cArray2EigenVector3d(this->stateInBuffer.sigma_BN);
+    r_BN_N = cArray2EigenVector3d(this->stateInBuffer.r_BN_N);
     dcm_BN = sigma_BN_eigen.toRotationMatrix().transpose();
     r_BN_B = dcm_BN * r_BN_N;
     double r_BN_B_dbl[3];
     eigenVector3d2CArray(r_BN_B, r_BN_B_dbl);
+    
+    // print out r_BN_B_dbl
+    for (int i = 0; i < 3; i++) {
+        //BSK_PRINT(MSG_ERROR, "%f", this->navTrans.r_BN_N[i]);
+    }
     
     double cmdVecOutput[3];
     double left_term[3];
@@ -135,11 +149,17 @@ void gravityGradientTorque::computeForceTorque(double integTime)
     double fifth = 5.0;
     double I[3][3];
     
-    //Assign I
-    for (int i = 0; i < 3; i++) {
-        I[i][i] = sc.ISCPntB_B[3*i];
+    //Assign I (debugged and verified)
+    int i;
+    int j;
+    int ind = 0;
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            I[i][j] = sc.ISCPntB_B[ind];
+            ind++;
+        }
     }
-    
+
     r_BN_B_norm = v3Norm(r_BN_B_dbl);
     
     v3Scale(3*MU_EARTH / pow(r_BN_B_norm, fifth), r_BN_B_dbl, left_term);
@@ -148,7 +168,7 @@ void gravityGradientTorque::computeForceTorque(double integTime)
     
     v3Cross(left_term, right_term, cmdVecOutput);
     
-    
+    BSK_PRINT(MSG_ERROR, "r norm: %f", r_BN_B_norm);
     cmdVec = cArray2EigenVector3d(cmdVecOutput);
     this->torqueExternalPntB_B = cmdVec;
     

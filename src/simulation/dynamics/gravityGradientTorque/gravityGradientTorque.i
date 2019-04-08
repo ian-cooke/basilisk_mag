@@ -26,9 +26,12 @@
 %include "sys_model.h"
 %include "../_GeneralModuleFiles/dynamicEffector.h"
 %include "gravityGradientTorque.h"
-%include "../../simMessages/scPlusStatesSimMsg.h"
 %include "../../../utilities/bsk_Print.h"
-GEN_SIZEOF(scPlusStatesSimMsg);
+%include "../../../fswAlgorithms/fswMessages/vehicleConfigFswMsg.h"
+%include "simMessages/scPlusStatesSimMsg.h"
+GEN_SIZEOF(SCPlusStatesSimMsg);
+GEN_SIZEOF(VehicleConfigFswMsg);
+
 
 %pythoncode %{
 import sys

@@ -23,9 +23,9 @@
 #include "_GeneralModuleFiles/sys_model.h"
 #include "../_GeneralModuleFiles/dynamicEffector.h"
 #include "../simulation/utilities/avsEigenMRP.h"
-#include "../../simMessages/scPlusStatesSimMsg.h"
 #include "../../../fswAlgorithms/fswMessages/vehicleConfigFswMsg.h"
 #include "../../../utilities/bsk_Print.h"
+#include "simMessages/scPlusStatesSimMsg.h"
 
 
 class gravityGradientTorque: public SysModel, public DynamicEffector{
@@ -42,12 +42,12 @@ public:
     void computeForceTorque(double integTime);
 
 private:
-    SCPlusStatesSimMsg scPlusStates;
-    int64_t scPlusStatesSimMsgID;           //!< -- Message ID for incoming data
+    SCPlusStatesSimMsg stateInBuffer; //!< -- Buffer for incoming state message data
+    int64_t stateInMsgId; //!< -- Message ID for incoming SC state data
     VehicleConfigFswMsg sc;
     int64_t vehicleConfigFswMsgID;
 public:
-    std::string scPlusStatesSimMsgName;     //!< -- message used to read torque command inputs
+    std::string stateInMsgName; //!< -- Message name for the S/C state
     std::string vehicleConfigFswMsgName;
     Eigen::Vector3d extTorquePntB_B;    //!< [Nm] external torque in body frame components
 

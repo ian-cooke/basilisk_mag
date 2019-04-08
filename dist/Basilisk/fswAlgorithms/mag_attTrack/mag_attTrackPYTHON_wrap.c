@@ -7027,7 +7027,6 @@ SWIGINTERN PyObject *_wrap_ctl_mag_att_track_one(PyObject *SWIGUNUSEDPARM(self),
   double *arg6 = (double *) 0 ;
   double *arg7 = (double *) 0 ;
   double *arg8 = (double *) 0 ;
-  double *arg9 = (double *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   void *argp2 = 0 ;
@@ -7044,8 +7043,6 @@ SWIGINTERN PyObject *_wrap_ctl_mag_att_track_one(PyObject *SWIGUNUSEDPARM(self),
   int res7 = 0 ;
   void *argp8 = 0 ;
   int res8 = 0 ;
-  void *argp9 = 0 ;
-  int res9 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   PyObject * obj2 = 0 ;
@@ -7054,9 +7051,8 @@ SWIGINTERN PyObject *_wrap_ctl_mag_att_track_one(PyObject *SWIGUNUSEDPARM(self),
   PyObject * obj5 = 0 ;
   PyObject * obj6 = 0 ;
   PyObject * obj7 = 0 ;
-  PyObject * obj8 = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOOOOOOOO:ctl_mag_att_track_one",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5,&obj6,&obj7,&obj8)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOOOOOOO:ctl_mag_att_track_one",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5,&obj6,&obj7)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_double, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ctl_mag_att_track_one" "', argument " "1"" of type '" "double *""'"); 
@@ -7097,12 +7093,7 @@ SWIGINTERN PyObject *_wrap_ctl_mag_att_track_one(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res8), "in method '" "ctl_mag_att_track_one" "', argument " "8"" of type '" "double *""'"); 
   }
   arg8 = (double *)(argp8);
-  res9 = SWIG_ConvertPtr(obj8, &argp9,SWIGTYPE_p_double, 0 |  0 );
-  if (!SWIG_IsOK(res9)) {
-    SWIG_exception_fail(SWIG_ArgError(res9), "in method '" "ctl_mag_att_track_one" "', argument " "9"" of type '" "double *""'"); 
-  }
-  arg9 = (double *)(argp9);
-  ctl_mag_att_track_one(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9);
+  ctl_mag_att_track_one(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8);
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:

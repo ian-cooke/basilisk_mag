@@ -222,6 +222,6 @@ dependencies: \
   /Users/iancooke/basilisk_mag/src/simulation/dynamics/gravityGradientTorque/../_GeneralModuleFiles/dynParamManager.h \
   /Users/iancooke/basilisk_mag/src/simulation/dynamics/gravityGradientTorque/../_GeneralModuleFiles/stateData.h \
   /Users/iancooke/basilisk_mag/src/simulation/../simulation/utilities/avsEigenMRP.h \
-  /Users/iancooke/basilisk_mag/src/simulation/dynamics/gravityGradientTorque/../../simMessages/scPlusStatesSimMsg.h \
   /Users/iancooke/basilisk_mag/src/simulation/dynamics/gravityGradientTorque/../../../fswAlgorithms/fswMessages/vehicleConfigFswMsg.h \
-  /Users/iancooke/basilisk_mag/src/simulation/architecture/asio/message_router/../../../utilities/bsk_Print.h
+  /Users/iancooke/basilisk_mag/src/simulation/architecture/asio/message_router/../../../utilities/bsk_Print.h \
+  /Users/iancooke/basilisk_mag/src/simulation/simMessages/scPlusStatesSimMsg.h
